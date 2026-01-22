@@ -2721,6 +2721,57 @@
   <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
   <script src="assets/js/plugins/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  
+  <!-- Quick Links Auto-Scroll + Manual Swipe (Mobile Only) -->
+  <script>
+    (function() {
+      // Only run on mobile
+      if (window.innerWidth > 768) return;
+      
+      const container = document.querySelector('.quick-links-section .container');
+      if (!container) return;
+      
+      const scrollSpeed = 0.8;
+      const resumeDelay = 1000;
+      let lastScrollTime = 0;
+      let userScrolling = false;
+      let resumeTimeout = null;
+      
+      // Continuous auto-scroll - never stops
+      function autoScroll(timestamp) {
+        if (!userScrolling) {
+          container.scrollLeft += scrollSpeed;
+          // Loop back to start for infinite scroll
+          if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+            container.scrollLeft = 0;
+          }
+        }
+        requestAnimationFrame(autoScroll);
+      }
+      
+      // Track user interaction without blocking
+      function onUserTouch() {
+        userScrolling = true;
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+      }
+      
+      function onTouchEnd() {
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(function() {
+          userScrolling = false;
+        }, resumeDelay);
+      }
+      
+      // Passive listeners - don't block touch
+      container.addEventListener('touchstart', onUserTouch, { passive: true });
+      container.addEventListener('touchend', onTouchEnd, { passive: true });
+      container.addEventListener('touchcancel', onTouchEnd, { passive: true });
+      
+      // Start auto-scroll after page loads
+      requestAnimationFrame(autoScroll);
+    })();
+  </script>
+  
   <script>
     AOS.init({
       duration: 1000,

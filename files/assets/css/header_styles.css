@@ -1871,42 +1871,48 @@ footer {
     }
 }
 
-/* Quick Links - Mobile Marquee Scroll */
+/* Quick Links - Mobile Auto-Scroll + Manual Swipe */
 @media (max-width: 768px) {
     .quick-links-section {
         padding: 20px 0;
         margin-bottom: 25px;
-        overflow: hidden;
+        overflow: visible;
     }
     
     .quick-links-section .container {
         max-width: 100%;
-        padding: 0;
-        overflow: hidden;
+        padding: 0 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
     
-    /* Show duplicate items for seamless infinite scroll */
+    .quick-links-section .container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Hide duplicate items - not needed with JS scroll */
     .quick-link-duplicate {
-        display: flex !important;
+        display: none !important;
     }
     
     .quick-links-row {
         display: flex;
         flex-wrap: nowrap;
-        gap: 45px;
+        gap: 35px;
         justify-content: flex-start;
-        animation: quickLinksScroll 15s linear infinite;
         width: max-content;
-    }
-    
-    .quick-links-row:hover {
-        animation-play-state: paused;
+        padding: 5px 0;
+        /* No CSS animation - JS handles auto-scroll */
     }
     
     .quick-link-item {
         flex: 0 0 auto;
         min-width: auto;
         padding: 0 5px;
+        touch-action: pan-x;
     }
     
     .quick-link-icon {
@@ -1923,15 +1929,6 @@ footer {
         max-width: 70px;
         white-space: nowrap;
     }
-    
-    @keyframes quickLinksScroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
 }
 
 /* Quick Links - Small Mobile */
@@ -1940,9 +1937,12 @@ footer {
         padding: 15px 0;
     }
     
+    .quick-links-section .container {
+        padding: 0 10px;
+    }
+    
     .quick-links-row {
-        gap: 35px;
-        animation-duration: 12s;
+        gap: 30px;
     }
     
     .quick-link-icon {
