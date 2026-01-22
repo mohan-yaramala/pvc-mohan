@@ -1,0 +1,3027 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PVC - Leading the Future of AIoT Security</title>
+
+  <!--=====FAB ICON=======-->
+  <link rel="shortcut icon" href="assets/img/logo/pvc-logo.png" type="image/x-icon">
+  <!--===== CSS LINK =======-->
+  <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/plugins/aos.css">
+  <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/plugins/mobile.css">
+  <link rel="stylesheet" href="assets/css/plugins/owlcarousel.min.css">
+  <link rel="stylesheet" href="assets/css/plugins/sidebar.css">
+  <link rel="stylesheet" href="assets/css/plugins/slick-slider.css">
+  <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/header_styles.css">
+  <!-- JS Plugins -->
+  <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+  <script src="assets/js/plugins/waypoints.js"></script>
+  <link rel="stylesheet" href="assets/css/products_styles.css">
+
+
+  <style>
+    /* ===== ABOUT SECTION PROFESSIONAL STYLES ===== */
+    #about {
+      background: var(--white-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about3-section-area {
+      padding: 70px 0 !important;
+    }
+
+    .about-images-area {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    .about-images-area .product-img-box {
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12) !important;
+      max-width: 90%;
+    }
+
+    .about-images-area .product-img-box:hover {
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2) !important;
+      transform: translateY(-8px);
+    }
+
+    .about-images-area .product-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .about-images-area .product-img-box:hover img {
+      transform: scale(1.05);
+    }
+
+    .about-pera {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      padding: 12px 20px !important;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--pvc-gold-dark) 0%, var(--pvc-accent-red) 100%) !important;
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+      backdrop-filter: blur(10px);
+    }
+
+    .about-pera p {
+      color: #fff !important;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 0 !important;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .about-header-area {
+      padding-left: 0 !important;
+    }
+
+    .about-header-area h5 {
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--pvc-accent-red) !important;
+      margin-bottom: 12px !important;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .about-header-area h5 img {
+      width: 16px;
+      height: 16px;
+      transition: 0.3s;
+    }
+
+    .about-header-area h5:hover img {
+      transform: scale(1.15) rotate(5deg);
+    }
+
+    .about-header-area h2 {
+      font-size: 38px !important;
+      font-weight: 700 !important;
+      color: var(--text-dark) !important;
+      line-height: 1.25;
+      margin-bottom: 18px !important;
+      margin-top: 0 !important;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: -0.5px;
+    }
+
+    .about-header-area>p {
+      font-size: 14px !important;
+      color: var(--text-light) !important;
+      line-height: 1.7;
+      margin-bottom: 22px !important;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+    }
+
+    .all-progress-area {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .progres-section-area {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 18px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progres-section-area::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--pvc-accent-red), var(--pvc-gold-dark));
+      border-radius: 2px;
+    }
+
+    .progres-section-area:hover {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+      border-color: var(--pvc-accent-red);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12);
+      transform: translateX(8px);
+    }
+
+    .progres-section-area .check {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      box-shadow: 0 6px 16px rgba(212, 175, 55, 0.25);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .progres-section-area:hover .check {
+      transform: scale(1.12) rotate(10deg);
+      box-shadow: 0 10px 24px rgba(212, 175, 55, 0.35);
+    }
+
+    .about5-boxes {
+      flex: 1;
+      padding-left: 5px;
+    }
+
+    .about5-boxes h3 {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: var(--text-dark) !important;
+      margin: 0 0 6px 0 !important;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: -0.2px;
+    }
+
+    .about5-boxes p {
+      font-size: 13px !important;
+      color: var(--text-light) !important;
+      margin: 0 !important;
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+    }
+
+    @media (max-width: 991px) {
+      .about-header-area h2 {
+        font-size: 32px !important;
+      }
+
+      .about3-section-area {
+        padding: 50px 0 !important;
+      }
+
+      .about-header-area {
+        margin-top: 30px;
+      }
+
+      .progres-section-area {
+        padding: 16px;
+      }
+
+      .about-images-area .product-img-box {
+        max-width: 95%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .about-header-area h2 {
+        font-size: 24px !important;
+      }
+
+      .about-header-area h5 {
+        font-size: 11px !important;
+      }
+
+      .about-header-area>p {
+        font-size: 13px !important;
+      }
+
+      .progres-section-area {
+        padding: 14px;
+        gap: 12px;
+      }
+
+      .progres-section-area .check {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+      }
+
+      .about5-boxes h3 {
+        font-size: 14px !important;
+      }
+
+      .about5-boxes p {
+        font-size: 12px !important;
+      }
+
+      .about-pera {
+        bottom: 12px;
+        right: 12px;
+        padding: 10px 16px !important;
+      }
+
+      .about-pera p {
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+
+      .all-progress-area {
+        gap: 12px;
+      }
+    }
+
+    /* ===== SERVICE SECTION PROFESSIONAL STYLES ===== */
+    #services {
+      background: var(--white-secondary);
+      position: relative;
+      /* removed overflow hidden to allow nav buttons on edges */
+      padding: 70px 0 !important;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border-bottom: 4px solid transparent;
+      transition: all 0.4s ease;
+      height: 100%;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border-bottom-color: var(--pvc-gold-dark);
+    }
+
+    .service-icon {
+      width: 70px;
+      height: 70px;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 30px;
+      color: var(--pvc-accent-red);
+      transition: 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--pvc-gold-dark);
+      color: #fff;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+
+    .service3-section-area {
+      padding: 80px 0 !important;
+    }
+
+    .service-header {
+      margin-bottom: 60px;
+    }
+
+    .service-header h2 {
+      font-size: 42px !important;
+      font-weight: 700 !important;
+      color: var(--text-dark) !important;
+      margin: 20px 0 !important;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: -0.5px;
+    }
+
+    .service-header p {
+      font-size: 15px !important;
+      color: var(--text-light) !important;
+      line-height: 1.7;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .service-carousel-area {
+      position: relative;
+      padding: 30px 10px;
+      margin-top: -30px;
+    }
+
+    /* Gold Pagination Dots */
+    .service-carousel-area .owl-dots {
+      text-align: center;
+      margin-top: 50px;
+      line-height: 1;
+    }
+
+    .service-carousel-area .owl-dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(212, 175, 55, 0.2) !important;
+      display: inline-block;
+      margin: 0 6px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      border: none !important;
+      padding: 0 !important;
+    }
+
+    .service-carousel-area .owl-dot.active {
+      background: var(--pvc-gold-dark) !important;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .service-carousel-area .owl-dot,
+    .service-carousel-area .owl-prev,
+    .service-carousel-area .owl-next {
+      cursor: pointer !important;
+    }
+
+    /* Round Navigation Arrows */
+    .service-carousel-area .owl-nav {
+      position: absolute;
+      top: 50%;
+      /* Centered vertically on the cards */
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 0;
+      /* Nav container shouldn't take space */
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      transform: translateY(-50%);
+      z-index: 999;
+      /* Ensure it stays above everything */
+      padding: 0 20px;
+      /* Positioned clearly on the carousel as requested */
+    }
+
+    .service-carousel-area .owl-prev,
+    .service-carousel-area .owl-next {
+      width: 55px !important;
+      height: 55px !important;
+
+      background: #ffffff !important;
+      color: var(--pvc-gold-dark) !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 22px !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+      pointer-events: auto !important;
+      border: 2px solid var(--pvc-gold-mid) !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .service-carousel-area .owl-prev:hover,
+    .service-carousel-area .owl-next:hover {
+      background: var(--pvc-gold-dark) !important;
+      color: #ffffff !important;
+      border-color: var(--pvc-gold-dark) !important;
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .service-boxarea {
+      position: relative;
+      height: 550px;
+      /* Fixed height for tall cards */
+      background: var(--white-primary) !important;
+      border: 1px solid rgba(212, 175, 55, 0.2) !important;
+      border-radius: 20px !important;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05) !important;
+      overflow: hidden !important;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: flex !important;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .service-boxarea:hover {
+      border-color: var(--pvc-gold-dark) !important;
+      border-width: 2px !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+      transform: translateY(-5px);
+    }
+
+    .service-boxarea .img1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1;
+    }
+
+    .service-boxarea .img1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 0;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      filter: brightness(0.95);
+    }
+
+    .service-boxarea:hover .img1 {
+      /* Golden yellow overlay effect */
+      background: rgba(255, 215, 0, 0.3);
+    }
+
+    .service-boxarea:hover .img1 img {
+      opacity: 0.8;
+      /* Make image slightly transparent to show overlay */
+      transform: scale(1.1);
+      /* Zoom in effect */
+      filter: brightness(1.1);
+    }
+
+    .service-boxarea .content-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      /* More generous padding */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      text-align: left;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 2;
+      opacity: 0;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .service-boxarea:hover .content-area {
+      opacity: 1;
+      pointer-events: auto;
+      background: linear-gradient(135deg, rgba(139, 110, 0, 0.94) 0%, rgba(184, 134, 11, 0.94) 100%);
+    }
+
+    .service-boxarea .content-area::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: none;
+      z-index: 0;
+    }
+
+    .service-boxarea .icons {
+      width: 55px;
+      height: 55px;
+      border-radius: 14px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease;
+      margin: 0 auto 20px !important;
+      /* increased bottom margin for better spacing */
+      flex-shrink: 0;
+      position: relative !important;
+      z-index: 1;
+      left: auto !important;
+      right: auto !important;
+      top: auto !important;
+      transform: none !important;
+    }
+
+    .service-boxarea:hover .icons {
+      transform: scale(1.2) rotate(5deg);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      background: var(--pvc-gold-dark) !important;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .service-boxarea .icons img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    .content-area-pera {
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-area-pera a {
+      display: block;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      margin-bottom: 12px !important;
+      transition: all 0.3s ease;
+      text-decoration: none !important;
+      font-family: 'Poppins', sans-serif;
+      color: #fff !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      letter-spacing: 0.5px;
+    }
+
+    .service-boxarea:hover .content-area-pera a {
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05);
+    }
+
+    .content-area-pera p {
+      font-size: 16px !important;
+      line-height: 24px;
+      margin-top: 24px;
+      margin-bottom: 0 !important;
+      font-family: 'Poppins', sans-serif;
+      color: rgba(255, 255, 255, 0.8) !important;
+      word-wrap: break-word;
+      transition: all 0.4s ease;
+      font-weight: 500;
+    }
+
+    @media (max-width: 991px) {
+      .service3-section-area {
+        padding: 60px 0 !important;
+      }
+
+      .service-header h2 {
+        font-size: 32px !important;
+      }
+
+      .service-boxarea {
+        height: 350px;
+      }
+
+      .service-boxarea .content-area {
+        padding: 24px;
+        justify-content: center;
+      }
+
+      .service-boxarea .icons {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        margin-bottom: 14px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .service3-section-area .container-fluid {
+        padding: 0 10px !important;
+        /* Edge to edge on mobile */
+      }
+
+      .service-carousel-area {
+        padding: 20px 0 !important;
+      }
+
+      .service-header h2 {
+        font-size: 26px !important;
+      }
+
+      .service-header p {
+        font-size: 14px !important;
+      }
+
+      .service-header {
+        margin-bottom: 40px;
+      }
+
+      .service-boxarea {
+        height: 400px;
+        /* Increased from 300px for mobile */
+      }
+
+      .service-boxarea .content-area {
+        padding: 18px;
+        justify-content: center;
+      }
+
+      .service-boxarea .icons {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .service-boxarea .icons img {
+        width: 26px;
+        height: 26px;
+      }
+
+      .content-area-pera a {
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .content-area-pera p {
+        font-size: 12px !important;
+        line-height: 1.5;
+      }
+    }
+
+    /* Mobile Header Tweaks */
+    .mobile-header {
+      background: #1a1a1a !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .mobile-logo img {
+
+      width: auto !important;
+    }
+
+    @media (max-width: 991px) {
+      .header-area {
+        padding: 15px 20px !important;
+      }
+    }
+
+    /* Mobile Sidebar Dropdown Tweak */
+    .mobile-nav-list li.has-dropdown>a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-dropdown {
+      display: none;
+      padding-left: 20px;
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .mobile-nav-list li.active .mobile-dropdown {
+      display: block;
+    }
+
+    img {
+      max-width: 100% !important;
+
+    }
+
+    /* White Theme Override for Index Page */
+    body.homepage3-body {
+      background: #ffffff !important;
+      color: #333333 !important;
+    }
+
+    #services,
+    #products,
+    #about,
+    #portfolio,
+    #contact-box {
+      background: #ffffff !important;
+    }
+
+    .heading6 h2,
+    .about-header-area h2,
+    .service-header h2 {
+      color: #1a1a1a !important;
+    }
+
+    .heading6 p,
+    .about-header-area p,
+    .service-header p {
+      color: #555555 !important;
+    }
+
+    /* Hardware Section Interaction */
+    .product-img-box {
+      perspective: 1000px;
+      position: relative;
+      cursor: pointer;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .product-img-box img {
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .product-img-box:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Glare effect */
+    .product-img-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .product-img-box:hover::after {
+      opacity: 1;
+    }
+
+    .hardware-list li {
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      padding: 12px 20px;
+      border-radius: 50px;
+      /* Pill shape */
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .hardware-list li:hover {
+      background: rgba(212, 175, 55, 0.1);
+      /* Visible gold highlight */
+      transform: translateX(10px);
+      color: var(--pvc-gold-dark);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.05);
+    }
+
+    .hardware-list li i {
+      transition: transform 0.3s ease;
+      font-size: 1.2em;
+    }
+
+    .hardware-list li:hover i {
+      transform: scale(1.3) rotate(5deg);
+    }
+
+    .progres-section-area {
+      transition: all 0.4s ease;
+      padding: 15px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .progres-section-area:hover {
+      background: rgba(212, 175, 55, 0.08);
+      transform: translateX(10px);
+    }
+
+    .progres-section-area:hover .check {
+      transform: scale(1.2) rotate(10deg);
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    /* Interactive & Theme Styles */
+    .btn-accent {
+      background: var(--pvc-gold-dark) !important;
+      color: #fff !important;
+      border: none !important;
+      padding: 15px 35px !important;
+      border-radius: 8px !important;
+      display: inline-block !important;
+      font-weight: 700 !important;
+      transition: all 0.4s ease !important;
+      box-shadow: 0 4px 15px rgba(139, 110, 0, 0.3) !important;
+    }
+
+    .btn-accent:hover {
+      background: var(--pvc-gold-mid) !important;
+      transform: translateY(-3px) !important;
+      box-shadow: 0 8px 25px rgba(139, 110, 0, 0.5) !important;
+    }
+
+    .counter-boxarea {
+      transition: all 0.4s ease;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+    }
+
+    .counter-boxarea:hover {
+      background: #fff !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-10px);
+      border-color: var(--pvc-gold-mid) !important;
+    }
+
+    .testimonial-author-box {
+      transition: all 0.4s ease !important;
+    }
+
+    .testimonial-author-box:hover {
+      border-color: var(--pvc-gold-dark) !important;
+      box-shadow: 0 15px 40px rgba(184, 134, 11, 0.2) !important;
+      transform: scale(1.02);
+    }
+
+    .contact-boxarea {
+      transition: all 0.3s ease !important;
+      border-radius: 12px !important;
+      padding: 15px !important;
+    }
+
+    .contact-boxarea:hover {
+      background: #fff !important;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05) !important;
+      transform: translateX(10px);
+    }
+
+    .header-btn4 {
+      background: var(--pvc-gold-dark) !important;
+      transition: all 0.4s ease !important;
+    }
+
+    .header-btn4:hover {
+      background: var(--pvc-gold-mid) !important;
+      box-shadow: 0 5px 20px rgba(139, 110, 0, 0.4) !important;
+      transform: translateY(-2px);
+    }
+
+    /* Premium Form Styling */
+    .contact-form-area {
+      background: #ffffff !important;
+      padding: 50px !important;
+      border-radius: 20px !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08) !important;
+      border-top: 6px solid var(--pvc-gold-dark) !important;
+    }
+
+    .contact-form-area h3 {
+      font-size: 32px !important;
+      font-weight: 700 !important;
+      color: #1a1a1a !important;
+      margin-bottom: 35px !important;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .input-group-custom {
+      margin-bottom: 25px;
+    }
+
+    .input-group-custom label {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .input-group-custom input,
+    .input-group-custom textarea {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 2px solid #eee;
+      background: transparent;
+      font-size: 16px;
+      color: #333;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .input-group-custom input:focus,
+    .input-group-custom textarea:focus {
+      border-bottom-color: var(--pvc-gold-mid);
+    }
+
+    .input-group-custom input::placeholder,
+    .input-group-custom textarea::placeholder {
+      color: #aaa;
+      font-weight: 400;
+    }
+
+    .btn-form-submit {
+      background: transparent;
+      color: var(--pvc-gold-dark) !important;
+      border: 2px solid var(--pvc-gold-dark) !important;
+      padding: 18px 40px;
+      border-radius: 50px !important;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn-form-submit:hover {
+      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important;
+      background-size: 200% auto !important;
+      color: #000 !important;
+      border-color: transparent !important;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-form-submit i {
+      font-size: 18px;
+      transition: transform 0.4s ease;
+    }
+
+    .btn-form-submit:hover i {
+      transform: translate(3px, -3px);
+    }
+
+    /* ===== SCENARIO SECTION STYLES ===== */
+    .scenario-card {
+      background: #fff;
+      padding: 45px 35px;
+      border-radius: 24px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      height: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .scenario-card:hover {
+      border-color: var(--pvc-gold-mid);
+      transform: translateY(-12px);
+      box-shadow: 0 25px 60px rgba(184, 134, 11, 0.12);
+    }
+
+    .scenario-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(212, 175, 55, 0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--pvc-gold-dark);
+      margin-bottom: 30px;
+      transition: all 0.5s ease;
+      position: relative;
+    }
+
+    .scenario-card:hover .scenario-icon {
+      background: var(--pvc-gold-dark);
+      color: #fff;
+      transform: scale(1.05) rotate(5deg);
+      box-shadow: 0 10px 25px rgba(184, 134, 11, 0.3);
+    }
+
+    .scenario-icon::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--pvc-gold-mid);
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .scenario-card:hover .scenario-icon::after {
+      opacity: 1;
+      transform: scale(1.3);
+    }
+
+    .scenario-card h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--pvc-gold-dark);
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .scenario-card p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #555;
+      margin: 0;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    /* ===== SCALABILITY SECTION STYLES ===== */
+    .scale-card {
+      background: #fff;
+      padding: 50px 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .scale-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0) 100%);
+      opacity: 0;
+      transition: all 0.5s ease;
+      z-index: -1;
+    }
+
+    .scale-card:hover::before {
+      opacity: 1;
+    }
+
+    .scale-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--pvc-gold-mid);
+      box-shadow: 0 20px 40px rgba(184, 134, 11, 0.1);
+    }
+
+
+    .scale-icon-box {
+      width: 65px;
+      height: 65px;
+      background: var(--pvc-gold-dark);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
+      transition: all 0.4s ease;
+    }
+
+    .scale-icon-box i {
+      color: #fff;
+      font-size: 28px;
+    }
+
+    .scale-card:hover .scale-icon-box {
+      transform: scale(1.1) rotate(-5deg);
+      background: #fff;
+      border: 1px solid var(--pvc-gold-mid);
+    }
+
+    .scale-card:hover .scale-icon-box i {
+      color: var(--pvc-gold-dark);
+    }
+
+    .scale-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 15px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .scale-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .product-view-btn {
+      background: transparent;
+      color: var(--pvc-gold-dark);
+      border: 2px solid var(--pvc-gold-dark);
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px !important;
+      transition: all 0.4s ease;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      cursor: pointer;
+      text-decoration: none !important;
+    }
+
+    .scenario-card:hover .product-view-btn,
+    .scale-card:hover .product-view-btn {
+      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important;
+      background-size: 200% auto !important;
+      color: #000 !important;
+      border-color: transparent !important;
+      box-shadow: 0 8px 20px rgba(184, 134, 11, 0.4);
+    }
+
+    .service-boxarea {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-boxarea .content-area {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      align-items: center;
+      text-align: center;
+    }
+
+    .service-boxarea .content-area-pera {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    .service-boxarea .content-area-pera p {
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+
+    .service-boxarea .content-area .product-view-btn {
+      margin-top: auto;
+    }
+
+    .service-boxarea:hover .product-view-btn {
+      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important;
+      background-size: 200% auto !important;
+      color: #000 !important;
+      border-color: transparent !important;
+      box-shadow: 0 8px 20px rgba(184, 134, 11, 0.4);
+    }
+
+    /* Hero Carousel Premium Vertical Pagination (Image 2 style) */
+    #home {
+      counter-reset: hero-dots;
+      position: relative;
+    }
+
+    #home .carousel-area .owl-dots {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      z-index: 100;
+    }
+
+    #home .carousel-area .owl-dot {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.4) !important;
+      border-radius: 50%;
+      border: none !important;
+      padding: 0 !important;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      counter-increment: hero-dots;
+      display: block !important;
+    }
+
+    #home .carousel-area .owl-dot.active {
+      background: #fff !important;
+      transform: scale(1.5);
+    }
+
+    /* Circular Timer & Number for Active Dot */
+    #home .carousel-area .owl-dot.active::before {
+      content: counter(hero-dots);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 8px;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    #home .carousel-area .owl-dot.active::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 28px;
+      height: 28px;
+      margin-top: -14px;
+      margin-left: -14px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: rotateDotTimer 5s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes rotateDotTimer {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Hide default Owl Nav Arrows for main carousel */
+    #home .owl-nav {
+      display: none !important;
+    }
+
+    /* Adjust main menu items to handle the transition if needed */
+    /* ===== HERO SECTION HEIGHT CONTROL (FIXED) ===== */
+    #home {
+      overflow: hidden;
+      /* prevents extra white space */
+    }
+
+    #home .hero3-section-area {
+      height: 65vh;
+      /* MAIN HEIGHT CONTROL */
+      min-height: 420px;
+      /* prevents text breaking */
+      display: flex;
+      align-items: center;
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      #home .hero3-section-area {
+        height: 80vh;
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!--=====HEADER START =======-->
+  <header>
+    <div class="header-area homepage3 header header-sticky" id="header">
+      <div class="container-fluid" style="padding: 0 50px;">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="header-elements">
+              <div class="site-logo">
+                <a href="index.html"><img src="assets/img/logo/pvc-logo.png" alt="PVC Logo"></a>
+              </div>
+              <div class="main-menu">
+                <ul>
+                  <li><a href="index.html" class="active">Home</a></li>
+                  
+                  <!-- Network Cameras with Dropdown -->
+                  <li class="has-dropdown">
+                    <a href="network-cameras.html">Network Cameras <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu-nav">
+                      <li><a href="network-cameras.html"><i class="fa-solid fa-video"></i> Network Cameras</a></li>
+                      <li><a href="product-category.html?cat=nvr"><i class="fa-solid fa-server"></i> Network Video Recorders (NVR)</a></li>
+                      <li><a href="product-category.html?cat=storage"><i class="fa-solid fa-database"></i> Data Storage</a></li>
+                      <li><a href="product-category.html?cat=switches"><i class="fa-solid fa-network-wired"></i> Network Switches</a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- Turbo HD with Dropdown -->
+                  
+                  
+                  <!-- Access Control with Dropdown -->
+                  <li class="has-dropdown">
+                    <a href="access-control.html">Access Control <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu-nav">
+                      <li><a href="access-control.html"><i class="fa-solid fa-id-card"></i> Access Control Systems</a></li>
+                      <li><a href="product-category.html?cat=gates"><i class="fa-solid fa-door-open"></i> Speed Gates & Turnstiles</a></li>
+                      <li><a href="product-category.html?cat=face"><i class="fa-solid fa-face-viewfinder"></i> Face Recognition</a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- Video Intercom with Dropdown -->
+                  <li class="has-dropdown">
+                    <a href="video-intercom.html">Video Intercom <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu-nav">
+                      <li><a href="video-intercom.html"><i class="fa-solid fa-phone-flip"></i> IP Video Intercom</a></li>
+                      <li><a href="video-intercom.html"><i class="fa-solid fa-plug"></i> 2-Wire Intercom</a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- More Products with Dropdown -->
+                  <li class="has-dropdown">
+                    <a href="products.html">More Products <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu-nav">
+                      <li><a href="alarm-systems.html"><i class="fa-solid fa-bell"></i> Alarm Systems</a></li>
+                      <li><a href="thermal-products.html"><i class="fa-solid fa-temperature-half"></i> Thermal Products</a></li>
+                      <li><a href="display-control.html"><i class="fa-solid fa-tv"></i> Display & Control</a></li>
+                      <li><a href="software.html"><i class="fa-solid fa-code"></i> Software</a></li>
+                      <li><a href="intelligent-traffic.html"><i class="fa-solid fa-car"></i> Intelligent Traffic</a></li>
+                      <li><a href="audio-products.html"><i class="fa-solid fa-bullhorn"></i> Audio Products</a></li>
+                      <li class="dropdown-divider"></li>
+                      <li><a href="products.html"><i class="fa-solid fa-grid-2"></i> View All Products</a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- Services with Dropdown -->
+                  <li class="has-dropdown">
+                    <a href="services.html">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu-nav">
+                      <li><a href="services.html"><i class="fa-solid fa-toolbox"></i> Support & Tools</a></li>
+                      <li><a href="services.html"><i class="fa-solid fa-chalkboard-user"></i> Training Center</a></li>
+                      <li><a href="services.html"><i class="fa-solid fa-rotate"></i> RMA Service</a></li>
+                      <li><a href="services.html"><i class="fa-solid fa-headset"></i> Technical Support</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="header-right-icons">
+                <!-- Search Icon -->
+                <div class="nav-search-wrapper">
+                  <button class="nav-search-btn" aria-label="Search" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <div class="nav-search-dropdown">
+                    <form class="nav-search-form" onsubmit="return handleNavSearch(event)">
+                      <input type="text" class="nav-search-input" placeholder="Search products..." autocomplete="off">
+                      <button type="submit" class="nav-search-submit" aria-label="Submit search">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <!-- Phone Icon -->
+                <a href="tel:+919144555566" class="nav-phone-btn" aria-label="Call us">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+              </div>
+              <!-- MOBILE HEADER ACTIONS (Phone + Search + Menu) -->
+              <div class="mobile-header-actions d-lg-none">
+                <a href="tel:+919144555566" class="mobile-action-btn mobile-phone-btn" aria-label="Call us">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+                <div class="mobile-search-wrapper">
+                  <button class="mobile-action-btn mobile-search-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <div class="mobile-search-dropdown">
+                    <form class="mobile-search-form" onsubmit="return handleMobileSearch(event)">
+                      <input type="text" class="mobile-search-input" placeholder="Search products..." autocomplete="off">
+                      <button type="submit" class="mobile-search-submit" aria-label="Submit search">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="mobile-menu-toggle">
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLEAN MOBILE SIDEBAR -->
+    <div class="clean-mobile-overlay"></div>
+    <div class="clean-mobile-sidebar">
+      <div class="clean-sidebar-header">
+        <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" class="clean-logo">
+        <div class="clean-close-btn"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+      <div class="clean-mobile-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </header>
+  <!--=====HEADER END =======-->
+
+  <!--===== PRELOADER STARTS =======-->
+  <div class="preloader">
+    <div class="loading-container">
+      <div id="loading-icon">
+        <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" style="width: 150px;">
+      </div>
+    </div>
+  </div>
+  <!--===== PRELOADER ENDS =======-->
+
+  <!--===== PROGRESS STARTS=======-->
+  <div class="paginacontainer">
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+  </div>
+  <!--===== PROGRESS ENDS=======-->
+
+
+  <!--===== HERO AREA STARTS =======-->
+  <section id="home" data-aos="zoom-out" data-aos-duration="1500">
+    <div class="carousel-area owl-carousel">
+
+      <!-- Slide 1: NVR -->
+      <div class="hero3-section-area" style="background: url('assets/img/carousel/hikvision-hero-banner.jpeg');
+      
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;">
+
+        <div class="container-fluid p-0">
+          <div class="row m-0">
+            <div class="col-lg-8" style="padding-left: 50px;">
+              <div class="header-main-content heading5">
+               
+               
+                <div class="btn-area">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+
+    </div>
+  </section>
+  <!--===== HERO AREA ENDS =======-->
+
+  <!--===== QUICK LINKS SECTION STARTS =======-->
+  <section id="quick-links" class="quick-links-section">
+    <div class="container">
+      <div class="quick-links-row">
+        <a href="products.html" class="quick-link-item">
+          <div class="quick-link-icon">
+            <i class="fa-solid fa-grip"></i>
+          </div>
+          <span class="quick-link-text">All Products</span>
+        </a>
+        <a href="products.html#bestsellers" class="quick-link-item">
+          <div class="quick-link-icon">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <span class="quick-link-text">Best Sellers</span>
+        </a>
+        <a href="products.html#new" class="quick-link-item">
+          <div class="quick-link-icon">
+            <i class="fa-solid fa-sparkles"></i>
+          </div>
+          <span class="quick-link-text">New Arrivals</span>
+        </a>
+        <a href="products.html#accessories" class="quick-link-item">
+          <div class="quick-link-icon">
+            <i class="fa-solid fa-puzzle-piece"></i>
+          </div>
+          <span class="quick-link-text">Accessories</span>
+        </a>
+        <a href="services.html" class="quick-link-item">
+          <div class="quick-link-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <span class="quick-link-text">Support & Service</span>
+        </a>
+        <a href="contact-us.html" class="quick-link-item">
+          <div class="quick-link-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <span class="quick-link-text">Contact Us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--===== QUICK LINKS SECTION ENDS =======-->
+
+  <section id="product-categories" class="products-grid-area pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="cat-section-header">
+            <h2 class="cat-grid-title">Product categories</h2>
+            <div class="eco-header-divider"></div>
+            <p class="cat-section-tagline">Smart security solutions for every need</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Row 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <a href="network-cameras.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/network-products-update.png" alt="Network Products">
+              <h3>Network Products</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="turbo-hd.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/turbo-hd-update.png" alt="Turbo HD Products">
+              <h3>Turbo HD Products</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <a href="access-control.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/access-control-update.png" alt="Access Control">
+              <h3>Access Control</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <a href="video-intercom.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/video-intercom-update.png" alt="Video Intercom">
+              <h3>Video Intercom</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="access-control.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/speed-gates-update.png" alt="Speed Gates & Turnstiles">
+              <h3>Speed Gates & Turnstiles</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <a href="product-category.html?cat=networking" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/networking-update.png" alt="Networking">
+              <h3>Networking</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <a href="alarm-systems.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/alarm-system-update.png" alt="Alarm System">
+              <h3>Alarm Systems</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="audio-products.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/Audio Products.jpeg" alt="Audio Products">
+              <h3>Audio Products</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <a href="product-category.html?cat=sensing" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/Sensing Products.jpeg" alt="Sensing Products">
+              <h3>Sensing Products</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <a href="intelligent-traffic.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/Intelligent Traffic.jpeg" alt="Intelligent Traffic">
+              <h3>Intelligent Traffic</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="product-category.html?cat=parking" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/Parking Management.png" alt="Parking Management">
+              <h3>Parking Management</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <a href="product-category.html?cat=onboard" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/Onboard Security.jpeg" alt="Onboard Security">
+              <h3>Onboard Security</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <a href="product-category.html?cat=pds" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/Premises Distribution System.jpeg" alt="Premises Distribution System">
+              <h3>Premises Distribution System</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="software.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/Software.jpeg" alt="Software">
+              <h3>Software</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <a href="product-category.html?cat=hilook" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/HiLook.jpeg" alt="HiLook">
+              <h3>HiLook</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Row 6 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <a href="product-category.html?cat=accessories" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/Accessories.jpeg" alt="Accessories">
+              <h3>Accessories</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <a href="display-control.html" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/display-and-control-update.png" alt="Display and Control">
+              <h3>Display and Control</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <a href="product-category.html?cat=led" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/led-displays-update.png" alt="LED Displays">
+              <h3>LED Displays</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Row 7 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <a href="product-category.html?cat=ifpd" class="d-block h-100 text-decoration-none">
+            <div class="cat-card">
+              <img src="assets/img/products/interactive-flat-panels-update.png"
+                alt="Hikvision Interactive Flat Panel Displays">
+              <h3>Hikvision Interactive Flat Panel Displays</h3>
+              <div class="product-view-btn">
+                View Products <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+  </section>
+  <!--===== ABOUT AREA STARTS =======-->
+  
+  <!--===== ABOUT AREA ENDS =======-->
+
+  <!--===== INTELLIGENCE SCENARIOS AREA STARTS =======-->
+  
+  <!--===== INTELLIGENCE SCENARIOS AREA ENDS =======-->
+
+  <!--===== NEW PRODUCTS CAROUSEL SECTION =====-->
+  
+  <!--===== PRODUCTS AREA STARTS =======-->
+  <!-- <section id="products" class="sp1" style="background: #fff; padding: 100px 0;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+          <div class="heading6">
+            <span class="section-tag"
+              style="color: var(--pvc-gold-dark); font-weight: 700; display: block; margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase; font-size: 14px;">Premium
+              Hardware</span>
+            <h2 class="text-anime-style-3"
+              style="font-size: 48px; line-height: 1.2; margin-bottom: 25px; color: #1a1a1a; font-weight: 800; letter-spacing: -1px;">
+              Cutting-Edge Security Hardware</h2>
+            <p style="color: #555; font-size: 18px; line-height: 1.8; margin-bottom: 35px;">
+              From 4K Ultra-HD Network Cameras to AcuSeek Intelligent NVRs, our hardware is engineered for durability
+              and high-performance intelligence.</p>
+
+            <ul class="list-unstyled hardware-list" style="margin-bottom: 40px;">
+              <li class="mb-3 d-flex align-items-center" style="font-size: 16px; color: #333; font-weight: 500;">
+                <div
+                  style="min-width: 24px; height: 24px; background: var(--pvc-gold-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: #fff; font-size: 12px;">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                8K/4K Network Bullet & Dome Cameras
+              </li>
+              <li class="mb-3 d-flex align-items-center" style="font-size: 16px; color: #333; font-weight: 500;">
+                <div
+                  style="min-width: 24px; height: 24px; background: var(--pvc-gold-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: #fff; font-size: 12px;">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                Intelligent 64-Channel NVR Storage
+              </li>
+              <li class="mb-3 d-flex align-items-center" style="font-size: 16px; color: #333; font-weight: 500;">
+                <div
+                  style="min-width: 24px; height: 24px; background: var(--pvc-gold-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: #fff; font-size: 12px;">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                Solar Power Cable-Free Camera Series
+              </li>
+              <li class="mb-3 d-flex align-items-center" style="font-size: 16px; color: #333; font-weight: 500;">
+                <div
+                  style="min-width: 24px; height: 24px; background: var(--pvc-gold-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: #fff; font-size: 12px;">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                Thermal Imaging & Perimeter Sensors
+              </li>
+            </ul>
+
+            <div class="btn-area">
+              <a href="products.html" class="header-btn1"
+                style="background: var(--pvc-gold-dark); border-color: var(--pvc-gold-dark); color: #fff; padding: 15px 35px; border-radius: 6px; font-weight: 600;">
+                View Full Catalog <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="hardware-showcase-img"
+            style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
+            <img src="assets/img/products/premium-showcase-hikvision.png" alt="PVC Premium Security Hardware"
+              style="width: 100%; height: 600px; display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--===== PRODUCTS AREA ENDS =======-->
+  <!--===== CONNECT SECTION START =====-->
+  <!--===== CONNECT SECTION STARTS (INTERACTIVE ECOSYSTEM) =====-->
+  <!-- <section id="connect"
+    style="background: var(--white-secondary); padding: 80px 0; position: relative; overflow: hidden;">
+    <div
+      style="position: absolute; top: 55%; left: 0; width: 100%; height: 2px; background: repeating-linear-gradient(90deg, var(--pvc-gold-mid) 0, var(--pvc-gold-mid) 10px, transparent 10px, transparent 20px); opacity: 0.3; z-index: 0;">
+    </div>
+
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-12 text-center" data-aos="fade-up">
+          <div class="heading6">
+            <span class="section-tag"
+              style="background: rgba(212, 175, 55, 0.1); padding: 5px 15px; border-radius: 20px; color: var(--pvc-gold-dark);">Global
+              Network</span>
+            <h2 class="text-anime-style-3" style="color: var(--pvc-gold-dark); margin-top: 15px;">Connecting a
+              Global Security Ecosystem</h2>
+            <p class="mt-3">A synchronized platform uniting technology, commerce, and service.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="eco-card"
+            style="background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); position: relative; transition: transform 0.3s ease;">
+            <div class="eco-icon"
+              style="background: linear-gradient(135deg, #222, #444); width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); position: relative;">
+              <i class="fa-solid fa-users" style="color: #fff; font-size: 32px;"></i>
+              <div class="pulse-ring"
+                style="position: absolute; width: 100%; height: 100%; border: 2px solid var(--pvc-gold-mid); border-radius: 50%; animation: pulse-gold 2s infinite;">
+              </div>
+            </div>
+            <h4 style="font-weight: 700; color: #111; margin-bottom: 10px;">Customers</h4>
+            <p style="font-size: 14px; color: #666;">End-users protected by cutting-edge solutions.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-1 d-none d-lg-flex align-items-center justify-content-center" data-aos="fade-in"
+          data-aos-delay="200">
+          <i class="fa-solid fa-chevron-right"
+            style="color: var(--pvc-gold-mid); font-size: 24px; animation: slide-right 1.5s infinite;"></i>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="eco-card featured"
+            style="background: linear-gradient(135deg, #fff, #fcfbf5); padding: 40px 30px; border-radius: 20px; box-shadow: 0 15px 40px rgba(184, 134, 11, 0.15); border: 1px solid rgba(212, 175, 55, 0.2); transform: scale(1.05);">
+            <div class="eco-icon"
+              style="background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid)); width: 100px; height: 100px; margin: 0 auto 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 30px rgba(184, 134, 11, 0.3);">
+              <i class="fa-solid fa-store" style="color: #fff; font-size: 42px;"></i>
+            </div>
+            <h4 style="font-weight: 800; color: var(--pvc-gold-dark); margin-bottom: 15px; font-size: 24px;">
+              Retailer Network</h4>
+            <p style="font-size: 15px; color: #555;">Authorized partners delivering expertise and local support.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-1 d-none d-lg-flex align-items-center justify-content-center" data-aos="fade-in"
+          data-aos-delay="400">
+          <i class="fa-solid fa-chevron-right"
+            style="color: var(--pvc-gold-mid); font-size: 24px; animation: slide-right 1.5s infinite;"></i>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="500">
+          <div class="eco-card"
+            style="background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03);">
+            <div class="eco-icon"
+              style="background: linear-gradient(135deg, #222, #444); width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1); position: relative;">
+              <i class="fa-solid fa-truck-fast" style="color: #fff; font-size: 32px;"></i>
+              <div class="pulse-ring"
+                style="position: absolute; width: 100%; height: 100%; border: 2px solid var(--pvc-gold-mid); border-radius: 50%; animation: pulse-gold 2s infinite; animation-delay: 0.5s;">
+              </div>
+            </div>
+            <h4 style="font-weight: 700; color: #111; margin-bottom: 10px;">Distributors</h4>
+            <p style="font-size: 14px; color: #666;">Global supply chain ensuring product availability.</p>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        @keyframes pulse-gold {
+          0% {
+            transform: scale(1);
+            opacity: 0.8;
+          }
+
+          100% {
+            transform: scale(1.6);
+            opacity: 0;
+          }
+        }
+
+        @keyframes slide-right {
+          0% {
+            transform: translateX(0);
+            opacity: 0.5;
+          }
+
+          50% {
+            transform: translateX(10px);
+            opacity: 1;
+          }
+
+          100% {
+            transform: translateX(0);
+            opacity: 0.5;
+          }
+        }
+
+        .eco-card:hover {
+          transform: translateY(-10px) !important;
+        }
+      </style>
+    </div>
+  </section> -->
+
+  <!--===== CLIENTS AREA STARTS =======-->
+  <section id="clients" data-aos="fade-up">
+    <div class="counter-section-area"
+      style="background: #ffffff; padding: 60px 0; border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+      <div class="container">
+        <!-- New Impressive Heading for Ecosystem -->
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-12 text-center" data-aos="fade-down">
+            <style>
+              .eco-header-section {
+                padding-bottom: 30px;
+                position: relative;
+              }
+
+              .eco-icon-top {
+                width: 70px;
+                height: 70px;
+                background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid));
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px;
+                box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+                animation: eco-glow 3s infinite ease-in-out;
+              }
+
+              @keyframes eco-glow {
+
+                0%,
+                100% {
+                  transform: scale(1);
+                  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+                }
+
+                50% {
+                  transform: scale(1.08);
+                  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
+                }
+              }
+
+              .eco-header-subtitle {
+                color: #000000;
+                font-weight: 700;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                font-size: 14px;
+                display: block;
+              }
+
+              .eco-header-title {
+                font-size: 46px;
+                font-weight: 800;
+                margin-bottom: 20px;
+                letter-spacing: -1px;
+                color: var(--pvc-gold-dark);
+              }
+
+              .eco-header-divider {
+                width: 120px;
+                height: 3px;
+                background: linear-gradient(to right, transparent, var(--pvc-gold-mid), transparent);
+                margin: 0 auto;
+              }
+            </style>
+            <div class="eco-header-section">
+              <div class="eco-icon-top">
+                <i class="fa-solid fa-earth-americas" style="color: #fff; font-size: 32px;"></i>
+              </div>
+              <span class="eco-header-subtitle">Global Impact</span>
+              <h2 class="eco-header-title">Connecting a Global Security Ecosystem</h2>
+              <div class="eco-header-divider"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Item 1: Clients -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up">
+            <div class="counter-boxarea text-center"
+              style="padding: 40px 30px; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease; position: relative;"
+              onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--pvc-gold-mid)'; this.style.boxShadow='0 15px 40px rgba(184, 134, 11, 0.15)';"
+              onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(0,0,0,0.05)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)';">
+
+              <div class="icon-box"
+                style="width: 80px; height: 80px; margin: 0 auto 25px; background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid)); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(184, 134, 11, 0.25);">
+                <i class="fa-solid fa-users" style="color: #fff; font-size: 32px;"></i>
+              </div>
+
+              <h2 style="color: #111; font-size: 50px; font-weight: 800; margin-bottom: 5px;"><span
+                  class="counter">3500</span>+</h2>
+              <p
+                style="color: #555; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin: 0;">
+                Enterprise Clients</p>
+            </div>
+          </div>
+          <!-- Item 2: Nodes -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="counter-boxarea text-center"
+              style="padding: 40px 30px; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease; position: relative;"
+              onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--pvc-gold-mid)'; this.style.boxShadow='0 15px 40px rgba(184, 134, 11, 0.15)';"
+              onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(0,0,0,0.05)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)';">
+
+              <div class="icon-box"
+                style="width: 80px; height: 80px; margin: 0 auto 25px; background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid)); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(184, 134, 11, 0.25);">
+                <i class="fa-solid fa-tower-broadcast" style="color: #fff; font-size: 32px;"></i>
+              </div>
+
+              <h2 style="color: #111; font-size: 50px; font-weight: 800; margin-bottom: 5px;"><span
+                  class="counter">1.2</span>M+</h2>
+              <p
+                style="color: #555; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin: 0;">
+                AIoT Nodes Deployed</p>
+            </div>
+          </div>
+          <!-- Item 3: Partnerships -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="counter-boxarea text-center"
+              style="padding: 40px 30px; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease; position: relative;"
+              onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--pvc-gold-mid)'; this.style.boxShadow='0 15px 40px rgba(184, 134, 11, 0.15)';"
+              onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(0,0,0,0.05)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)';">
+
+              <div class="icon-box"
+                style="width: 80px; height: 80px; margin: 0 auto 25px; background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid)); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(184, 134, 11, 0.25);">
+                <i class="fa-solid fa-handshake" style="color: #fff; font-size: 32px;"></i>
+              </div>
+
+              <h2 style="color: #111; font-size: 50px; font-weight: 800; margin-bottom: 5px;"><span
+                  class="counter">20</span>+</h2>
+              <p
+                style="color: #555; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin: 0;">
+                Strategic Partners</p>
+            </div>
+          </div>
+          <!-- Item 4: Global Markets -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="counter-boxarea text-center"
+              style="padding: 40px 30px; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease; position: relative;"
+              onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--pvc-gold-mid)'; this.style.boxShadow='0 15px 40px rgba(184, 134, 11, 0.15)';"
+              onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(0,0,0,0.05)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)';">
+
+              <div class="icon-box"
+                style="width: 80px; height: 80px; margin: 0 auto 25px; background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid)); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(184, 134, 11, 0.25);">
+                <i class="fa-solid fa-globe" style="color: #fff; font-size: 32px;"></i>
+              </div>
+
+              <h2 style="color: #111; font-size: 50px; font-weight: 800; margin-bottom: 5px;"><span
+                  class="counter">180</span>+</h2>
+              <p
+                style="color: #555; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin: 0;">
+                Global Markets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--===== CLIENTS AREA ENDS =======-->
+
+  <!--===== SCALABILITY AREA STARTS =======-->
+  <section id="scalability" class="sp1" style="background: #ffffff; padding: 100px 0;">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="heading6">
+            <span class="section-tag"
+              style="color: var(--pvc-gold-dark); text-transform: uppercase; letter-spacing: 3px; font-weight: 900; font-size: 13px; margin-bottom: 15px; display: block;">Unlimited
+              Versatility</span>
+            <h2 style="font-size: 44px; font-weight: 900; color: #111; line-height: 1.2;">Scalable Intelligence for
+              <span style="color: var(--pvc-gold-dark);">Every Environment.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <p style="font-size: 17px; color: #555; line-height: 1.8; margin: 0;">Our architecture is designed to grow
+            with you. Whether it's a single family home or a complex smart city infrastructure, PVC provides the same
+            uncompromising precision at any scale.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Scale 1: Residential -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="scale-card">
+            <div class="scale-icon-box">
+              <i class="fa-solid fa-house-lock"></i>
+            </div>
+            <h3>Residential Elite</h3>
+            <p>Smart security for modern homes. Protecting your family with AI-driven perimeter alerts, video doorbells,
+              and seamless mobile control from anywhere.</p>
+            <a href="products.html" class="product-view-btn">
+              View Products <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Scale 2: Commercial -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="scale-card">
+            <div class="scale-icon-box">
+              <i class="fa-solid fa-building-shield"></i>
+            </div>
+            <h3>Commercial Pro</h3>
+            <p>Enterprise-grade security for businesses and retail. Integrated access control, intelligent attendance,
+              and high-fidelity 24/7 surveillance for complete operational safety.</p>
+            <a href="products.html" class="product-view-btn">
+              View Products <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Scale 3: Enterprise -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="scale-card">
+            <div class="scale-icon-box">
+              <i class="fa-solid fa-city"></i>
+            </div>
+            <h3>Enterprise Urban</h3>
+            <p>Mega-scale protection for cities and industrial zones. Advanced LPR, thermal monitoring, and centralized
+              command software for massive data management.</p>
+            <a href="products.html" class="product-view-btn">
+              View Products <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--===== SCALABILITY AREA ENDS =======-->
+
+  <!--===== BRAND PARTNERS AREA STARTS =======-->
+  <section id="brand-partners">
+    <div class="sp1" style="background: var(--white-secondary);">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 text-center mb-4" data-aos="fade-down">
+            <style>
+              .brand-header-section {
+                position: relative;
+                padding: 20px 0;
+              }
+
+              .brand-header-section h4 {
+                font-size: 36px;
+                font-weight: 900;
+                color: var(--pvc-gold-dark);
+                margin-bottom: 10px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+              }
+
+              @keyframes shimmer {
+
+                0%,
+                100% {
+                  background-position: 0% 50%;
+                }
+
+                50% {
+                  background-position: 100% 50%;
+                }
+              }
+
+              .brand-header-section h4 {
+                background-size: 200% auto;
+              }
+
+              .brand-subtitle {
+                color: #555;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+              }
+
+              .brand-icon {
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid));
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 15px;
+                box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);
+                animation: pulse 2s infinite;
+              }
+
+              @keyframes pulse {
+
+                0%,
+                100% {
+                  transform: scale(1);
+                  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);
+                }
+
+                50% {
+                  transform: scale(1.1);
+                  box-shadow: 0 12px 30px rgba(184, 134, 11, 0.5);
+                }
+              }
+
+              .brand-icon i {
+                color: #fff;
+                font-size: 32px;
+              }
+
+              .brand-divider {
+                width: 80px;
+                height: 3px;
+                background: linear-gradient(to right, transparent, var(--pvc-gold-dark), transparent);
+                margin: 20px auto;
+              }
+            </style>
+            <div class="brand-header-section">
+              <div class="brand-icon">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+              <p class="brand-subtitle">Trusted By Industry Leaders</p>
+              <h4>Our Strategic Partners</h4>
+              <div class="brand-divider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <style>
+              .testimonial-slider .img1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 180px;
+                padding: 10px 20px;
+              }
+
+              .testimonial-slider .img1 img {
+                max-height: 120px;
+                width: auto;
+                object-fit: contain;
+                transition: all 0.3s ease;
+              }
+
+              .testimonial-slider .img1 img:hover {
+                transform: scale(1.1);
+              }
+            </style>
+            <div class="testimonial-slider owl-carousel" id="brandCarousel">
+              <div class="img1"><img src="assets/img/brands/hikvision.png" alt="Hikvision" style="max-height: 150px;">
+              </div>
+              <div class="img1"><img src="assets/img/brands/cpplusworld.png" alt="CP Plus" style="max-height: 150px;">
+              </div>
+              <div class="img1"><img src="assets/img/brands/magus.png" alt="Magus" style="max-height: 140px;"></div>
+              <div class="img1"><img src="assets/img/brands/Axis.jpeg" alt="Axis" style="max-height: 120px;"></div>
+              <div class="img1"><img src="assets/img/brands/Honeywell.jpeg" alt="Honeywell" style="max-height: 150px;">
+              </div>
+              <div class="img1"><img src="assets/img/brands/Godrej.png" alt="Godrej" style="max-height: 150px;">
+              </div>
+              <div class="img1"><img src="assets/img/brands/Hanwha.png" alt="Hanwha" style="max-height: 110px;"></div>
+              <div class="img1"><img src="assets/img/brands/Bosch.png" alt="Bosch" style="max-height: 150px;"></div>
+              <div class="img1"><img src="assets/img/brands/dahua.png" alt="Dahua" style="max-height: 150px;"></div>
+            </div>
+            <script>
+              // Auto-scroll brands carousel when section comes into view
+              document.addEventListener('DOMContentLoaded', function () {
+                const brandSection = document.getElementById('brand-partners');
+                const brandCarousel = $('#brandCarousel');
+
+                // Initialize carousel with autoplay
+                brandCarousel.owlCarousel({
+                  loop: true,
+                  margin: 30,
+                  nav: false,
+                  dots: false,
+                  autoplay: true,
+                  autoplayTimeout: 1500,
+                  autoplaySpeed: 700,
+                  autoplayHoverPause: true,
+                  responsive: {
+                    0: { items: 2 },
+                    600: { items: 3 },
+                    1000: { items: 5 }
+                  }
+                });
+
+                // Observe when section enters viewport
+                const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      brandCarousel.trigger('play.owl.autoplay');
+                    }
+                  });
+                }, { threshold: 0.3 });
+
+                if (brandSection) {
+                  observer.observe(brandSection);
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--===== BRAND PARTNERS AREA ENDS =======-->
+
+  <!--===== FEEDBACK AREA STARTS =======-->
+  <section id="feedback" class="sp1" style="background: #ffffff; overflow: hidden; position: relative;"
+    data-aos="fade-up">
+    <!-- Abstract Background Pattern -->
+    <div
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; pointer-events: none; background-image: radial-gradient(var(--pvc-gold-mid) 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="row mb-5 pb-4">
+        <div class="col-lg-12 text-center">
+          <style>
+            .creative-feedback-title {
+              position: relative;
+              display: inline-block;
+            }
+
+            .creative-feedback-title h2 {
+              font-size: 54px;
+              font-weight: 900;
+              letter-spacing: -2px;
+              color: #111;
+              margin-bottom: 0;
+            }
+
+            .creative-feedback-title .accent-line {
+              position: absolute;
+              bottom: -15px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 100px;
+              height: 4px;
+              background: linear-gradient(90deg, transparent, var(--pvc-gold-mid), transparent);
+              border-radius: 2px;
+            }
+
+            .feedback-creative-grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 30px;
+              padding: 40px 0;
+            }
+
+            @media (max-width: 991px) {
+              .feedback-creative-grid {
+                grid-template-columns: 1fr;
+              }
+            }
+
+            .deep-glass-card {
+              background: rgba(255, 255, 255, 0.9);
+              border: 1px solid rgba(184, 134, 11, 0.1);
+              padding: 50px 40px;
+              border-radius: 24px;
+              position: relative;
+              transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              min-height: 380px;
+            }
+
+            .deep-glass-card::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 6px;
+              background: linear-gradient(90deg, var(--pvc-gold-mid), var(--pvc-gold-dark));
+              opacity: 1;
+              /* Solid and bold */
+              transition: all 0.5s ease;
+            }
+
+            .deep-glass-card:hover {
+              transform: translateY(-15px) scale(1.02);
+              box-shadow: 0 30px 60px rgba(184, 134, 11, 0.2);
+              border-color: rgba(184, 134, 11, 0.4);
+            }
+
+            .deep-glass-card:hover::before {
+              height: 10px;
+            }
+
+            .big-quote-bg {
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              font-size: 140px;
+              font-family: serif;
+              color: var(--pvc-gold-mid);
+              opacity: 0.15;
+              line-height: 1;
+              pointer-events: none;
+              transition: all 0.5s ease;
+            }
+
+            .deep-glass-card:hover .big-quote-bg {
+              opacity: 0.3;
+              transform: scale(1.1);
+            }
+
+            .feedback-text {
+              font-size: 19px;
+              line-height: 1.8;
+              color: #444;
+              font-weight: 500;
+              position: relative;
+              z-index: 2;
+            }
+
+            .author-node {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              margin-top: 35px;
+              padding-top: 25px;
+              border-top: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .node-dot {
+              width: 12px;
+              height: 12px;
+              background: var(--pvc-gold-mid);
+              border-radius: 50%;
+              box-shadow: 0 0 10px var(--pvc-gold-mid);
+            }
+
+            .author-details-wrap span {
+              display: block;
+              font-weight: 800;
+              color: var(--pvc-gold-dark);
+              font-size: 16px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            }
+
+            .author-details-wrap p {
+              margin: 0;
+              font-size: 14px;
+              color: #888;
+              font-weight: 600;
+            }
+          </style>
+          <div class="creative-feedback-title">
+            <span
+              style="text-transform: uppercase; letter-spacing: 5px; color: var(--pvc-gold-mid); font-weight: 700; font-size: 13px; margin-bottom: 10px; display: block;">Voice
+              of Trust</span>
+            <h2 class="text-anime-style-3">What Our Customers Say</h2>
+            <div class="accent-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback-creative-grid">
+        <!-- Card 1 -->
+        <div class="deep-glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="big-quote-bg">“</div>
+          <p class="feedback-text">"The transition to 4K surveillance with AcuSeek NVR has been seamless. The clarity is
+            unmatched, and our security protocols have evolved overnight."</p>
+          <div class="author-node">
+            <div class="node-dot"></div>
+            <div class="author-details-wrap">
+              <span>Security Director</span>
+              <p>Retail Mall Group</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="deep-glass-card" data-aos="fade-up" data-aos-delay="200"
+          style="background: linear-gradient(135deg, #fff, #fff9f0);">
+          <div class="big-quote-bg">“</div>
+          <p class="feedback-text">"Solar cable-free cameras are a lifesaver for our remote energy monitoring sites. No
+            wiring, just pure high-end intelligence in the wild."</p>
+          <div class="author-node">
+            <div class="node-dot" style="background: #222; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>
+            <div class="author-details-wrap">
+              <span>Project Lead</span>
+              <p>Smart Energy Site</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="deep-glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="big-quote-bg">“</div>
+          <p class="feedback-text">"Perimeter protection solutions from PVC have virtually eliminated our trespassing
+            issues. The AI detection is terrifyingly accurate."</p>
+          <div class="author-node">
+            <div class="node-dot"></div>
+            <div class="author-details-wrap">
+              <span>Safety Manager</span>
+              <p>Industrial Tech Ltd.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--===== FEEDBACK AREA ENDS =======-->
+
+  <!--===== CONTACT AREA STARTS =======-->
+  <section id="contact-us" class="sp1" style="background-color: var(--white-secondary);">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="contact-header heading6">
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="text-anime-style-3" style="color: var(--text-dark);">Let's Secure Your Assets Today</h2>
+            <p style="color: var(--text-light);">Our experts are ready to help you choose the right AIoT solutions
+              for
+              your business or home.</p>
+            <div class="space32"></div>
+            <div class="contact-info-minimal mt-5">
+              <style>
+                .minimal-contact-item {
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 20px;
+                  margin-bottom: 30px;
+                  transition: all 0.3s ease;
+                }
+
+                .minimal-contact-item:hover {
+                  transform: translateX(5px);
+                }
+
+                .minimal-contact-icon {
+                  width: 50px;
+                  height: 50px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 12px;
+                  background: rgba(212, 175, 55, 0.1);
+                  color: var(--pvc-gold-dark);
+                  font-size: 22px;
+                  flex-shrink: 0;
+                }
+
+                .minimal-contact-details p {
+                  margin: 0;
+                  font-size: 14px;
+                  color: #777;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                }
+
+                .minimal-contact-details a {
+                  font-size: 20px;
+                  font-weight: 800;
+                  color: #111;
+                  text-decoration: none;
+                  transition: color 0.3s ease;
+                }
+
+                .minimal-contact-details a:hover {
+                  color: var(--pvc-gold-dark);
+                }
+              </style>
+              <!-- Call Item -->
+              <div class="minimal-contact-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="minimal-contact-icon">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="minimal-contact-details">
+                  <p>Call Specialist</p>
+                  <a href="tel:+917579445566">+91 7579 44 55 66</a>
+                </div>
+              </div>
+              <!-- Email Item -->
+              <div class="minimal-contact-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="minimal-contact-icon">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="minimal-contact-details">
+                  <p>Email Official</p>
+                  <a href="mailto:Sales@pvcsecurity.com">Sales@pvcsecurity.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-lg-0 mt-5" data-aos="zoom-in">
+          <div class="contact-form-area">
+            <h3>Request a Consultation</h3>
+            <form action="#" method="POST">
+              <div class="input-group-custom">
+                <label>Your Name</label>
+                <input type="text" placeholder="Full Name">
+              </div>
+              <div class="input-group-custom">
+                <label>Email Address</label>
+                <input type="email" placeholder="email@example.com">
+              </div>
+              <div class="input-group-custom">
+                <label>Message</label>
+                <textarea placeholder="Tell us about your project..." rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn-form-submit">
+                Connect with Experts <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--===== CONTACT AREA ENDS =======-->
+
+  <!--===== FOOTER AREA STARTS =======-->
+  <footer class="footer3-section-area">
+    <div class="container">
+      <div class="row sp1 pb-0">
+        <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
+          <div class="logo-content">
+            <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" style="height: 100px; margin-bottom: 20px;">
+            <p>Upholding integrity and innovating the future of AIoT security. Providing world-class machine perception
+              and intelligence solutions globally.</p>
+            <ul class="d-flex mt-4 list-unstyled gap-3">
+              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="footer-list">
+            <h4
+              style="border-bottom: 2px solid var(--pvc-gold-mid); padding-bottom: 10px; color: var(--white-primary);">
+              Quick Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="index.html" style="color: rgba(255,255,255,0.8);">Home</a></li>
+              <li><a href="about-us.html" style="color: rgba(255,255,255,0.8);">About Us</a></li>
+              <li><a href="products.html" style="color: rgba(255,255,255,0.8);">Products</a></li>
+              <li><a href="services.html" style="color: rgba(255,255,255,0.8);">Services</a></li>
+              <li><a href="contact-us.html" style="color: rgba(255,255,255,0.8);">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="head">
+            <h4
+              style="border-bottom: 2px solid var(--pvc-gold-mid); padding-bottom: 10px; color: var(--white-primary);">
+              International</h4>
+          </div>
+          <div class="location-area mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone-volume footer-contact-icon"></i>
+            <a href="tel:+917579445566" style="color: var(--white-primary);">+91 7579 44 55 66</a>
+          </div>
+          <div class="location-area d-flex align-items-center gap-2">
+            <i class="fa-solid fa-envelope-open-text footer-contact-icon"></i>
+            <a href="mailto:Sales@pvcsecurity.com" style="color: var(--white-primary);">Sales@pvcsecurity.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5 pb-5 mt-5 border-top border-secondary">
+        <div class="col-12 text-center">
+          <p style="color: rgba(255,255,255,0.6)">© Copyright 2024 - PVC Security Systems. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--===== FOOTER AREA ENDS =======-->
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/aos.js"></script>
+  <script src="assets/js/plugins/fontawesome.js"></script>
+  <script src="assets/js/plugins/magnific-popup.js"></script>
+  <script src="assets/js/plugins/mobilemenu.js"></script>
+  <script src="assets/js/plugins/owlcarousel.min.js"></script>
+  <script src="assets/js/plugins/nice-select.js"></script>
+  <script src="assets/js/plugins/slick-slider.js"></script>
+  <script src="assets/js/plugins/circle-progress.js"></script>
+  <script src="assets/js/plugins/gsap.min.js"></script>
+  <script src="assets/js/plugins/counter.js"></script>
+  <script src="assets/js/plugins/Splitetext.js"></script>
+  <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+  <script src="assets/js/plugins/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Premium Icon Tilt Interaction
+    const interactiveElements = document.querySelectorAll('.service-icon, .progres-section-area .check, .site-logo img, .social-links a, .service-boxarea .icons, .contact-boxarea .img1, .product-img-box');
+    interactiveElements.forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        let tiltAmount = 6;
+        if (el.classList.contains('product-img-box')) tiltAmount = 15; // More pronounced for the hardware box
+
+        const rotateX = (y - centerY) / tiltAmount;
+        const rotateY = (centerX - x) / tiltAmount;
+        el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        el.style.transition = 'transform 0.1s ease-out';
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        el.style.transition = 'transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+      });
+    });
+  </script>
+
+  <!-- Cart Functionality -->
+  <link rel="stylesheet" href="assets/css/cart_styles.css">
+  <script src="assets/js/cart.js"></script>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919144555566" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Chat with us</span>
+  </a>
+
+  <style>
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 100px;
+      right: 25px;
+      z-index: 9998;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #ffffff !important;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none !important;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      background: #128C7E;
+      transform: scale(1.05);
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+      color: #ffffff !important;
+    }
+
+    .whatsapp-float i {
+      font-size: 22px;
+    }
+
+    .whatsapp-float span {
+      white-space: nowrap;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        bottom: 90px;
+        right: 20px;
+        padding: 12px 16px;
+        font-size: 13px;
+      }
+
+      .whatsapp-float i {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-float {
+        bottom: 80px;
+        right: 15px;
+        padding: 14px;
+        border-radius: 50%;
+      }
+
+      .whatsapp-float span {
+        display: none;
+      }
+
+      .whatsapp-float i {
+        font-size: 24px;
+      }
+    }
+  </style>
+
+  <!-- Search Icon Functionality -->
+  <script>
+    // Toggle search dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchBtn = document.querySelector('.nav-search-btn');
+      const searchWrapper = document.querySelector('.nav-search-wrapper');
+      const searchInput = document.querySelector('.nav-search-input');
+      
+      if (searchBtn && searchWrapper) {
+        searchBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          searchWrapper.classList.toggle('active');
+          if (searchWrapper.classList.contains('active') && searchInput) {
+            setTimeout(() => searchInput.focus(), 100);
+          }
+        });
+        
+        // Close when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!searchWrapper.contains(e.target)) {
+            searchWrapper.classList.remove('active');
+          }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            searchWrapper.classList.remove('active');
+          }
+        });
+      }
+    });
+    
+    // Handle search form submission
+    function handleNavSearch(e) {
+      e.preventDefault();
+      const input = document.querySelector('.nav-search-input');
+      const query = input ? input.value.trim() : '';
+      if (query) {
+        // Redirect to products page with search query
+        window.location.href = 'products.html?search=' + encodeURIComponent(query);
+      }
+      return false;
+    }
+    
+    // Mobile Search Functionality
+    (function() {
+      const mobileSearchBtn = document.querySelector('.mobile-search-btn');
+      const mobileSearchWrapper = document.querySelector('.mobile-search-wrapper');
+      const mobileSearchInput = document.querySelector('.mobile-search-input');
+      
+      if (mobileSearchBtn && mobileSearchWrapper) {
+        mobileSearchBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          mobileSearchWrapper.classList.toggle('active');
+          if (mobileSearchWrapper.classList.contains('active') && mobileSearchInput) {
+            setTimeout(() => mobileSearchInput.focus(), 100);
+          }
+        });
+        
+        // Close when clicking outside
+        document.addEventListener('click', function(e) {
+          if (mobileSearchWrapper && !mobileSearchWrapper.contains(e.target)) {
+            mobileSearchWrapper.classList.remove('active');
+          }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileSearchWrapper) {
+            mobileSearchWrapper.classList.remove('active');
+          }
+        });
+      }
+    })();
+    
+    // Handle mobile search form submission
+    function handleMobileSearch(e) {
+      e.preventDefault();
+      const input = document.querySelector('.mobile-search-input');
+      const query = input ? input.value.trim() : '';
+      if (query) {
+        window.location.href = 'products.html?search=' + encodeURIComponent(query);
+      }
+      return false;
+    }
+  </script>
+
+</body>
+
+</html>

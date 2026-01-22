@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Demo - PVC Global</title>
+    
+    <link rel="shortcut icon" href="assets/img/logo/pvc-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header_styles.css">
+    <link rel="stylesheet" href="assets/css/products_styles.css">
+    
+    <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+</head>
+<body>
+    <!-- Simple Header -->
+    <header style="background: #000; padding: 20px 0;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="color: #d4af37; margin: 0;">Cart System Demo</h2>
+                <a href="cart.html" style="color: #fff; text-decoration: none;">View Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Demo Products Section -->
+    <section style="padding: 80px 0; background: #f5f5f5;">
+        <div class="container">
+            <h1 style="text-align: center; margin-bottom: 50px;">Sample Products with Cart</h1>
+            
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="hik-product-card">
+                        <div class="hik-product-img">
+                            <img src="assets/img/products/network-products-update.png" alt="Camera 1">
+                        </div>
+                        <div class="hik-product-info">
+                            <h3>Premium Security Camera</h3>
+                            <p>Model: CAM-PRO-001</p>
+                            <p style="color: #d4af37; font-weight: bold; font-size: 20px;">₹12,999</p>
+                            <div class="hik-product-actions" style="margin-top: 20px;">
+                                <button class="hik-btn-main" style="flex: 1; border: none; cursor: pointer;" 
+                                        onclick="addToCart({
+                                            name: 'Premium Security Camera', 
+                                            model: 'CAM-PRO-001', 
+                                            price: 12999, 
+                                            image: 'assets/img/products/network-products-update.png'
+                                        })">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="hik-product-card">
+                        <div class="hik-product-img">
+                            <img src="assets/img/products/network-products-update.png" alt="Camera 2">
+                        </div>
+                        <div class="hik-product-info">
+                            <h3>Night Vision Camera</h3>
+                            <p>Model: CAM-NIGHT-002</p>
+                            <p style="color: #d4af37; font-weight: bold; font-size: 20px;">₹15,499</p>
+                            <div class="hik-product-actions" style="margin-top: 20px;">
+                                <button class="hik-btn-main" style="flex: 1; border: none; cursor: pointer;" 
+                                        onclick="addToCart({
+                                            name: 'Night Vision Camera', 
+                                            model: 'CAM-NIGHT-002', 
+                                            price: 15499, 
+                                            image: 'assets/img/products/network-products-update.png'
+                                        })">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="hik-product-card">
+                        <div class="hik-product-img">
+                            <img src="assets/img/products/network-products-update.png" alt="Camera 3">
+                        </div>
+                        <div class="hik-product-info">
+                            <h3>Wireless Smart Camera</h3>
+                            <p>Model: CAM-WIFI-003</p>
+                            <p style="color: #999; font-style: italic;">Price on Request</p>
+                            <div class="hik-product-actions" style="margin-top: 20px;">
+                                <button class="hik-btn-main" style="flex: 1; border: none; cursor: pointer;" 
+                                        onclick="addToCart({
+                                            name: 'Wireless Smart Camera', 
+                                            model: 'CAM-WIFI-003', 
+                                            price: 0, 
+                                            image: 'assets/img/products/network-products-update.png'
+                                        })">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div style="background: #fff; padding: 40px; margin-top: 60px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <h2 style="color: #d4af37; margin-bottom: 20px;">📝 How to Use This Cart System</h2>
+                
+                <ol style="line-height: 2;">
+                    <li><strong>Add Products:</strong> Click "Add to Cart" on any product above</li>
+                    <li><strong>View Cart:</strong> A floating button will appear showing cart count</li>
+                    <li><strong>Manage Cart:</strong> Click the floating button or "View Cart" link to go to cart page</li>
+                    <li><strong>Adjust Quantities:</strong> Use +/- buttons on cart page</li>
+                    <li><strong>Fill Details:</strong> Enter your mobile number, pincode, and select shipping method</li>
+                    <li><strong>Place RFQ:</strong> Click "Place RFQ on WhatsApp" to send quotation request</li>
+                </ol>
+
+                <div style="background: #fffbea; padding: 20px; border-left: 4px solid #d4af37; margin-top: 30px;">
+                    <h4 style="margin-top: 0;">💡 Important Notes:</h4>
+                    <ul style="margin-bottom: 0;">
+                        <li>Cart data is stored in your browser (localStorage)</li>
+                        <li>Items persist even after page refresh</li>
+                        <li>Update WhatsApp number in <code>assets/js/cart.js</code> (line ~290)</li>
+                        <li>Works on all modern browsers (Chrome, Firefox, Safari, Edge)</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="cart.html" style="display: inline-block; background: #25D366; color: #fff; padding: 15px 40px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
+                        <i class="fa-brands fa-whatsapp"></i> Go to Cart Page
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #000; color: #fff; padding: 30px 0; text-align: center;">
+        <div class="container">
+            <p style="margin: 0;">&copy; 2026 PVC Global. Cart System Demo</p>
+        </div>
+    </footer>
+
+    <!-- Cart Functionality -->
+    <link rel="stylesheet" href="assets/css/cart_styles.css">
+    <script src="assets/js/cart.js"></script>
+</body>
+</html>

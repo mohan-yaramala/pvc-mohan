@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - PVC Global Security</title>
+  <link rel="shortcut icon" href="assets/img/logo/pvc-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/plugins/aos.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/header_styles.css">
+  <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+  <style>
+    .contact-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/img/hero-contact.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      margin-top: 80px !important;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0;
+      text-align: left;
+      color: #fff;
+    }
+
+    .contact-hero h1 {
+      font-size: 60px;
+      font-weight: 600;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .contact-hero p {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .office-card {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 24px;
+      padding: 30px;
+      height: 100%;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    }
+
+    .office-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(249, 198, 109, 0.05), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .office-card:hover {
+      border-color: var(--pvc-gold-mid);
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .office-card:hover::before {
+      opacity: 1;
+    }
+
+    .office-card h3 {
+      color: #111;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 800;
+      position: relative;
+    }
+
+    .office-icon {
+      width: 65px;
+      height: 65px;
+      background: linear-gradient(135deg, var(--pvc-gold-mid), var(--pvc-gold-dark));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 24px;
+      transition: var(--transition);
+      box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
+    }
+
+    .office-card:hover .office-icon {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    .contact-info-list li {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 15px;
+      color: #555;
+      font-size: 16px;
+      transition: var(--transition);
+    }
+
+    .contact-info-list li:hover {
+      color: #000;
+      transform: translateX(5px);
+    }
+
+    .contact-info-list i {
+      color: var(--pvc-gold-dark);
+      font-size: 18px;
+    }
+
+    .contact-form-section {
+      background: #fbfbfb;
+      padding: 120px 0;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 60px;
+      border-radius: 32px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-control {
+      background: #f8f9fa;
+      border: 2px solid transparent;
+      color: #000;
+      padding: 18px 25px;
+      border-radius: 12px;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .form-control:focus {
+      background: #fff;
+      border-color: var(--pvc-gold-mid);
+      box-shadow: 0 10px 25px rgba(249, 198, 109, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .btn-submit {
+      background: transparent;
+      color: var(--pvc-gold-dark);
+      border: 2px solid var(--pvc-gold-dark);
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px !important;
+      transition: all 0.4s ease;
+      width: 100%;
+      margin-top: 30px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-submit:hover {
+      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important;
+      background-size: 200% auto !important;
+      color: #000 !important;
+      border-color: transparent !important;
+      box-shadow: 0 8px 20px rgba(184, 134, 11, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .branch-card {
+      background: #fff;
+      padding: 35px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      border: 1px solid #f0f0f0;
+      transition: var(--transition);
+      border-left: 5px solid var(--pvc-gold-dark);
+    }
+
+    .branch-card:hover {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      transform: translateX(10px);
+      border-left-width: 10px;
+    }
+
+    .branch-card h4 {
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .social-links a.office-icon {
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+      border-radius: 12px;
+    }
+
+    .breadcrumb-area {
+      background: #f8f9fa;
+      padding: 15px 0;
+      color: #666;
+    }
+
+    .breadcrumb-area a {
+      color: #333;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!--=====HEADER START=======-->
+  <header>
+    <div class="header-area homepage3 header header-sticky" id="header">
+      <div class="container-fluid" style="padding: 0 50px;">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="header-elements">
+              <div class="site-logo">
+                <a href="index.html"><img src="assets/img/logo/pvc-logo.png" alt="PVC Logo"></a>
+              </div>
+              <div class="main-menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li class="has-megamenu"><a href="products.html">Products</a>
+                    <div class="mega-menu-wrapper">
+                      <div class="container-fluid" style="padding: 0 50px;">
+                        <div class="row">
+                          <!-- Column 1 -->
+                          <div class="col-xl-2 col-lg-3">
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-video"></i> Network Products</h4>
+                              <ul>
+                                <li><a href="network-cameras.html">Network Cameras</a>
+                                </li>
+                                <li><a href="product-category.html?cat=nvr">Network
+                                    Video Recorders (NVR)</a></li>
+                                <li><a href="product-category.html?cat=storage">Data
+                                    Storage</a></li>
+                                <li><a href="product-category.html?cat=switches">Network
+                                    Switches</a></li>
+                              </ul>
+                            </div>
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-microchip"></i> Turbo HD Products
+                              </h4>
+                              <ul>
+                                <li><a href="turbo-hd.html">Turbo HD Cameras</a></li>
+                                <li><a href="product-category.html?cat=dvr">Digital
+                                    Video Recorders (DVR)</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Column 2 -->
+                          <div class="col-xl-2 col-lg-3">
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-id-card"></i> Access Control</h4>
+                              <ul>
+                                <li><a href="access-control.html">Access Control
+                                    Systems</a></li>
+                                <li><a href="product-category.html?cat=gates">Speed
+                                    Gates & Turnstiles</a></li>
+                                <li><a href="product-category.html?cat=face">Face
+                                    Recognition</a></li>
+                              </ul>
+                            </div>
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-phone-flip"></i> Video Intercom
+                              </h4>
+                              <ul>
+                                <li><a href="video-intercom.html">IP Video Intercom</a>
+                                </li>
+                                <li><a href="video-intercom.html">2-Wire Intercom</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Column 3 -->
+                          <div class="col-xl-2 col-lg-3">
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-bell"></i> Alarm</h4>
+                              <ul>
+                                <li><a href="alarm-systems.html">Intrusion Alarm</a>
+                                </li>
+                                <li><a href="alarm-systems.html">Emergency Alarm</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-temperature-half"></i> Thermal
+                                Products</h4>
+                              <ul>
+                                <li><a href="thermal-products.html">Thermal Cameras</a>
+                                </li>
+                                <li><a href="thermal-products.html">HeatPro Series</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Column 4 -->
+                          <div class="col-xl-2 col-lg-3">
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-tv"></i> Display & Control</h4>
+                              <ul>
+                                <li><a href="display-control.html">Commercial
+                                    Displays</a></li>
+                                <li><a href="display-control.html">Video Walls</a></li>
+                                <li><a href="display-control.html">Monitors</a></li>
+                              </ul>
+                            </div>
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-code"></i> Software</h4>
+                              <ul>
+                                <li><a href="software.html">HikCentral Pro</a></li>
+                                <li><a href="software.html">Hik-Connect</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Column 5 -->
+                          <div class="col-xl-4 col-lg-3">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="mega-category">
+                                  <h4><i class="fa-solid fa-car"></i> Intelligent
+                                    Traffic</h4>
+                                  <ul>
+                                    <li><a href="intelligent-traffic.html">Checkpoints</a>
+                                    </li>
+                                    <li><a href="intelligent-traffic.html">LPR
+                                        Cameras</a></li>
+                                    <li><a href="intelligent-traffic.html">Radar
+                                        Sensors</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="mega-category">
+                                  <h4><i class="fa-solid fa-bullhorn"></i> Audio
+                                    Products</h4>
+                                  <ul>
+                                    <li><a href="audio-products.html">Network
+                                        Speakers</a></li>
+                                    <li><a href="audio-products.html">Public
+                                        Address</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="col-12 mt-3">
+                                <div class="mega-category"
+                                  style="background: rgba(212, 175, 55, 0.05); padding: 15px; border-left: 3px solid var(--pvc-gold-mid);">
+                                  <h4 style="margin-bottom: 10px;">Featured Solution
+                                  </h4>
+                                  <p style="font-size: 13px; margin-bottom: 15px;">
+                                    AcuSense Technology: Advanced threat detection
+                                    for smarter security.</p>
+                                  <a href="#" class="mega-view-all"
+                                    style="font-size: 13px; color: var(--pvc-gold-mid);">Learn
+                                    Technology <i class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mega-menu-footer">
+                          <div class="mega-menu-footer-content">PVC AIoT Portfolio: Network
+                            Cameras, NVR, Access Control, Alarm, Thermal, and Intelligent
+                            Solutions.</div>
+                          <a href="products.html" class="mega-view-all" style="color: var(--pvc-gold-mid);">Explore All
+                            Products <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="has-megamenu"><a href="services.html">Services</a>
+                    <div class="mega-menu-wrapper">
+                      <div class="container-fluid" style="padding: 0 50px;">
+                        <div class="row">
+                          <!-- Column 1: Support & Learning -->
+                          <div class="col-xl-3 col-lg-4">
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-toolbox"></i> Support & Tools</h4>
+                              <ul>
+                                <li><a href="services.html">Online Tools</a></li>
+                                <li><a href="services.html">Download Center</a></li>
+                                <li><a href="services.html">Calculator</a></li>
+                              </ul>
+                            </div>
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-chalkboard-user"></i> Learning
+                              </h4>
+                              <ul>
+                                <li><a href="services.html">Training Center</a></li>
+                                <li><a href="services.html">Video Gallery</a></li>
+                                <li><a href="services.html">Knowledge Base</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Column 2: Maintenance & Contact -->
+                          <div class="col-xl-3 col-lg-4">
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-rotate"></i> Maintenance</h4>
+                              <ul>
+                                <li><a href="services.html">RMA Service</a></li>
+                                <li><a href="services.html">Service Policy</a></li>
+                                <li><a href="services.html">Repair Status</a></li>
+                              </ul>
+                            </div>
+                            <div class="mega-category">
+                              <h4><i class="fa-solid fa-headset"></i> Contact Support</h4>
+                              <ul>
+                                <li><a href="services.html">Global Call Center</a></li>
+                                <li><a href="services.html">Technical Support</a></li>
+                                <li><a href="contact-us.html">Sales Inquiry</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Column 3: Featured -->
+                          <div class="col-xl-6 col-lg-4">
+                            <div class="mega-support-featured"
+                              style="text-align: center; padding: 25px; background: rgba(212, 175, 55, 0.05); border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.1); height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                              <img src="assets/img/hero-support.jpg" alt="Support"
+                                style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;"
+                                onerror="this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80'">
+                              <h4 style="color: var(--pvc-gold-mid); font-size: 20px; margin-bottom: 10px;">
+                                Support Center</h4>
+                              <p
+                                style="font-size: 14px; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">
+                                Get expert assistance for all your PVC products through
+                                our global support network.</p>
+                              <a href="services.html" class="mega-view-all"
+                                style="font-weight: 600; color: var(--pvc-gold-mid);">Visit
+                                Support Center <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mega-menu-footer">
+                          <div class="mega-menu-footer-content">PVC Global Service: Tools,
+                            Documentation, Training, and Expert Technical Assistance.</div>
+                          <a href="services.html" class="mega-view-all" style="color: var(--pvc-gold-mid);">Explore
+                            Services <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="contact-us.html" class="active">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header-right-icons">
+
+
+
+              </div>
+              <!-- CLEAN MOBILE TOGGLE -->
+              <div class="clean-mobile-toggle d-lg-none">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLEAN MOBILE SIDEBAR -->
+    <div class="clean-mobile-overlay"></div>
+    <div class="clean-mobile-sidebar">
+      <div class="clean-sidebar-header">
+        <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" class="clean-logo">
+        <div class="clean-close-btn"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+      <div class="clean-mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact-us.html" class="active">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!--=====HEADER END =======-->
+
+  <section class="contact-hero">
+    <div class="container">
+      <h1 data-aos="fade-up">Get In Touch</h1>
+      <p data-aos="fade-up" data-aos-delay="200">We are here to secure your future with world-class AIoT solutions.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb-area">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0" style="background: transparent; padding: 0;">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <section class="sp1">
+    <div class="container">
+      <div class="row">
+        <!-- Head Office -->
+        <div class="col-lg-6 mb-4">
+          <div class="office-card" data-aos="fade-up">
+            <div class="office-icon"><i class="fa-solid fa-building"></i></div>
+            <h3>Head Office</h3>
+            <p class="mb-4">PVC AIoT PRIVATE LIMITED.</p>
+            <ul class="contact-info-list">
+              <li><i class="fa-solid fa-location-dot"></i> K-57 Ground Floor Krishna Park Extn, Til, West
+                Delhi 110018 CIN : New Delhi</li>
+              <li><i class="fa-solid fa-envelope"></i> Sales@pvc.com</li>
+              <li><i class="fa-solid fa-phone"></i> +91 7579 44 55 66</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Regional Office -->
+        <div class="col-lg-6 mb-4">
+          <div class="office-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="office-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3>Regional Office</h3>
+            <p class="mb-4">PVC AIoT PRIVATE LIMITED.</p>
+            <ul class="contact-info-list">
+              <li><i class="fa-solid fa-location-dot"></i> H No - 7-1-117, Flat No:-403, Ananda Nilayam
+                Apartment , Back Side, Gurudwara Saheb , Ameerpet , Hyderabad. TS. India. Pin – 500 016
+              </li>
+              <li><i class="fa-solid fa-envelope"></i> Ram@pvc.aiot.com</li>
+              <li><i class="fa-solid fa-phone"></i> +91 1234567890</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--
+  <section class="branch-offices">
+    <div class="container">
+      <h2 class="text-center mb-5">Branch Offices</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="branch-card">
+            <h4>Vijayawada Branch</h4>
+            <p>PVC AIoT PRIVATE LIMITED.<br>
+              DR. No.- 46-3-34, B.H. Nagar, Gundala, Vijayawada, Andhra Pradesh - 520004</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="branch-card">
+            <h4>Noida (Delhi-NCR)</h4>
+            <p>PVC AIoT PRIVATE LIMITED.<br>
+              A-12, Sector 4, NOIDA - 201301, India</p>
+            <p><small>Enquiries: 18001026526</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="form-container">
+            <h2>Have queries, doubts or suggestions?</h2>
+            <p class="mb-4">Raise an entry by filling out the form below, and we'll be more than happy to
+              help.</p>
+            <form>
+              <div class="row">
+                <div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Name*">
+                </div>
+                <div class="col-md-6 mb-3"><input type="email" class="form-control" placeholder="E-mail*"></div>
+                <div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Contact No*"></div>
+                <div class="col-md-6 mb-3">
+                  <select class="form-control">
+                    <option>Query Type*</option>
+                  </select>
+                </div>
+                <div class="col-12 mb-3"><textarea class="form-control" rows="4" placeholder="Query*"></textarea>
+                </div>
+                <div class="col-12"><button class="btn-submit">Submit Request</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--=====FOOTER START=======-->
+  <footer class="footer3-section-area">
+    <div class="container">
+      <div class="row sp1 pb-0">
+        <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
+          <div class="logo-content">
+            <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" style="height: 100px; margin-bottom: 20px;">
+            <p>Upholding integrity and innovating the future of AIoT security. Providing world-class machine
+              perception
+              and intelligence solutions globally.</p>
+            <ul class="d-flex mt-4 list-unstyled gap-3">
+              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="footer-list">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="head">
+            <h4>International</h4>
+          </div>
+          <div class="location-area mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-phone-volume footer-contact-icon"></i>
+            <a href="tel:+917579445566">+91 7579 44 55 66</a>
+          </div>
+          <div class="location-area d-flex align-items-center gap-2">
+            <i class="fa-solid fa-envelope-open-text footer-contact-icon"></i>
+            <a href="mailto:Sales@pvcsecurity.com">Sales@pvcsecurity.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5 pb-5 mt-5 border-top border-secondary">
+        <div class="col-12 text-center">
+          <p>© Copyright 2024 - PVC Security Systems. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--=====FOOTER END =======-->
+
+
+
+
+
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/aos.js"></script>
+  <script src="assets/js/plugins/fontawesome.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Interactive Icon Tilt (Icons Only)
+    const icons = document.querySelectorAll('.office-icon, .social-links a');
+    icons.forEach(icon => {
+      icon.addEventListener('mousemove', e => {
+        const rect = icon.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 5;
+        const rotateY = (centerX - x) / 5;
+
+        icon.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+      });
+
+      icon.addEventListener('mouseleave', () => {
+        icon.style.transform = 'perspective(500px) rotateX(0) rotateY(0) scale(1)';
+      });
+    });
+
+    // Form Container Effects
+    const formContainer = document.querySelector('.form-container');
+    const inputs = document.querySelectorAll('.form-control');
+
+    // Enhanced Outer Glow on Container when inputs focused
+    inputs.forEach(input => {
+      input.addEventListener('focus', () => {
+        formContainer.style.boxShadow = '0 0 50px rgba(249, 198, 109, 0.5)';
+        formContainer.style.borderColor = 'var(--pvc-gold-mid)';
+      });
+      input.addEventListener('blur', () => {
+        formContainer.style.boxShadow = '0 20px 60px rgba(0,0,0,0.05)';
+        formContainer.style.borderColor = 'rgba(0,0,0,0.05)';
+      });
+    });
+
+    // Submit Animation: Move Up
+    const submitBtn = document.querySelector('.btn-submit');
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      formContainer.style.transition = 'all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+      formContainer.style.transform = 'translateY(-150px)';
+      formContainer.style.opacity = '0';
+
+      setTimeout(() => {
+        alert('Message sent successfully!');
+        formContainer.style.transform = 'translateY(0)';
+        formContainer.style.opacity = '1';
+      }, 800);
+    });
+  </script>
+
+</body>
+
+</html>
