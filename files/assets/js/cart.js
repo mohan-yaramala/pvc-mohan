@@ -403,14 +403,8 @@ function placeRFQOnWhatsApp() {
  * Initialize cart functionality on page load
  */
 document.addEventListener('DOMContentLoaded', function() {
-    // CHANGE 1: Clear cart on new session start (prevents old localStorage cart from persisting)
-    // Keeps cart usable across pages during the same browsing session.
-    const CART_STORAGE_KEY = 'pvcCart';
-    const CART_SESSION_FLAG_KEY = 'pvcCartSessionActive';
-    if (!sessionStorage.getItem(CART_SESSION_FLAG_KEY)) {
-        localStorage.removeItem(CART_STORAGE_KEY);
-        sessionStorage.setItem(CART_SESSION_FLAG_KEY, '1');
-    }
+    // Cart items persist across sessions automatically via localStorage
+    updateFloatingCartButton();
 
     // Update floating cart button on all pages
     updateFloatingCartButton();

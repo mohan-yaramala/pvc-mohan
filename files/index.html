@@ -1348,6 +1348,34 @@
         min-height: auto;
       }
     }
+
+    /* Mobile Responsive - Scalability Cards */
+    @media (max-width: 576px) {
+      .scale-card {
+        padding: 30px 20px;
+      }
+
+      .scale-card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .scale-card p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .scale-icon-box {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+      }
+
+      .scale-icon-box i {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 
@@ -1610,18 +1638,17 @@
 
       <div class="row g-4">
         <!-- Row 1 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up">
           <a href="network-cameras.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/network-products-update.png" alt="Network Products">
               <h3>Network Products</h3>
-              <div class="product-view-btn">
-                View Products <i class="fa-solid fa-arrow-right"></i>
-              </div>
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <!-- COMMENTED OUT: Turbo HD Products -->
+        <!--
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="100">
           <a href="turbo-hd.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/turbo-hd-update.png" alt="Turbo HD Products">
@@ -1632,7 +1659,10 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        -->
+        <!-- COMMENTED OUT: Access Control -->
+        <!--
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="200">
           <a href="access-control.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/access-control-update.png" alt="Access Control">
@@ -1643,20 +1673,20 @@
             </div>
           </a>
         </div>
+        -->
 
         <!-- Row 2 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up">
           <a href="video-intercom.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/video-intercom-update.png" alt="Video Intercom">
               <h3>Video Intercom</h3>
-              <div class="product-view-btn">
-                View Products <i class="fa-solid fa-arrow-right"></i>
-              </div>
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <!-- COMMENTED OUT: Speed Gates & Turnstiles -->
+        <!--
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="100">
           <a href="access-control.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/speed-gates-update.png" alt="Speed Gates & Turnstiles">
@@ -1667,42 +1697,36 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        -->
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="200">
           <a href="product-category.html?cat=networking" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/networking-update.png" alt="Networking">
               <h3>Networking</h3>
-              <div class="product-view-btn">
-                View Products <i class="fa-solid fa-arrow-right"></i>
-              </div>
             </div>
           </a>
         </div>
 
         <!-- Row 3 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up">
           <a href="alarm-systems.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/alarm-system-update.png" alt="Alarm System">
               <h3>Alarm Systems</h3>
-              <div class="product-view-btn">
-                View Products <i class="fa-solid fa-arrow-right"></i>
-              </div>
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="100">
           <a href="audio-products.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/Audio Products.jpeg" alt="Audio Products">
               <h3>Audio Products</h3>
-              <div class="product-view-btn">
-                View Products <i class="fa-solid fa-arrow-right"></i>
-              </div>
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <!-- COMMENTED OUT: Sensing Products -->
+        <!--
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="200">
           <a href="product-category.html?cat=sensing" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/Sensing Products.jpeg" alt="Sensing Products">
@@ -1713,20 +1737,20 @@
             </div>
           </a>
         </div>
+        -->
 
         <!-- Row 4 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up">
           <a href="intelligent-traffic.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/Intelligent Traffic.jpeg" alt="Intelligent Traffic">
               <h3>Intelligent Traffic</h3>
-              <div class="product-view-btn">
-                View Products <i class="fa-solid fa-arrow-right"></i>
-              </div>
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <!-- COMMENTED OUT: Parking Management -->
+        <!--
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="100">
           <a href="product-category.html?cat=parking" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/Parking Management.png" alt="Parking Management">
@@ -1737,7 +1761,10 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        -->
+        <!-- COMMENTED OUT: Onboard Security -->
+        <!--
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="200">
           <a href="product-category.html?cat=onboard" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/Onboard Security.jpeg" alt="Onboard Security">
@@ -1748,9 +1775,11 @@
             </div>
           </a>
         </div>
+        -->
 
-        <!-- Row 5 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <!-- COMMENTED OUT: Row 5 -->
+        <!--
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up">
           <a href="product-category.html?cat=pds" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/Premises Distribution System.jpeg" alt="Premises Distribution System">
@@ -1761,7 +1790,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="100">
           <a href="software.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/Software.jpeg" alt="Software">
@@ -1772,7 +1801,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="200">
           <a href="product-category.html?cat=hilook" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/HiLook.jpeg" alt="HiLook">
@@ -1784,8 +1813,8 @@
           </a>
         </div>
 
-        <!-- Row 6 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        Row 6
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up">
           <a href="product-category.html?cat=accessories" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/Accessories.jpeg" alt="Accessories">
@@ -1796,7 +1825,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="100">
           <a href="display-control.html" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/display-and-control-update.png" alt="Display and Control">
@@ -1807,20 +1836,17 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up" data-aos-delay="200">
           <a href="product-category.html?cat=led" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/led-displays-update.png" alt="LED Displays">
               <h3>LED Displays</h3>
-              <div class="product-view-btn">
-                View Products <i class="fa-solid fa-arrow-right"></i>
-              </div>
             </div>
           </a>
         </div>
 
-        <!-- Row 7 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        COMMENTED OUT: Row 7 and remaining products
+        <div class="col-lg-4 col-md-6 col-6" data-aos="fade-up">
           <a href="product-category.html?cat=ifpd" class="d-block h-100 text-decoration-none">
             <div class="cat-card">
               <img src="assets/img/products/interactive-flat-panels-update.png"
@@ -1832,6 +1858,7 @@
             </div>
           </a>
         </div>
+        -->
       </div>
   </section>
   <!--===== ABOUT AREA STARTS =======-->
@@ -2097,7 +2124,7 @@
               <div class="eco-icon-top">
                 <i class="fa-solid fa-earth-americas" style="color: #fff; font-size: 32px;"></i>
               </div>
-              <span class="eco-header-subtitle">Global Impact</span>
+              <span class="eco-header-subtitle">Stats</span>
               <h2 class="eco-header-title">Connecting a Global Security Ecosystem</h2>
               <div class="eco-header-divider"></div>
             </div>
@@ -2105,8 +2132,10 @@
         </div>
 
         <div class="row g-4">
+          <!-- COMMENTED OUT: 4 Global Impact Cards -->
+          <!--
           <!-- Item 1: Clients -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up">
+          <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up">
             <div class="counter-boxarea text-center"
               style="padding: 40px 30px; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease; position: relative;"
               onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--pvc-gold-mid)'; this.style.boxShadow='0 15px 40px rgba(184, 134, 11, 0.15)';"
@@ -2125,7 +2154,7 @@
             </div>
           </div>
           <!-- Item 2: Nodes -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-delay="200">
             <div class="counter-boxarea text-center"
               style="padding: 40px 30px; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease; position: relative;"
               onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--pvc-gold-mid)'; this.style.boxShadow='0 15px 40px rgba(184, 134, 11, 0.15)';"
@@ -2144,7 +2173,7 @@
             </div>
           </div>
           <!-- Item 3: Partnerships -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-delay="400">
             <div class="counter-boxarea text-center"
               style="padding: 40px 30px; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease; position: relative;"
               onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--pvc-gold-mid)'; this.style.boxShadow='0 15px 40px rgba(184, 134, 11, 0.15)';"
@@ -2163,7 +2192,7 @@
             </div>
           </div>
           <!-- Item 4: Global Markets -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-delay="600">
             <div class="counter-boxarea text-center"
               style="padding: 40px 30px; background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.4s ease; position: relative;"
               onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--pvc-gold-mid)'; this.style.boxShadow='0 15px 40px rgba(184, 134, 11, 0.15)';"
@@ -2188,6 +2217,7 @@
   <!--===== CLIENTS AREA ENDS =======-->
 
   <!--===== SCALABILITY AREA STARTS =======-->
+  <!-- COMMENTED OUT: SCALABILITY SECTION
   <section id="scalability" class="sp1" style="background: #ffffff; padding: 100px 0;">
     <div class="container">
       <div class="row align-items-center mb-5">
@@ -2208,9 +2238,9 @@
         </div>
       </div>
 
-      <div class="row g-4">
-        <!-- Scale 1: Residential -->
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-4" style="display: none;">
+        Scale 1: Residential
+        <div class="col-lg-4 col-md-4 col-4" data-aos="fade-up" data-aos-delay="100">
           <div class="scale-card">
             <div class="scale-icon-box">
               <i class="fa-solid fa-house-lock"></i>
@@ -2224,8 +2254,8 @@
           </div>
         </div>
 
-        <!-- Scale 2: Commercial -->
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        Scale 2: Commercial
+        <div class="col-lg-4 col-md-4 col-4" data-aos="fade-up" data-aos-delay="200">
           <div class="scale-card">
             <div class="scale-icon-box">
               <i class="fa-solid fa-building-shield"></i>
@@ -2239,8 +2269,8 @@
           </div>
         </div>
 
-        <!-- Scale 3: Enterprise -->
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        Scale 3: Enterprise
+        <div class="col-lg-4 col-md-4 col-4" data-aos="fade-up" data-aos-delay="300">
           <div class="scale-card">
             <div class="scale-icon-box">
               <i class="fa-solid fa-city"></i>
@@ -2480,7 +2510,34 @@
 
             @media (max-width: 991px) {
               .feedback-creative-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+              }
+            }
+
+            @media (max-width: 576px) {
+              .feedback-creative-grid {
+                display: flex;
+                overflow-x: auto;
+                gap: 15px;
+                padding: 20px 0;
+                scroll-behavior: smooth;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+              }
+              
+              .feedback-creative-grid::-webkit-scrollbar {
+                height: 4px;
+              }
+              
+              .feedback-creative-grid::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+              }
+              
+              .feedback-creative-grid::-webkit-scrollbar-thumb {
+                background: var(--pvc-gold-mid);
+                border-radius: 10px;
               }
             }
 
@@ -2496,7 +2553,25 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
-              min-height: 380px;
+              aspect-ratio: 1;
+            }
+
+            @media (max-width: 768px) {
+              .deep-glass-card {
+                padding: 35px 25px;
+                aspect-ratio: 1;
+              }
+            }
+
+            @media (max-width: 576px) {
+              .deep-glass-card {
+                padding: 15px 10px;
+                aspect-ratio: 1;
+                flex: 0 0 80%;
+                max-width: 280px;
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+              }
             }
 
             .deep-glass-card::before {
@@ -2535,6 +2610,14 @@
               transition: all 0.5s ease;
             }
 
+            @media (max-width: 576px) {
+              .big-quote-bg {
+                font-size: 60px;
+                top: 5px;
+                right: 5px;
+              }
+            }
+
             .deep-glass-card:hover .big-quote-bg {
               opacity: 0.3;
               transform: scale(1.1);
@@ -2549,6 +2632,13 @@
               z-index: 2;
             }
 
+            @media (max-width: 576px) {
+              .feedback-text {
+                font-size: 14px;
+                line-height: 1.6;
+              }
+            }
+
             .author-node {
               display: flex;
               align-items: center;
@@ -2556,6 +2646,14 @@
               margin-top: 35px;
               padding-top: 25px;
               border-top: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            @media (max-width: 576px) {
+              .author-node {
+                gap: 8px;
+                margin-top: 12px;
+                padding-top: 8px;
+              }
             }
 
             .node-dot {
@@ -2575,19 +2673,35 @@
               letter-spacing: 1px;
             }
 
+            @media (max-width: 576px) {
+              .author-details-wrap span {
+                font-size: 11px;
+                letter-spacing: 0.3px;
+              }
+            }
+
             .author-details-wrap p {
               margin: 0;
               font-size: 14px;
               color: #888;
               font-weight: 600;
             }
+
+            @media (max-width: 576px) {
+              .author-details-wrap p {
+                font-size: 10px;
+              }
+            }
           </style>
           <div class="creative-feedback-title">
-            <span
-              style="text-transform: uppercase; letter-spacing: 5px; color: var(--pvc-gold-mid); font-weight: 700; font-size: 13px; margin-bottom: 10px; display: block;">Voice
-              of Trust</span>
-            <h2 class="text-anime-style-3">What Our Customers Say</h2>
-            <div class="accent-line"></div>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px;">
+              <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);">
+                <i class="fa-solid fa-message" style="color: #fff; font-size: 32px;"></i>
+              </div>
+              <p style="color: #555; font-size: 16px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin: 0;">Voice of Trust</p>
+              <h4 style="font-size: 36px; font-weight: 900; color: var(--pvc-gold-dark); margin: 0; letter-spacing: 1px; text-transform: uppercase;">What Our Customers Say</h4>
+              <div style="width: 80px; height: 3px; background: linear-gradient(to right, transparent, var(--pvc-gold-dark), transparent); margin-top: 10px;"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -2640,10 +2754,161 @@
   </section>
   <!--===== FEEDBACK AREA ENDS =======-->
 
+  <script>
+    // Auto-scroll feedback cards on mobile like Strategic Partners carousel
+    document.addEventListener('DOMContentLoaded', function() {
+      const feedbackGrid = document.querySelector('.feedback-creative-grid');
+      if (!feedbackGrid || window.innerWidth > 576) return;
+
+      let scrollPosition = 0;
+      const cardWidth = 280; // Match max-width from CSS
+      const gap = 15; // Match gap from CSS
+      const totalCardWidth = cardWidth + gap;
+      const totalWidth = feedbackGrid.scrollWidth;
+
+      // Start auto-scroll
+      const autoScroll = setInterval(() => {
+        scrollPosition += totalCardWidth;
+        
+        // Smooth scroll
+        feedbackGrid.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
+
+        // Reset to beginning for infinite loop
+        if (scrollPosition >= totalWidth - feedbackGrid.offsetWidth - totalCardWidth) {
+          setTimeout(() => {
+            feedbackGrid.scrollTo({
+              left: 0,
+              behavior: 'auto'
+            });
+            scrollPosition = 0;
+          }, 800);
+        }
+      }, 5000); // Auto-scroll every 5 seconds
+
+      // Pause on hover
+      feedbackGrid.addEventListener('mouseenter', () => {
+        clearInterval(autoScroll);
+      });
+
+      // Resume on mouse leave
+      feedbackGrid.addEventListener('mouseleave', () => {
+        const newAutoScroll = setInterval(() => {
+          scrollPosition += totalCardWidth;
+          feedbackGrid.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+          });
+
+          if (scrollPosition >= totalWidth - feedbackGrid.offsetWidth - totalCardWidth) {
+            setTimeout(() => {
+              feedbackGrid.scrollTo({
+                left: 0,
+                behavior: 'auto'
+              });
+              scrollPosition = 0;
+            }, 800);
+          }
+        }, 5000);
+      });
+
+      // Restart on window resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth <= 576) {
+          clearInterval(autoScroll);
+          scrollPosition = 0;
+          feedbackGrid.scrollTo({ left: 0, behavior: 'auto' });
+          autoScroll;
+        }
+      });
+    });
+  </script>
+
   <!--===== CONTACT AREA STARTS =======-->
   <section id="contact-us" class="sp1" style="background-color: var(--white-secondary);">
     <div class="container">
-      <div class="row align-items-center">
+      <style>
+        @media (max-width: 768px) {
+          .contact-section-mobile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .contact-section-mobile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+          }
+
+          .contact-section-mobile .col-lg-6:first-child {
+            padding-right: 0;
+          }
+
+          .contact-section-mobile .col-lg-6:last-child {
+            padding-left: 0;
+            margin-top: 0 !important;
+          }
+
+          .contact-section-mobile .contact-header h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+
+          .contact-section-mobile .contact-header p {
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
+
+          .contact-section-mobile .space32 {
+            height: 15px;
+          }
+
+          .contact-section-mobile .minimal-contact-item {
+            margin-bottom: 20px;
+          }
+
+          .contact-section-mobile .minimal-contact-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+          }
+
+          .contact-section-mobile .minimal-contact-details p {
+            font-size: 12px;
+            letter-spacing: 1px;
+          }
+
+          .contact-section-mobile .minimal-contact-details a {
+            font-size: 18px;
+            font-weight: 800;
+          }
+
+          .contact-section-mobile .input-group-custom {
+            margin-bottom: 15px;
+          }
+
+          .contact-section-mobile .input-group-custom label {
+            font-size: 14px;
+          }
+
+          .contact-section-mobile .input-group-custom input,
+          .contact-section-mobile .input-group-custom textarea {
+            font-size: 14px;
+            padding: 12px 14px;
+          }
+
+          .contact-section-mobile .btn-form-submit {
+            font-size: 14px;
+            padding: 12px 30px;
+          }
+        }
+      </style>
+      <div class="row align-items-center contact-section-mobile">
         <div class="col-lg-6" data-aos="fade-right">
           <div class="contact-header heading6">
             <span class="section-tag">Get In Touch</span>
@@ -2667,30 +2932,30 @@
                 }
 
                 .minimal-contact-icon {
-                  width: 50px;
-                  height: 50px;
+                  width: 60px;
+                  height: 60px;
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   border-radius: 12px;
                   background: rgba(212, 175, 55, 0.1);
                   color: var(--pvc-gold-dark);
-                  font-size: 22px;
+                  font-size: 28px;
                   flex-shrink: 0;
                 }
 
                 .minimal-contact-details p {
                   margin: 0;
-                  font-size: 14px;
+                  font-size: 13px;
                   color: #777;
                   font-weight: 600;
                   text-transform: uppercase;
-                  letter-spacing: 1px;
+                  letter-spacing: 2px;
                 }
 
                 .minimal-contact-details a {
-                  font-size: 20px;
-                  font-weight: 800;
+                  font-size: 22px;
+                  font-weight: 900;
                   color: #111;
                   text-decoration: none;
                   transition: color 0.3s ease;
@@ -2725,6 +2990,100 @@
         </div>
         <div class="col-lg-6 mt-lg-0 mt-5" data-aos="zoom-in">
           <div class="contact-form-area">
+            <style>
+              .contact-form-area h3 {
+                font-size: 32px;
+                font-weight: 900;
+                color: #111;
+                margin-bottom: 30px;
+              }
+
+              .input-group-custom {
+                margin-bottom: 25px;
+              }
+
+              .input-group-custom label {
+                font-size: 16px;
+                font-weight: 700;
+                color: #222;
+                margin-bottom: 10px;
+                display: block;
+              }
+
+              .input-group-custom input,
+              .input-group-custom textarea {
+                width: 100%;
+                padding: 10px 14px;
+                font-size: 15px;
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+                background: #f9f9f9;
+                transition: all 0.3s ease;
+                min-height: 40px;
+              }
+
+              .input-group-custom textarea {
+                min-height: 80px;
+                resize: vertical;
+              }
+
+              .input-group-custom input:focus,
+              .input-group-custom textarea:focus {
+                outline: none;
+                border-color: var(--pvc-gold-mid);
+                background: #fff;
+              }
+
+              .btn-form-submit {
+                font-size: 16px;
+                font-weight: 700;
+                padding: 12px 32px;
+                margin-top: 10px;
+                letter-spacing: 1px;
+                display: inline-block;
+                width: auto;
+              }
+
+              @media (max-width: 576px) {
+                .contact-form-area {
+                  padding: 0 15px;
+                }
+
+                .contact-form-area h3 {
+                  font-size: 22px;
+                  margin-bottom: 20px;
+                }
+
+                .input-group-custom {
+                  margin-bottom: 12px;
+                }
+
+                .input-group-custom label {
+                  font-size: 14px;
+                  margin-bottom: 6px;
+                }
+
+                .input-group-custom input,
+                .input-group-custom textarea {
+                  padding: 8px 12px;
+                  font-size: 14px;
+                  min-height: 36px;
+                }
+
+                .input-group-custom textarea {
+                  min-height: 70px;
+                }
+
+                .btn-form-submit {
+                  font-size: 13px;
+                  padding: 10px 22px;
+                  margin-top: 8px;
+                  width: auto;
+                  display: inline-block;
+                  border-radius: 50px;
+                }
+              }
+            </style>
             <h3>Request a Consultation</h3>
             <form action="#" method="POST">
               <div class="input-group-custom">

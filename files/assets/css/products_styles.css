@@ -516,3 +516,80 @@ body,
         font-size: 28px;
     }
 }
+
+/* ==========================================================================
+   PRODUCT CARD MODIFICATIONS - Hide Button & Make Card Clickable
+   ========================================================================== */
+
+/* Hide the View Products button */
+.product-view-btn {
+    display: none !important;
+}
+
+/* Make the entire card clickable */
+.cat-card {
+    cursor: pointer;
+}
+
+/* Ensure parent link takes full card space */
+.cat-card a,
+a.d-block.h-100.text-decoration-none {
+    display: block !important;
+    height: 100% !important;
+    text-decoration: none !important;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE - 2 Column Layout for Small Devices
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 2 columns on mobile and tablets */
+    .col-6 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    /* Adjust card padding on mobile */
+    .cat-card {
+        padding: 20px !important;
+        min-height: 250px;
+    }
+
+    /* Adjust image size on mobile */
+    .cat-card img {
+        max-width: 90%;
+        max-height: 140px;
+    }
+
+    /* Reduce title size on mobile */
+    .cat-card h3 {
+        font-size: 16px;
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra small devices - 2 columns */
+    .col-6 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    .cat-card {
+        padding: 15px !important;
+        min-height: 220px;
+    }
+
+    .cat-card img {
+        max-width: 85%;
+        max-height: 110px;
+        margin-bottom: 10px;
+    }
+
+    .cat-card h3 {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+}
