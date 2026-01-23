@@ -9921,15 +9921,40 @@ html {
   animation: move 2s linear 0s infinite normal;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  .loading-container,
+  .loading {
+    height: 120px;
+    width: 120px;
+  }
+  
   #loading-icon {
     left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 100px;
+  }
+  
+  #loading-icon img {
+    width: 100px !important;
+    height: auto !important;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 480px) {
+  .loading-container,
+  .loading {
+    height: 100px;
+    width: 100px;
+  }
+  
   #loading-icon {
-    left: 0;
+    height: 80px;
+    width: 80px;
+  }
+  
+  #loading-icon img {
+    width: 80px !important;
   }
 }
 

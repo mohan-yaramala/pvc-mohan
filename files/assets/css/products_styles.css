@@ -515,81 +515,42 @@ body,
         white-space: nowrap;
         font-size: 28px;
     }
-}
 
-/* ==========================================================================
-   PRODUCT CARD MODIFICATIONS - Hide Button & Make Card Clickable
-   ========================================================================== */
-
-/* Hide the View Products button */
-.product-view-btn {
-    display: none !important;
-}
-
-/* Make the entire card clickable */
-.cat-card {
-    cursor: pointer;
-}
-
-/* Ensure parent link takes full card space */
-.cat-card a,
-a.d-block.h-100.text-decoration-none {
-    display: block !important;
-    height: 100% !important;
-    text-decoration: none !important;
-}
-
-/* ==========================================================================
-   MOBILE RESPONSIVE - 2 Column Layout for Small Devices
-   ========================================================================== */
-@media (max-width: 768px) {
-    /* 2 columns on mobile and tablets */
-    .col-6 {
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
-    }
-
-    /* Adjust card padding on mobile */
-    .cat-card {
-        padding: 20px !important;
-        min-height: 250px;
-    }
-
-    /* Adjust image size on mobile */
-    .cat-card img {
-        max-width: 90%;
-        max-height: 140px;
-    }
-
-    /* Reduce title size on mobile */
-    .cat-card h3 {
-        font-size: 16px;
-        margin: 15px 0;
-    }
-}
-
-@media (max-width: 576px) {
-    /* Extra small devices - 2 columns */
-    .col-6 {
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
-    }
-
-    .cat-card {
+    /* Category Cards - 2 per row mobile layout */
+    .cat-card,
+    .hik-product-card {
         padding: 15px !important;
-        min-height: 220px;
+        min-height: 180px;
+        border-radius: 10px !important;
     }
 
-    .cat-card img {
-        max-width: 85%;
-        max-height: 110px;
-        margin-bottom: 10px;
+    .cat-card:hover,
+    .hik-product-card:hover {
+        padding: 14px !important;
     }
 
-    .cat-card h3 {
+    .cat-card img,
+    .hik-product-img img {
+        max-width: 90%;
+        max-height: 100px;
+        margin-bottom: 12px;
+    }
+
+    .cat-card h3,
+    .hik-product-info h3 {
         font-size: 14px;
-        margin: 10px 0;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    /* Hide View Products button on mobile */
+    .cat-card .product-view-btn {
+        display: none !important;
+    }
+
+    /* Reduce gap between cards on mobile */
+    .row.g-4 {
+        --bs-gutter-x: 0.75rem;
+        --bs-gutter-y: 0.75rem;
     }
 }
