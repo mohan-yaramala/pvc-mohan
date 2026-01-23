@@ -73,28 +73,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="gstNumber">GST Number <span class="optional">(Optional)</span></label>
-                            <input type="text" class="form-control" id="gstNumber" placeholder="Enter GST number if applicable">
+                            <label for="customerName">Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" id="customerName" placeholder="Enter your full name">
                         </div>
 
                         <div class="form-group">
-                            <label for="deliveryPincode">Delivery Pincode <span class="required">*</span></label>
-                            <input type="text" class="form-control" id="deliveryPincode" placeholder="Enter delivery pincode">
+                            <label for="cityName">City / Village <span class="required">*</span></label>
+                            <input type="text" class="form-control" id="cityName" placeholder="Enter city or village name">
                         </div>
 
                         <h3 class="section-title mt-4"><i class="fa-solid fa-truck"></i> Shipping Method</h3>
                         <p class="section-note">Select your preferred shipping method</p>
 
                         <div class="shipping-methods">
-                            <div class="shipping-card" data-method="Bluedart Air">
-                                <div class="shipping-icon"><i class="fa-solid fa-plane"></i></div>
-                                <div class="shipping-info">
-                                    <h4>Bluedart Air</h4>
-                                    <p>Fast delivery via air freight</p>
-                                </div>
-                                <div class="shipping-check"><i class="fa-solid fa-circle-check"></i></div>
-                            </div>
-
                             <div class="shipping-card" data-method="Bluedart Road">
                                 <div class="shipping-icon"><i class="fa-solid fa-truck-fast"></i></div>
                                 <div class="shipping-info">
@@ -104,15 +95,7 @@
                                 <div class="shipping-check"><i class="fa-solid fa-circle-check"></i></div>
                             </div>
 
-                            <div class="shipping-card" data-method="By Hand">
-                                <div class="shipping-icon"><i class="fa-solid fa-hand-holding-hand"></i></div>
-                                <div class="shipping-info">
-                                    <h4>By Hand</h4>
-                                    <p>Personal pickup or hand delivery</p>
-                                </div>
-                                <div class="shipping-check"><i class="fa-solid fa-circle-check"></i></div>
-                            </div>
-
+                            
                             <div class="shipping-card" data-method="Other">
                                 <div class="shipping-icon"><i class="fa-solid fa-box"></i></div>
                                 <div class="shipping-info">
@@ -138,20 +121,12 @@
                         <!-- Cart Summary Totals -->
                         <div class="cart-totals">
                             <div class="cart-total-row">
-                                <span>Subtotal:</span>
-                                <span id="cartSubtotal">₹0.00</span>
-                            </div>
-                            <div class="cart-total-row">
                                 <span>Items:</span>
                                 <span id="cartItemCount">0</span>
                             </div>
                             <div class="cart-shipping-note">
                                 <i class="fa-solid fa-info-circle"></i>
                                 <p>Shipping cost will be calculated and added to your final quotation</p>
-                            </div>
-                            <div class="cart-total-row total-final">
-                                <span>Estimated Total:</span>
-                                <span id="cartTotal">₹0.00</span>
                             </div>
                         </div>
 
@@ -160,7 +135,7 @@
                             <button id="placeRFQBtn" class="btn-place-rfq">
                                 <i class="fa-brands fa-whatsapp"></i> Place RFQ on WhatsApp
                             </button>
-                            <a href="products.html" class="btn-continue-shopping">
+                            <a href="all-products.html" class="btn-continue-shopping">
                                 <i class="fa-solid fa-arrow-left"></i> Continue Shopping
                             </a>
                         </div>
@@ -171,7 +146,7 @@
                         <i class="fa-solid fa-cart-shopping"></i>
                         <h3>Your cart is empty</h3>
                         <p>Add products to your cart to request a quotation</p>
-                        <a href="products.html" class="btn-continue-shopping">Browse Products</a>
+                        <a href="all-products.html" class="btn-continue-shopping">Browse Products</a>
                     </div>
                 </div>
             </div>

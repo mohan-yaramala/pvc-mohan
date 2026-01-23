@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/header_styles.css">
     <link rel="stylesheet" href="assets/css/products_styles.css">
     <link rel="stylesheet" href="assets/css/all-products.css">
+    <link rel="stylesheet" href="assets/css/cart_styles.css">
 
     <!-- JS Plugins -->
     <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
@@ -324,7 +325,12 @@
                                         <span class="checkmark"></span>
                                         MAXXION
                                     </label>
-                                
+                                    <label class="filter-checkbox-label">
+                                        <input type="checkbox" name="category" value="RACK">
+                                        <span class="checkmark"></span>
+                                        RACK
+                                    </label>
+
                                    
                                     <label class="filter-checkbox-label">
                                         <input type="checkbox" name="category" value="SD CARDS">
@@ -459,6 +465,12 @@
     <script src="assets/js/plugins/aos.js"></script>
     <script src="assets/js/plugins/fontawesome.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof updateFloatingCartButton === 'function') updateFloatingCartButton();
+        });
+    </script>
     <script src="assets/js/all-products.js"></script>
     
     <script>

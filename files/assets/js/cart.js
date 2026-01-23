@@ -303,8 +303,8 @@ function getSelectedShippingMethod() {
 function placeRFQOnWhatsApp() {
     // Get form values
     const mobileNumber = document.getElementById('mobileNumber').value.trim();
-    const gstNumber = document.getElementById('gstNumber').value.trim();
-    const deliveryPincode = document.getElementById('deliveryPincode').value.trim();
+        const customerName = document.getElementById('customerName').value.trim();
+        const cityName = document.getElementById('cityName').value.trim();
     const shippingMethod = getSelectedShippingMethod();
     
     // Validate required fields
@@ -314,16 +314,21 @@ function placeRFQOnWhatsApp() {
         return;
     }
     
-    if (!deliveryPincode) {
-        alert('Please enter delivery pincode');
-        document.getElementById('deliveryPincode').focus();
-        return;
-    }
+        if (!customerName) {
+            alert('Please enter your name');
+            document.getElementById('customerName').focus();
+            return;
+        }
+
+        if (!cityName) {
+            alert('Please enter your city or village name');
+            document.getElementById('cityName').focus();
+            return;
+        }
     
-    if (shippingMethod === 'Not Selected') {
-        alert('Please select a shipping method');
-        return;
-    }
+    // Delivery pincode is optional now; do not block submission if empty
+    
+    // Shipping method is optional now; do not block submission if not selected
     
     // Get cart items
     const cart = getCart();
@@ -331,9 +336,6 @@ function placeRFQOnWhatsApp() {
         alert('Your cart is empty');
         return;
     }
-    
-    // Calculate totals
-    const totals = calculateCartTotals();
     
     // Generate RFQ Number (timestamp-based unique identifier)
     const rfqNumber = 'RFQ' + Date.now().toString().slice(-8);
@@ -348,9 +350,6 @@ function placeRFQOnWhatsApp() {
         productList += `• ${item.quantity} × ${item.name}\n`;
     });
     
-    // Format total amount (show "On Request" if no price available)
-    const totalAmount = totals.total > 0 ? totals.total.toFixed(2) : 'On Request';
-    
     // Generate professional WhatsApp RFQ message using the specified template
     let message = `🧾 *REQUEST FOR QUOTATION (RFQ)*\n`;
     message += `${'─'.repeat(30)}\n\n`;
@@ -358,7 +357,9 @@ function placeRFQOnWhatsApp() {
     message += `📌 *RFQ Details*\n`;
     message += `• RFQ Number: ${rfqNumber}\n`;
     message += `• 📅 Date: ${formattedDate}\n`;
-    message += `• 📍 Delivery Pin Code: ${deliveryPincode}\n`;
+        message += `• 👤 Name: ${customerName}\n`;
+        message += `• 📍 City/Village: ${cityName}\n`;
+    if (deliveryPincode) message += `• 📍 Delivery Pin Code: ${deliveryPincode}\n`;
     message += `• 📱 Registered Mobile Number: ${mobileNumber}\n\n`;
     
     message += `${'─'.repeat(30)}\n\n`;
@@ -368,11 +369,10 @@ function placeRFQOnWhatsApp() {
     
     message += `${'─'.repeat(30)}\n\n`;
     
-    message += `🚚 *Shipping Method*\n`;
-    message += `${shippingMethod}\n\n`;
-    
-    message += `💰 *Estimated Total*\n`;
-    message += `₹${totalAmount}\n\n`;
+    if (shippingMethod && shippingMethod !== 'Not Selected') {
+        message += `🚚 *Shipping Method*\n`;
+        message += `${shippingMethod}\n\n`;
+    }
     
     message += `${'─'.repeat(30)}\n\n`;
     
