@@ -1,690 +1,679 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services & Support - PVC Global Security</title>
-  <link rel="shortcut icon" href="assets/img/logo/pvc-logo.png" type="image/x-icon">
+  <title>Premium Security Services - PVC Global Security</title>
+  <meta name="description"
+    content="Expert CCTV installation, security planning, and maintenance services. PVC Security provides professional surveillance support across Andhra Pradesh and Telangana.">
+  <link rel="shortcut icon" href="assets/img/logo/logo1.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
   <link rel="stylesheet" href="assets/css/plugins/aos.css">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/header_styles.css">
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+
   <!-- JS Plugins -->
   <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+  <!-- FontAwesome 6 (if not already fully loaded) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   <style>
     :root {
-      --pvc-gold-dark: #b8860b;
-      --pvc-gold-mid: #d4af37;
+      --pvc-black: #000000;
+      --pvc-gold: #B8860B;
+      --pvc-gold-light: #D4AF37;
+      --pvc-white: #FFFFFF;
+      --pvc-off-white: #F8F8F8;
+      --pvc-text-dark: #1a1a1a;
+      --pvc-text-gray: #444444;
+      --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    body {
+      background-color: var(--pvc-white);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* =========================================
+       HERO SECTION
+       ========================================= */
     .services-hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/hero-support.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 80vh;
-      margin-top: 80px;
+      background-color: var(--pvc-black);
+      height: 70vh;
+      min-height: 500px;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      /* Aligned left */
-      color: #fff;
+      justify-content: center;
+      text-align: center;
       position: relative;
-    }
-
-    /* .hero-content styles removed as wrapper is removed */
-
-    .services-hero h1 {
-      font-size: 60px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      text-align: left;
-      /* Ensure left align */
-    }
-
-    .services-hero p {
-      font-size: 24px;
-      opacity: 0.9;
-      margin: 0;
-      text-align: left;
-      width: 100%;
-    }
-
-    .breadcrumb-area {
-      background: #f8f9fa;
-      padding: 15px 0;
-      color: #666;
-    }
-
-    .breadcrumb-area a {
-      color: #333;
-      text-decoration: none;
-    }
-
-    .support-grid {
-      padding: 80px 0;
-      background: #fff;
-    }
-
-    .support-card {
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      border-radius: 24px;
-      padding: 50px 40px;
-      height: 100%;
-      transition: all 0.4s ease;
-      position: relative;
+      margin-top: 70px;
+      /* Header offset */
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-      display: block;
-      /* Removed flex to match office card */
     }
 
-    .support-card::before {
+    .services-hero::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(249, 198, 109, 0.05), transparent);
-      opacity: 0;
-      transition: all 0.4s ease;
+      background: radial-gradient(circle at center, rgba(184, 134, 11, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
     }
 
-    .support-card:hover {
-      border-color: var(--pvc-gold-mid);
-      transform: translateY(-12px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
     }
 
-    .support-card:hover::before {
-      opacity: 1;
+    .hero-title {
+      color: var(--pvc-white);
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
     }
 
-    .support-icon {
-      width: 65px;
-      height: 65px;
-      background: linear-gradient(135deg, var(--pvc-gold-mid), var(--pvc-gold-dark));
+    .hero-subtitle {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .gold-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--pvc-gold), var(--pvc-gold-light));
+      margin: 0 auto;
+      border-radius: 2px;
+      animation: expandLine 1.5s ease-out forwards;
+    }
+
+    @keyframes expandLine {
+      from {
+        width: 0;
+        opacity: 0;
+      }
+
+      to {
+        width: 80px;
+        opacity: 1;
+      }
+    }
+
+    /* =========================================
+       SERVICES GRID SECTION
+       ========================================= */
+    .services-grid-section {
+      padding: 100px 0;
+      background-color: var(--pvc-off-white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--pvc-white);
       border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(184, 134, 11, 0.15);
+      border-color: rgba(184, 134, 11, 0.3);
+    }
+
+    .service-icon-wrapper {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--pvc-off-white);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      margin-bottom: 30px;
-      font-size: 24px;
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
+      margin-bottom: 25px;
+      transition: var(--transition-smooth);
+      font-size: 32px;
+      color: var(--pvc-gold);
+      border: 1px solid rgba(184, 134, 11, 0.15);
     }
 
-    .support-icon i {
-      width: 32px;
-      height: 32px;
-      stroke-width: 2;
+    .service-card:hover .service-icon-wrapper {
+      background: var(--pvc-gold);
+      color: var(--pvc-white);
+      transform: scale(1.1);
     }
 
-    .support-card:hover .support-icon {
-      transform: none;
-      /* Removed rotation */
-      background: linear-gradient(135deg, var(--pvc-gold-mid), var(--pvc-gold-dark));
-      box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
-      color: #fff;
+    .service-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--pvc-black);
+      margin-bottom: 15px;
     }
 
-    .support-content {
-      text-align: left;
-    }
-
-    .support-card h3 {
-      color: #111;
-      font-size: 24px;
-      margin-bottom: 30px;
-      font-weight: 800;
-      position: relative;
-    }
-
-    .support-card:hover h3 {
-      color: #111;
-      /* Keep black on hover */
-    }
-
-    .support-card p {
-      color: #555;
-      font-size: 15px;
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--pvc-text-gray);
       line-height: 1.6;
-      margin-bottom: 0;
-      text-align: left;
+      margin-bottom: 25px;
+      flex-grow: 1;
     }
 
-    .support-card:hover p {
-      color: #444;
+    .learn-more-btn {
+      color: var(--pvc-gold);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      cursor: pointer;
+      padding-bottom: 2px;
+      transition: var(--transition-smooth);
     }
 
-    .support-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-      display: block;
+    .learn-more-btn::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--pvc-gold);
+      transition: var(--transition-smooth);
+    }
+
+    .service-card:hover .learn-more-btn::after {
       width: 100%;
     }
 
-    .support-links li {
-      margin-bottom: 8px;
-      padding-left: 20px;
+    /* =========================================
+       WHY CHOOSE US
+       ========================================= */
+    .why-us-section {
+      background-color: var(--pvc-white);
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--pvc-text-dark);
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .trust-item {
+      padding: 20px;
+    }
+
+    .trust-item i {
+      font-size: 40px;
+      color: var(--pvc-gold);
+      margin-bottom: 15px;
+    }
+
+    .trust-item h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--pvc-text-dark);
+    }
+
+    /* =========================================
+       PROCESS SECTION
+       ========================================= */
+    .process-section {
+      padding: 100px 0;
+      background-color: var(--pvc-off-white);
+    }
+
+    .process-timeline {
+      display: flex;
+      justify-content: space-between;
       position: relative;
-      color: #555;
-      font-size: 15px;
-      font-weight: 500;
+      max-width: 1000px;
+      margin: 60px auto 0;
     }
 
-    .support-links li::before {
-      content: '•';
-      color: var(--pvc-gold-mid);
+    /* Connector Line */
+    .process-timeline::before {
+      content: '';
       position: absolute;
-      left: 0;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 1;
-      top: -2px;
+      top: 25px;
+      left: 50px;
+      right: 50px;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 0;
     }
 
-    .support-card:hover .support-links li {
-      color: #333;
+    .process-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      flex: 1;
     }
 
-    .video-highlight {
-      background: #fdfdfd;
-      padding: 80px 0;
+    .step-dot {
+      width: 50px;
+      height: 50px;
+      background: var(--pvc-white);
+      border: 2px solid var(--pvc-gold);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--pvc-gold);
+      transition: var(--transition-smooth);
+    }
+
+    .process-step:hover .step-dot {
+      background: var(--pvc-gold);
+      color: var(--pvc-white);
+      box-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
+    }
+
+    .process-step h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .process-step p {
+      font-size: 0.9rem;
+      color: #666;
+      padding: 0 10px;
+    }
+
+    /* =========================================
+       SERVICE AREA & CTA
+       ========================================= */
+    .service-area-section {
+      background-color: var(--pvc-black);
+      padding: 60px 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-area-text {
+      color: var(--pvc-gold);
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .final-cta-section {
+      background-color: var(--pvc-black);
+      padding: 100px 0;
+      text-align: center;
+      color: var(--pvc-white);
+    }
+
+    .final-cta-content h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-premium {
+      padding: 18px 40px;
+      border: 2px solid var(--pvc-gold);
+      background: transparent;
+      color: var(--pvc-gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      transition: var(--transition-smooth);
+      text-decoration: none;
+      min-width: 200px;
+    }
+
+    .btn-premium:hover {
+      background: var(--pvc-gold);
+      color: var(--pvc-black);
+      box-shadow: 0 0 30px rgba(184, 134, 11, 0.4);
+    }
+
+    .btn-premium.filled {
+      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+      background-size: 200% auto;
+      color: #000;
+      border: none;
+      box-shadow: 0 10px 20px rgba(184, 134, 11, 0.3);
+    }
+
+    .btn-premium.filled:hover {
+      background-position: right center;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(184, 134, 11, 0.4);
+      color: #000;
+    }
+
+    /* =========================================
+       RESPONSIVE
+       ========================================= */
+    @media (max-width: 991px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .service-card {
+        padding: 20px 15px;
+      }
+
+      .service-card h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+
+      .service-card p {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+      }
+
+      .service-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .process-timeline {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .process-timeline::before {
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+
+      .process-step {
+        background: var(--pvc-off-white);
+        /* cover the line behind text */
+        padding: 10px 0;
+        width: 100%;
+      }
+
+      .final-cta-content h2 {
+        font-size: 2rem;
+      }
+
+      /* Optimizing Why Choose Us (Trust Grid) for 2-col mobile */
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .trust-item {
+        padding: 15px;
+      }
+
+      .trust-item i {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      .trust-item h4 {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!--=====HEADER START=======-->
-  <header>
-    <div class="header-area homepage3 header header-sticky" id="header">
-      <div class="container-fluid" style="padding: 0 50px;">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="header-elements">
-              <div class="site-logo">
-                <a href="index.html"><img src="assets/img/logo/pvc-logo.png" alt="PVC Logo"></a>
-              </div>
-              <div class="main-menu">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about-us.html">About Us</a></li>
-                  <li class="has-megamenu"><a href="products.html">Products</a>
-                    <div class="mega-menu-wrapper">
-                      <div class="container-fluid" style="padding: 0 50px;">
-                        <div class="row">
-                          <!-- Column 1 -->
-                          <div class="col-xl-2 col-lg-3">
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-video"></i> Network Products</h4>
-                              <ul>
-                                <li><a href="network-cameras.html">Network Cameras</a>
-                                </li>
-                                <li><a href="product-category.html?cat=nvr">Network
-                                    Video Recorders (NVR)</a></li>
-                                <li><a href="product-category.html?cat=storage">Data
-                                    Storage</a></li>
-                                <li><a href="product-category.html?cat=switches">Network
-                                    Switches</a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-microchip"></i> Turbo HD Products
-                              </h4>
-                              <ul>
-                                <li><a href="turbo-hd.html">Turbo HD Cameras</a></li>
-                                <li><a href="product-category.html?cat=dvr">Digital
-                                    Video Recorders (DVR)</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <!-- Column 2 -->
-                          <div class="col-xl-2 col-lg-3">
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-id-card"></i> Access Control</h4>
-                              <ul>
-                                <li><a href="access-control.html">Access Control
-                                    Systems</a></li>
-                                <li><a href="product-category.html?cat=gates">Speed
-                                    Gates & Turnstiles</a></li>
-                                <li><a href="product-category.html?cat=face">Face
-                                    Recognition</a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-phone-flip"></i> Video Intercom
-                              </h4>
-                              <ul>
-                                <li><a href="video-intercom.html">IP Video Intercom</a>
-                                </li>
-                                <li><a href="video-intercom.html">2-Wire Intercom</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <!-- Column 3 -->
-                          <div class="col-xl-2 col-lg-3">
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-bell"></i> Alarm</h4>
-                              <ul>
-                                <li><a href="alarm-systems.html">Intrusion Alarm</a>
-                                </li>
-                                <li><a href="alarm-systems.html">Emergency Alarm</a>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-temperature-half"></i> Thermal
-                                Products</h4>
-                              <ul>
-                                <li><a href="thermal-products.html">Thermal Cameras</a>
-                                </li>
-                                <li><a href="thermal-products.html">HeatPro Series</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <!-- Column 4 -->
-                          <div class="col-xl-2 col-lg-3">
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-tv"></i> Display & Control</h4>
-                              <ul>
-                                <li><a href="display-control.html">Commercial
-                                    Displays</a></li>
-                                <li><a href="display-control.html">Video Walls</a></li>
-                                <li><a href="display-control.html">Monitors</a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-code"></i> Software</h4>
-                              <ul>
-                                <li><a href="software.html">HikCentral Pro</a></li>
-                                <li><a href="software.html">Hik-Connect</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <!-- Column 5 -->
-                          <div class="col-xl-4 col-lg-3">
-                            <div class="row">
-                              <div class="col-md-6">
-                                <div class="mega-category">
-                                  <h4><i class="fa-solid fa-car"></i> Intelligent
-                                    Traffic</h4>
-                                  <ul>
-                                    <li><a href="intelligent-traffic.html">Checkpoints</a>
-                                    </li>
-                                    <li><a href="intelligent-traffic.html">LPR
-                                        Cameras</a></li>
-                                    <li><a href="intelligent-traffic.html">Radar
-                                        Sensors</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="col-md-6">
-                                <div class="mega-category">
-                                  <h4><i class="fa-solid fa-bullhorn"></i> Audio
-                                    Products</h4>
-                                  <ul>
-                                    <li><a href="audio-products.html">Network
-                                        Speakers</a></li>
-                                    <li><a href="audio-products.html">Public
-                                        Address</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="col-12 mt-3">
-                                <div class="mega-category"
-                                  style="background: rgba(212, 175, 55, 0.05); padding: 15px; border-left: 3px solid var(--pvc-gold-mid);">
-                                  <h4 style="margin-bottom: 10px;">Featured Solution
-                                  </h4>
-                                  <p style="font-size: 13px; margin-bottom: 15px;">
-                                    AcuSense Technology: Advanced threat detection
-                                    for smarter security.</p>
-                                  <a href="#" class="mega-view-all"
-                                    style="font-size: 13px; color: var(--pvc-gold-mid);">Learn
-                                    Technology <i class="fa-solid fa-arrow-right"></i></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="mega-menu-footer">
-                          <div class="mega-menu-footer-content">PVC AIoT Portfolio: Network
-                            Cameras, NVR, Access Control, Alarm, Thermal, and Intelligent
-                            Solutions.</div>
-                          <a href="products.html" class="mega-view-all" style="color: var(--pvc-gold-mid);">Explore All
-                            Products <i class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="has-megamenu"><a href="services.html" class="active">Services</a>
-                    <div class="mega-menu-wrapper">
-                      <div class="container-fluid" style="padding: 0 50px;">
-                        <div class="row">
-                          <!-- Column 1: Support & Learning -->
-                          <div class="col-xl-3 col-lg-4">
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-toolbox"></i> Support & Tools</h4>
-                              <ul>
-                                <li><a href="services.html">Online Tools</a></li>
-                                <li><a href="services.html">Download Center</a></li>
-                                <li><a href="services.html">Calculator</a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-chalkboard-user"></i> Learning
-                              </h4>
-                              <ul>
-                                <li><a href="services.html">Training Center</a></li>
-                                <li><a href="services.html">Video Gallery</a></li>
-                                <li><a href="services.html">Knowledge Base</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <!-- Column 2: Maintenance & Contact -->
-                          <div class="col-xl-3 col-lg-4">
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-rotate"></i> Maintenance</h4>
-                              <ul>
-                                <li><a href="services.html">RMA Service</a></li>
-                                <li><a href="services.html">Service Policy</a></li>
-                                <li><a href="services.html">Repair Status</a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-category">
-                              <h4><i class="fa-solid fa-headset"></i> Contact Support</h4>
-                              <ul>
-                                <li><a href="services.html">Global Call Center</a></li>
-                                <li><a href="services.html">Technical Support</a></li>
-                                <li><a href="contact-us.html">Sales Inquiry</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <!-- Column 3: Featured -->
-                          <div class="col-xl-6 col-lg-4">
-                            <div class="mega-support-featured"
-                              style="text-align: center; padding: 25px; background: rgba(212, 175, 55, 0.05); border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.1); height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                              <img src="assets/img/hero-support.jpg" alt="Support"
-                                style="width: 100%; max-height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;"
-                                onerror="this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80'">
-                              <h4 style="color: var(--pvc-gold-mid); font-size: 20px; margin-bottom: 10px;">
-                                Support Center</h4>
-                              <p
-                                style="font-size: 14px; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">
-                                Get expert assistance for all your PVC products through
-                                our global support network.</p>
-                              <a href="services.html" class="mega-view-all"
-                                style="font-weight: 600; color: var(--pvc-gold-mid);">Visit
-                                Support Center <i class="fa-solid fa-arrow-right"></i></a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="mega-menu-footer">
-                          <div class="mega-menu-footer-content">PVC Global Service: Tools,
-                            Documentation, Training, and Expert Technical Assistance.</div>
-                          <a href="services.html" class="mega-view-all" style="color: var(--pvc-gold-mid);">Explore
-                            Services <i class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="header-right-icons">
 
+  <!--===== GLOBAL HEADER COMPONENT =======-->
+  <script src="assets/js/global_header.js"></script>
+  <!--===== END GLOBAL HEADER =======-->
 
-
-              </div>
-              <!-- CLEAN MOBILE TOGGLE -->
-              <div class="clean-mobile-toggle d-lg-none">
-                <i class="fa-solid fa-bars"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- HERO SECTION -->
+  <section class="services-hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1 class="hero-title">Professional Security Services</h1>
+      <p class="hero-subtitle">Complete CCTV & Surveillance Solutions by PVC Security</p>
+      <div class="gold-divider"></div>
     </div>
+  </section>
 
-    <!-- CLEAN MOBILE SIDEBAR -->
-    <div class="clean-mobile-overlay"></div>
-    <div class="clean-mobile-sidebar">
-      <div class="clean-sidebar-header">
-        <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" class="clean-logo">
-        <div class="clean-close-btn"><i class="fa-solid fa-xmark"></i></div>
-      </div>
-      <div class="clean-mobile-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <!--=====HEADER END =======-->
-
-  <section class="services-hero" style="display: flex; align-items: center;">
+  <!-- SERVICES GRID -->
+  <section class="services-grid-section">
     <div class="container">
-      <div class="row">
-        <div class="col-12" style="text-align: left !important;">
-          <h1 data-aos="fade-up">Support</h1>
-          <p data-aos="fade-up" data-aos-delay="100">Enabling a Safer Society and Smarter Living</p>
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-video"></i>
+          </div>
+          <h3>CCTV Installation</h3>
+          <p>Professional installation of HD & IP camera systems for clear, uninterrupted surveillance coverage.</p>
+          <span class="learn-more-btn">Learn More</span>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Security Planning</h3>
+          <p>Strategic positioning and system design to eliminate blind spots and maximize security efficiency.</p>
+          <span class="learn-more-btn">Learn More</span>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-house-lock"></i>
+          </div>
+          <h3>Home Security</h3>
+          <p>Smart security solutions protecting your family with 24/7 monitoring and mobile access control.</p>
+          <span class="learn-more-btn">Learn More</span>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <h3>Office & Industrial</h3>
+          <p>Robust surveillance for commercial spaces, factories, and warehouses ensuring asset protection.</p>
+          <span class="learn-more-btn">Learn More</span>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3>Velvu Brand Solutions</h3>
+          <p>Authorized distributor and specialist for Velvu networking and surveillance products.</p>
+          <span class="learn-more-btn">Learn More</span>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3>AMC & Maintenance</h3>
+          <p>Annual Maintenance Contracts to keep your security systems running at peak performance.</p>
+          <span class="learn-more-btn">Learn More</span>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-arrow-up-right-dots"></i>
+          </div>
+          <h3>System Upgrade</h3>
+          <p>Modernize your existing analog systems to high-definition IP solutions with minimal disruption.</p>
+          <span class="learn-more-btn">Learn More</span>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="450">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3>Repair & Support</h3>
+          <p>Quick response technical support and on-site repair services for all major security brands.</p>
+          <span class="learn-more-btn">Learn More</span>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="breadcrumb-area">
+  <!-- WHY CHOOSE US -->
+  <section class="why-us-section">
     <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0" style="background: transparent; padding: 0;">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Support</li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-
-  <section class="support-grid">
-    <div class="container">
-      <div class="row">
-        <!-- 1. Download Center -->
-        <div class="col-lg-4 mb-4" data-aos="fade-up">
-          <div class="support-card">
-            <div class="support-icon">
-              <i data-lucide="download-cloud"></i>
-            </div>
-            <div class="support-content">
-              <h3>Download Center</h3>
-              <ul class="support-links">
-                <li>Firmwares</li>
-                <li>Softwares</li>
-                <li>Brochures</li>
-                <li>Papers</li>
-                <li>Product Resources</li>
-                <li>Tools</li>
-              </ul>
-            </div>
-          </div>
+      <div class="section-header" data-aos="fade-up">
+        <h2>Why Choose PVC Security?</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-user-gear"></i>
+          <h4>Expert Technicians</h4>
         </div>
-
-        <!-- 2. Training -->
-        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="support-card">
-            <div class="support-icon">
-              <i data-lucide="graduation-cap"></i>
-            </div>
-            <div class="support-content">
-              <h3>Training</h3>
-              <p>PVC Global provides training & certification programs for our partners. Online courses, local
-                classroom training, training records, and product related operation guides can been found
-                here</p>
-            </div>
-          </div>
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-certificate"></i>
+          <h4>Genuine Products</h4>
         </div>
-
-        <!-- 3. RMA (Restored) -->
-        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="support-card">
-            <div class="support-icon">
-              <i data-lucide="package-check"></i>
-            </div>
-            <div class="support-content">
-              <h3>RMA Service</h3>
-              <p>PVC authorized partners can register their RMA No. and track their RMA articles efficiently through our
-                portal.</p>
-            </div>
-          </div>
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="300">
+          <i class="fa-solid fa-comments"></i>
+          <h4>After-Sales Support</h4>
         </div>
-
-        <!-- 4. Video (Restored) -->
-        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="support-card">
-            <div class="support-icon">
-              <i data-lucide="video"></i>
-            </div>
-            <div class="support-content">
-              <h3>Video Center</h3>
-              <p>View our latest company promotional video, exciting products and solutions descriptions, exhibition
-                summary videos, and more.</p>
-            </div>
-          </div>
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="400">
+          <i class="fa-solid fa-handshake"></i>
+          <h4>Trusted Distributor</h4>
         </div>
-
-        <!-- 5. Service Policy (New) -->
-        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="support-card">
-            <div class="support-icon">
-              <i data-lucide="shield-check"></i>
-            </div>
-            <div class="support-content">
-              <h3>Service Policy</h3>
-              <p>Understanding your rights and our commitments. Read our comprehensive warranty and service policies for
-                all product lines.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Global Support (New) -->
-        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="support-card">
-            <div class="support-icon">
-              <i data-lucide="headset"></i>
-            </div>
-            <div class="support-content">
-              <h3>Global Support</h3>
-              <p>Get expert technical assistance. Reach our global call centers for troubleshooting, guidance, and
-                project support.</p>
-            </div>
-          </div>
+        <div class="trust-item" data-aos="fade-up" data-aos-delay="500">
+          <i class="fa-solid fa-bolt"></i>
+          <h4>Quick Installation</h4>
         </div>
       </div>
     </div>
   </section>
 
-  <!--=====FOOTER START=======-->
-  <footer class="footer3-section-area">
+  <!-- PROCESS SECTION -->
+  <section class="process-section">
     <div class="container">
-      <div class="row sp1 pb-0">
-        <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
-          <div class="logo-content">
-            <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" style="height: 100px; margin-bottom: 20px;">
-            <p>Upholding integrity and innovating the future of AIoT security. Providing world-class machine
-              perception
-              and intelligence solutions globally.</p>
-            <ul class="d-flex mt-4 list-unstyled gap-3">
-              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a></li>
-              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="footer-list">
-            <h4>Quick Links</h4>
-            <ul class="list-unstyled">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about-us.html">About Us</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="contact-us.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="head">
-            <h4>International</h4>
-          </div>
-          <div class="location-area mb-3 d-flex align-items-center gap-2">
-            <i class="fa-solid fa-phone-volume footer-contact-icon"></i>
-            <a href="tel:+917579445566">+91 7579 44 55 66</a>
-          </div>
-          <div class="location-area d-flex align-items-center gap-2">
-            <i class="fa-solid fa-envelope-open-text footer-contact-icon"></i>
-            <a href="mailto:Sales@pvcsecurity.com">Sales@pvcsecurity.com</a>
-          </div>
-        </div>
+      <div class="section-header" data-aos="fade-up">
+        <h2>Our Process</h2>
+        <p>Simple steps to a secure environment</p>
       </div>
-      <div class="row pt-5 pb-5 mt-5 border-top border-secondary">
-        <div class="col-12 text-center">
-          <p>© Copyright 2024 - PVC Security Systems. All Rights Reserved</p>
+
+      <div class="process-timeline">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-dot">01</div>
+          <h4>Requirement</h4>
+          <p>We discuss your specific security needs and challenges.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-dot">02</div>
+          <h4>Site Survey</h4>
+          <p>Expert analysis of your premises to identify vulnerabilities.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-dot">03</div>
+          <h4>Installation</h4>
+          <p>Professional setup and configuration of your security system.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-dot">04</div>
+          <h4>Support</h4>
+          <p>Ongoing maintenance and technical assistance whenever needed.</p>
         </div>
       </div>
     </div>
-  </footer>
-  <!--=====FOOTER END =======-->
+  </section>
 
 
 
+  <!-- SCRIPTS -->
   <script src="assets/js/plugins/bootstrap.min.js"></script>
   <script src="assets/js/plugins/aos.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!--===== GLOBAL FOOTER COMPONENT =======-->
+  <script src="assets/js/global_footer.js"></script>
+  <!--===== END GLOBAL FOOTER =======-->
   <script>
     AOS.init({
       duration: 1000,
-      once: true
-    });
-
-    // Premium Icon Tilt Interaction
-    const icons = document.querySelectorAll('.service-icon, .site-logo img, .social-links a, .mega-category h4 i');
-    icons.forEach(el => {
-      el.addEventListener('mousemove', e => {
-        const rect = el.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 6;
-        const rotateY = (centerX - x) / 6;
-        el.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
-        el.style.transition = 'transform 0.1s ease-out';
-      });
-      el.addEventListener('mouseleave', () => {
-        el.style.transform = 'perspective(600px) rotateX(0) rotateY(0) scale(1)';
-        el.style.transition = 'transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-      });
+      once: true,
+      offset: 100
     });
   </script>
-
-  <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-  </script>
-
 </body>
 
 </html>

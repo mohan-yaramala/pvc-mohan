@@ -1,4 +1,4 @@
-﻿/* About Us Page Specific Styles */
+/* About Us Page Specific Styles */
 body {
     background-color: #ffffff;
     color: #333333;
@@ -282,12 +282,23 @@ body {
 }
 
 
+
 @media (max-width: 991px) {
+    .about-hero {
+        padding-left: 0;
+        text-align: center;
+        min-height: 40vh;
+        margin-top: 70px;
+    }
+
+    .about-hero h1 {
+        font-size: 40px;
+    }
+
     .sidebar-nav {
         display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-bottom: 30px;
+        flex-direction: column;
+        gap: 0;
     }
 
     .details-sidebar {
@@ -295,3 +306,17 @@ body {
         margin-bottom: 40px;
     }
 }
+
+@media (max-width: 767px) {
+    .red-stat-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .red-stat-item {
+        justify-content: flex-start;
+        width: 100%;
+        gap: 20px;
+    }
+}
+

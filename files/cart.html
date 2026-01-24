@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,7 +7,7 @@
     <title>Your Cart - PVC Global</title>
 
     <!--=====FAB ICON=======-->
-    <link rel="shortcut icon" href="assets/img/logo/pvc-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo/logo1.png" type="image/x-icon">
     <!--===== CSS LINK =======-->
     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
@@ -15,40 +15,20 @@
     <link rel="stylesheet" href="assets/css/header_styles.css">
     <link rel="stylesheet" href="assets/css/cart_styles.css">
 
+    <style>
+        .cart-page-section {
+            margin-top: 70px !important;
+        }
+    </style>
+
     <!--=====  JS SCRIPT LINK =======-->
     <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
 </head>
 
 <body>
-    <!--=====HEADER START=======-->
-    <header>
-        <div class="header-area homepage3 header header-sticky" id="header">
-            <div class="container-fluid" style="padding: 0 50px;">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header-elements">
-                            <div class="site-logo">
-                                <a href="index.html"><img src="assets/img/logo/pvc-logo.png" alt="PVC Logo"></a>
-                            </div>
-                            <div class="main-menu">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="products.html">Products</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="contact-us.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                            <div class="header-right-icons"></div>
-                            <div class="clean-mobile-toggle d-lg-none">
-                                <i class="fa-solid fa-bars"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!--===== GLOBAL HEADER COMPONENT =======-->
+    <script src="assets/js/global_header.js"></script>
+    <!--===== END GLOBAL HEADER =======-->
     <!--=====HEADER END =======-->
 
     <!-- Cart Page Content -->
@@ -66,20 +46,23 @@
                 <div class="col-lg-7 mb-4">
                     <div class="cart-form-section">
                         <h3 class="section-title"><i class="fa-solid fa-user-circle"></i> Contact Information</h3>
-                        
+
                         <div class="form-group">
                             <label for="mobileNumber">Registered Mobile Number <span class="required">*</span></label>
-                            <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter your mobile number">
+                            <input type="tel" class="form-control" id="mobileNumber"
+                                placeholder="Enter your mobile number">
                         </div>
 
                         <div class="form-group">
                             <label for="customerName">Name <span class="required">*</span></label>
-                            <input type="text" class="form-control" id="customerName" placeholder="Enter your full name">
+                            <input type="text" class="form-control" id="customerName"
+                                placeholder="Enter your full name">
                         </div>
 
                         <div class="form-group">
                             <label for="cityName">City / Village <span class="required">*</span></label>
-                            <input type="text" class="form-control" id="cityName" placeholder="Enter city or village name">
+                            <input type="text" class="form-control" id="cityName"
+                                placeholder="Enter city or village name">
                         </div>
 
                         <h3 class="section-title mt-4"><i class="fa-solid fa-truck"></i> Shipping Method</h3>
@@ -95,7 +78,7 @@
                                 <div class="shipping-check"><i class="fa-solid fa-circle-check"></i></div>
                             </div>
 
-                            
+
                             <div class="shipping-card" data-method="Other">
                                 <div class="shipping-icon"><i class="fa-solid fa-box"></i></div>
                                 <div class="shipping-info">
@@ -153,21 +136,13 @@
         </div>
     </section>
 
-    <!--=====FOOTER START=======-->
-    <footer class="footer3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p>&copy; 2026 PVC Global. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--=====FOOTER END =======-->
-
     <!-- Cart JavaScript -->
     <script src="assets/js/cart.js"></script>
     <script src="assets/js/plugins/bootstrap.min.js"></script>
+
+    <!--===== GLOBAL FOOTER COMPONENT =======-->
+    <script src="assets/js/global_footer.js"></script>
+    <!--===== END GLOBAL FOOTER =======-->
 </body>
 
 </html>

@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PVC - Leading the Future of AIoT Security</title>
+  <meta name="description"
+    content="PVC Security delivers state-of-the-art AIoT surveillance solutions, including IP cameras, network recorders, and smart security systems for homes and businesses.">
 
   <!--=====FAB ICON=======-->
-  <link rel="shortcut icon" href="assets/img/logo/pvc-logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/img/logo/logo1.png" type="image/x-icon">
   <!--===== CSS LINK =======-->
   <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/plugins/aos.css">
@@ -26,1497 +28,25 @@
   <link rel="stylesheet" href="assets/css/products_styles.css">
 
 
-  <style>
-    /* ===== ABOUT SECTION PROFESSIONAL STYLES ===== */
-    #about {
-      background: var(--white-primary);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about3-section-area {
-      padding: 70px 0 !important;
-    }
-
-    .about-images-area {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 100%;
-    }
-
-    .about-images-area .product-img-box {
-      position: relative;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12) !important;
-      max-width: 90%;
-    }
-
-    .about-images-area .product-img-box:hover {
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2) !important;
-      transform: translateY(-8px);
-    }
-
-    .about-images-area .product-img-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .about-images-area .product-img-box:hover img {
-      transform: scale(1.05);
-    }
-
-    .about-pera {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      padding: 12px 20px !important;
-      border-radius: 8px;
-      background: linear-gradient(135deg, var(--pvc-gold-dark) 0%, var(--pvc-accent-red) 100%) !important;
-      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
-      backdrop-filter: blur(10px);
-    }
-
-    .about-pera p {
-      color: #fff !important;
-      font-weight: 700;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin: 0 !important;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .about-header-area {
-      padding-left: 0 !important;
-    }
-
-    .about-header-area h5 {
-      font-size: 12px !important;
-      font-weight: 600 !important;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--pvc-accent-red) !important;
-      margin-bottom: 12px !important;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .about-header-area h5 img {
-      width: 16px;
-      height: 16px;
-      transition: 0.3s;
-    }
-
-    .about-header-area h5:hover img {
-      transform: scale(1.15) rotate(5deg);
-    }
-
-    .about-header-area h2 {
-      font-size: 38px !important;
-      font-weight: 700 !important;
-      color: var(--text-dark) !important;
-      line-height: 1.25;
-      margin-bottom: 18px !important;
-      margin-top: 0 !important;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: -0.5px;
-    }
-
-    .about-header-area>p {
-      font-size: 14px !important;
-      color: var(--text-light) !important;
-      line-height: 1.7;
-      margin-bottom: 22px !important;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-    }
-
-    .all-progress-area {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .progres-section-area {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      padding: 18px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .progres-section-area::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 3px;
-      height: 100%;
-      background: linear-gradient(to bottom, var(--pvc-accent-red), var(--pvc-gold-dark));
-      border-radius: 2px;
-    }
-
-    .progres-section-area:hover {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
-      border-color: var(--pvc-accent-red);
-      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12);
-      transform: translateX(8px);
-    }
-
-    .progres-section-area .check {
-      width: 40px;
-      height: 40px;
-      min-width: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      font-weight: 600;
-      color: #fff;
-      box-shadow: 0 6px 16px rgba(212, 175, 55, 0.25);
-      transition: all 0.3s ease;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .progres-section-area:hover .check {
-      transform: scale(1.12) rotate(10deg);
-      box-shadow: 0 10px 24px rgba(212, 175, 55, 0.35);
-    }
-
-    .about5-boxes {
-      flex: 1;
-      padding-left: 5px;
-    }
-
-    .about5-boxes h3 {
-      font-size: 16px !important;
-      font-weight: 700 !important;
-      color: var(--text-dark) !important;
-      margin: 0 0 6px 0 !important;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: -0.2px;
-    }
-
-    .about5-boxes p {
-      font-size: 13px !important;
-      color: var(--text-light) !important;
-      margin: 0 !important;
-      line-height: 1.5;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-    }
-
-    @media (max-width: 991px) {
-      .about-header-area h2 {
-        font-size: 32px !important;
-      }
-
-      .about3-section-area {
-        padding: 50px 0 !important;
-      }
-
-      .about-header-area {
-        margin-top: 30px;
-      }
-
-      .progres-section-area {
-        padding: 16px;
-      }
-
-      .about-images-area .product-img-box {
-        max-width: 95%;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .about-header-area h2 {
-        font-size: 24px !important;
-      }
-
-      .about-header-area h5 {
-        font-size: 11px !important;
-      }
-
-      .about-header-area>p {
-        font-size: 13px !important;
-      }
-
-      .progres-section-area {
-        padding: 14px;
-        gap: 12px;
-      }
-
-      .progres-section-area .check {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
-      }
-
-      .about5-boxes h3 {
-        font-size: 14px !important;
-      }
-
-      .about5-boxes p {
-        font-size: 12px !important;
-      }
-
-      .about-pera {
-        bottom: 12px;
-        right: 12px;
-        padding: 10px 16px !important;
-      }
-
-      .about-pera p {
-        font-size: 10px;
-        letter-spacing: 1px;
-      }
-
-      .all-progress-area {
-        gap: 12px;
-      }
-    }
-
-    /* ===== SERVICE SECTION PROFESSIONAL STYLES ===== */
-    #services {
-      background: var(--white-secondary);
-      position: relative;
-      /* removed overflow hidden to allow nav buttons on edges */
-      padding: 70px 0 !important;
-    }
-
-    .service-card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      border-bottom: 4px solid transparent;
-      transition: all 0.4s ease;
-      height: 100%;
-      text-align: center;
-    }
-
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-      border-bottom-color: var(--pvc-gold-dark);
-    }
-
-    .service-icon {
-      width: 70px;
-      height: 70px;
-      background: rgba(212, 175, 55, 0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 30px;
-      color: var(--pvc-accent-red);
-      transition: 0.3s;
-    }
-
-    .service-card:hover .service-icon {
-      background: var(--pvc-gold-dark);
-      color: #fff;
-    }
-
-    .service-card h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 15px;
-    }
-
-    .service-card p {
-      font-size: 14px;
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-
-
-    .service3-section-area {
-      padding: 80px 0 !important;
-    }
-
-    .service-header {
-      margin-bottom: 60px;
-    }
-
-    .service-header h2 {
-      font-size: 42px !important;
-      font-weight: 700 !important;
-      color: var(--text-dark) !important;
-      margin: 20px 0 !important;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: -0.5px;
-    }
-
-    .service-header p {
-      font-size: 15px !important;
-      color: var(--text-light) !important;
-      line-height: 1.7;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .service-carousel-area {
-      position: relative;
-      padding: 30px 10px;
-      margin-top: -30px;
-    }
-
-    /* Gold Pagination Dots */
-    .service-carousel-area .owl-dots {
-      text-align: center;
-      margin-top: 50px;
-      line-height: 1;
-    }
-
-    .service-carousel-area .owl-dot {
-      width: 10px;
-      height: 10px;
-      background: rgba(212, 175, 55, 0.2) !important;
-      display: inline-block;
-      margin: 0 6px;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-      border: none !important;
-      padding: 0 !important;
-    }
-
-    .service-carousel-area .owl-dot.active {
-      background: var(--pvc-gold-dark) !important;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-
-    .service-carousel-area .owl-dot,
-    .service-carousel-area .owl-prev,
-    .service-carousel-area .owl-next {
-      cursor: pointer !important;
-    }
-
-    /* Round Navigation Arrows */
-    .service-carousel-area .owl-nav {
-      position: absolute;
-      top: 50%;
-      /* Centered vertically on the cards */
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 0;
-      /* Nav container shouldn't take space */
-      display: flex;
-      justify-content: space-between;
-      pointer-events: none;
-      transform: translateY(-50%);
-      z-index: 999;
-      /* Ensure it stays above everything */
-      padding: 0 20px;
-      /* Positioned clearly on the carousel as requested */
-    }
-
-    .service-carousel-area .owl-prev,
-    .service-carousel-area .owl-next {
-      width: 55px !important;
-      height: 55px !important;
-
-      background: #ffffff !important;
-      color: var(--pvc-gold-dark) !important;
-      border-radius: 50% !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 22px !important;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-      pointer-events: auto !important;
-      border: 2px solid var(--pvc-gold-mid) !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
-
-    .service-carousel-area .owl-prev:hover,
-    .service-carousel-area .owl-next:hover {
-      background: var(--pvc-gold-dark) !important;
-      color: #ffffff !important;
-      border-color: var(--pvc-gold-dark) !important;
-      opacity: 1;
-      transform: scale(1.1);
-    }
-
-    .service-boxarea {
-      position: relative;
-      height: 550px;
-      /* Fixed height for tall cards */
-      background: var(--white-primary) !important;
-      border: 1px solid rgba(212, 175, 55, 0.2) !important;
-      border-radius: 20px !important;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05) !important;
-      overflow: hidden !important;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      display: flex !important;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .service-boxarea:hover {
-      border-color: var(--pvc-gold-dark) !important;
-      border-width: 2px !important;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
-      transform: translateY(-5px);
-    }
-
-    .service-boxarea .img1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 1;
-    }
-
-    .service-boxarea .img1 img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      padding: 0;
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      filter: brightness(0.95);
-    }
-
-    .service-boxarea:hover .img1 {
-      /* Golden yellow overlay effect */
-      background: rgba(255, 215, 0, 0.3);
-    }
-
-    .service-boxarea:hover .img1 img {
-      opacity: 0.8;
-      /* Make image slightly transparent to show overlay */
-      transform: scale(1.1);
-      /* Zoom in effect */
-      filter: brightness(1.1);
-    }
-
-    .service-boxarea .content-area {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 40px;
-      /* More generous padding */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-start;
-      text-align: left;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 2;
-      opacity: 0;
-      justify-content: center;
-      align-items: center;
-      pointer-events: none;
-    }
-
-    .service-boxarea:hover .content-area {
-      opacity: 1;
-      pointer-events: auto;
-      background: linear-gradient(135deg, rgba(139, 110, 0, 0.94) 0%, rgba(184, 134, 11, 0.94) 100%);
-    }
-
-    .service-boxarea .content-area::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: none;
-      z-index: 0;
-    }
-
-    .service-boxarea .icons {
-      width: 55px;
-      height: 55px;
-      border-radius: 14px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 24px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.4s ease;
-      margin: 0 auto 20px !important;
-      /* increased bottom margin for better spacing */
-      flex-shrink: 0;
-      position: relative !important;
-      z-index: 1;
-      left: auto !important;
-      right: auto !important;
-      top: auto !important;
-      transform: none !important;
-    }
-
-    .service-boxarea:hover .icons {
-      transform: scale(1.2) rotate(5deg);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      background: var(--pvc-gold-dark) !important;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .service-boxarea .icons img {
-      width: 26px;
-      height: 26px;
-      object-fit: contain;
-    }
-
-    .content-area-pera {
-      transition: all 0.4s ease;
-      position: relative;
-      z-index: 1;
-    }
-
-    .content-area-pera a {
-      display: block;
-      font-size: 20px !important;
-      font-weight: 700 !important;
-      margin-bottom: 12px !important;
-      transition: all 0.3s ease;
-      text-decoration: none !important;
-      font-family: 'Poppins', sans-serif;
-      color: #fff !important;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      letter-spacing: 0.5px;
-    }
-
-    .service-boxarea:hover .content-area-pera a {
-      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-      transform: scale(1.05);
-    }
-
-    .content-area-pera p {
-      font-size: 16px !important;
-      line-height: 24px;
-      margin-top: 24px;
-      margin-bottom: 0 !important;
-      font-family: 'Poppins', sans-serif;
-      color: rgba(255, 255, 255, 0.8) !important;
-      word-wrap: break-word;
-      transition: all 0.4s ease;
-      font-weight: 500;
-    }
-
-    @media (max-width: 991px) {
-      .service3-section-area {
-        padding: 60px 0 !important;
-      }
-
-      .service-header h2 {
-        font-size: 32px !important;
-      }
-
-      .service-boxarea {
-        height: 350px;
-      }
-
-      .service-boxarea .content-area {
-        padding: 24px;
-        justify-content: center;
-      }
-
-      .service-boxarea .icons {
-        width: 50px;
-        height: 50px;
-        font-size: 22px;
-        margin-bottom: 14px;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .service3-section-area .container-fluid {
-        padding: 0 10px !important;
-        /* Edge to edge on mobile */
-      }
-
-      .service-carousel-area {
-        padding: 20px 0 !important;
-      }
-
-      .service-header h2 {
-        font-size: 26px !important;
-      }
-
-      .service-header p {
-        font-size: 14px !important;
-      }
-
-      .service-header {
-        margin-bottom: 40px;
-      }
-
-      .service-boxarea {
-        height: 400px;
-        /* Increased from 300px for mobile */
-      }
-
-      .service-boxarea .content-area {
-        padding: 18px;
-        justify-content: center;
-      }
-
-      .service-boxarea .icons {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-
-      .service-boxarea .icons img {
-        width: 26px;
-        height: 26px;
-      }
-
-      .content-area-pera a {
-        font-size: 16px !important;
-        margin-bottom: 8px !important;
-      }
-
-      .content-area-pera p {
-        font-size: 12px !important;
-        line-height: 1.5;
-      }
-    }
-
-    /* Mobile Header Tweaks */
-    .mobile-header {
-      background: #1a1a1a !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    }
-
-    .mobile-logo img {
-
-      width: auto !important;
-    }
-
-    @media (max-width: 991px) {
-      .header-area {
-        padding: 15px 20px !important;
-      }
-    }
-
-    /* Mobile Sidebar Dropdown Tweak */
-    .mobile-nav-list li.has-dropdown>a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .mobile-dropdown {
-      display: none;
-      padding-left: 20px;
-      background: rgba(0, 0, 0, 0.02);
-    }
-
-    .mobile-nav-list li.active .mobile-dropdown {
-      display: block;
-    }
-
-    img {
-      max-width: 100% !important;
-
-    }
-
-    /* White Theme Override for Index Page */
-    body.homepage3-body {
-      background: #ffffff !important;
-      color: #333333 !important;
-    }
-
-    #services,
-    #products,
-    #about,
-    #portfolio,
-    #contact-box {
-      background: #ffffff !important;
-    }
-
-    .heading6 h2,
-    .about-header-area h2,
-    .service-header h2 {
-      color: #1a1a1a !important;
-    }
-
-    .heading6 p,
-    .about-header-area p,
-    .service-header p {
-      color: #555555 !important;
-    }
-
-    /* Hardware Section Interaction */
-    .product-img-box {
-      perspective: 1000px;
-      position: relative;
-      cursor: pointer;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .product-img-box img {
-      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .product-img-box:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Glare effect */
-    .product-img-box::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-    }
-
-    .product-img-box:hover::after {
-      opacity: 1;
-    }
-
-    .hardware-list li {
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      padding: 12px 20px;
-      border-radius: 50px;
-      /* Pill shape */
-      width: 100%;
-      cursor: pointer;
-    }
-
-    .hardware-list li:hover {
-      background: rgba(212, 175, 55, 0.1);
-      /* Visible gold highlight */
-      transform: translateX(10px);
-      color: var(--pvc-gold-dark);
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.05);
-    }
-
-    .hardware-list li i {
-      transition: transform 0.3s ease;
-      font-size: 1.2em;
-    }
-
-    .hardware-list li:hover i {
-      transform: scale(1.3) rotate(5deg);
-    }
-
-    .progres-section-area {
-      transition: all 0.4s ease;
-      padding: 15px;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-
-    .progres-section-area:hover {
-      background: rgba(212, 175, 55, 0.08);
-      transform: translateX(10px);
-    }
-
-    .progres-section-area:hover .check {
-      transform: scale(1.2) rotate(10deg);
-      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-    }
-
-    /* Interactive & Theme Styles */
-    .btn-accent {
-      background: var(--pvc-gold-dark) !important;
-      color: #fff !important;
-      border: none !important;
-      padding: 15px 35px !important;
-      border-radius: 8px !important;
-      display: inline-block !important;
-      font-weight: 700 !important;
-      transition: all 0.4s ease !important;
-      box-shadow: 0 4px 15px rgba(139, 110, 0, 0.3) !important;
-    }
-
-    .btn-accent:hover {
-      background: var(--pvc-gold-mid) !important;
-      transform: translateY(-3px) !important;
-      box-shadow: 0 8px 25px rgba(139, 110, 0, 0.5) !important;
-    }
-
-    .counter-boxarea {
-      transition: all 0.4s ease;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-    }
-
-    .counter-boxarea:hover {
-      background: #fff !important;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transform: translateY(-10px);
-      border-color: var(--pvc-gold-mid) !important;
-    }
-    
-    /* Mobile Statistics - 2 per row compact styling */
-    @media (max-width: 767px) {
-      .counter-boxarea {
-        padding: 15px 10px !important;
-        border-radius: 12px !important;
-      }
-      
-      .counter-boxarea .icon-box {
-        width: 50px !important;
-        height: 50px !important;
-        margin-bottom: 12px !important;
-      }
-      
-      .counter-boxarea .icon-box i {
-        font-size: 20px !important;
-      }
-      
-      .counter-boxarea h2 {
-        font-size: 28px !important;
-        margin-bottom: 3px !important;
-      }
-      
-      .counter-boxarea p {
-        font-size: 10px !important;
-        letter-spacing: 1px !important;
-      }
-    }
-
-    .testimonial-author-box {
-      transition: all 0.4s ease !important;
-    }
-
-    .testimonial-author-box:hover {
-      border-color: var(--pvc-gold-dark) !important;
-      box-shadow: 0 15px 40px rgba(184, 134, 11, 0.2) !important;
-      transform: scale(1.02);
-    }
-
-    .contact-boxarea {
-      transition: all 0.3s ease !important;
-      border-radius: 12px !important;
-      padding: 15px !important;
-    }
-
-    .contact-boxarea:hover {
-      background: #fff !important;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05) !important;
-      transform: translateX(10px);
-    }
-
-    .header-btn4 {
-      background: var(--pvc-gold-dark) !important;
-      transition: all 0.4s ease !important;
-    }
-
-    .header-btn4:hover {
-      background: var(--pvc-gold-mid) !important;
-      box-shadow: 0 5px 20px rgba(139, 110, 0, 0.4) !important;
-      transform: translateY(-2px);
-    }
-
-    /* Premium Form Styling */
-    .contact-form-area {
-      background: #ffffff !important;
-      padding: 50px !important;
-      border-radius: 20px !important;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08) !important;
-      border-top: 6px solid var(--pvc-gold-dark) !important;
-    }
-
-    .contact-form-area h3 {
-      font-size: 32px !important;
-      font-weight: 700 !important;
-      color: #1a1a1a !important;
-      margin-bottom: 35px !important;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .input-group-custom {
-      margin-bottom: 25px;
-    }
-
-    .input-group-custom label {
-      display: block;
-      font-size: 16px;
-      font-weight: 600;
-      color: #444;
-      margin-bottom: 8px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .input-group-custom input,
-    .input-group-custom textarea {
-      width: 100%;
-      padding: 12px 0;
-      border: none;
-      border-bottom: 2px solid #eee;
-      background: transparent;
-      font-size: 16px;
-      color: #333;
-      transition: all 0.3s ease;
-      outline: none;
-    }
-
-    .input-group-custom input:focus,
-    .input-group-custom textarea:focus {
-      border-bottom-color: var(--pvc-gold-mid);
-    }
-
-    .input-group-custom input::placeholder,
-    .input-group-custom textarea::placeholder {
-      color: #aaa;
-      font-weight: 400;
-    }
-
-    .btn-form-submit {
-      background: transparent;
-      color: var(--pvc-gold-dark) !important;
-      border: 2px solid var(--pvc-gold-dark) !important;
-      padding: 18px 40px;
-      border-radius: 50px !important;
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .btn-form-submit:hover {
-      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important;
-      background-size: 200% auto !important;
-      color: #000 !important;
-      border-color: transparent !important;
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
-    }
-
-    .btn-form-submit i {
-      font-size: 18px;
-      transition: transform 0.4s ease;
-    }
-
-    .btn-form-submit:hover i {
-      transform: translate(3px, -3px);
-    }
-
-    /* ===== SCENARIO SECTION STYLES ===== */
-    .scenario-card {
-      background: #fff;
-      padding: 45px 35px;
-      border-radius: 24px;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-      height: 100%;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .scenario-card:hover {
-      border-color: var(--pvc-gold-mid);
-      transform: translateY(-12px);
-      box-shadow: 0 25px 60px rgba(184, 134, 11, 0.12);
-    }
-
-    .scenario-icon {
-      width: 80px;
-      height: 80px;
-      background: rgba(212, 175, 55, 0.08);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: var(--pvc-gold-dark);
-      margin-bottom: 30px;
-      transition: all 0.5s ease;
-      position: relative;
-    }
-
-    .scenario-card:hover .scenario-icon {
-      background: var(--pvc-gold-dark);
-      color: #fff;
-      transform: scale(1.05) rotate(5deg);
-      box-shadow: 0 10px 25px rgba(184, 134, 11, 0.3);
-    }
-
-    .scenario-icon::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border: 1px solid var(--pvc-gold-mid);
-      border-radius: 50%;
-      opacity: 0;
-      transition: all 0.5s ease;
-    }
-
-    .scenario-card:hover .scenario-icon::after {
-      opacity: 1;
-      transform: scale(1.3);
-    }
-
-    .scenario-card h3 {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--pvc-gold-dark);
-      margin-bottom: 18px;
-      letter-spacing: -0.5px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .scenario-card p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: #555;
-      margin: 0;
-      font-weight: 500;
-      margin-bottom: 25px;
-    }
-
-    /* ===== SCALABILITY SECTION STYLES ===== */
-    .scale-card {
-      background: #fff;
-      padding: 50px 40px;
-      border-radius: 20px;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .scale-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0) 100%);
-      opacity: 0;
-      transition: all 0.5s ease;
-      z-index: -1;
-    }
-
-    .scale-card:hover::before {
-      opacity: 1;
-    }
-
-    .scale-card:hover {
-      transform: translateY(-10px);
-      border-color: var(--pvc-gold-mid);
-      box-shadow: 0 20px 40px rgba(184, 134, 11, 0.1);
-    }
-
-
-    .scale-icon-box {
-      width: 65px;
-      height: 65px;
-      background: var(--pvc-gold-dark);
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 25px;
-      box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
-      transition: all 0.4s ease;
-    }
-
-    .scale-icon-box i {
-      color: #fff;
-      font-size: 28px;
-    }
-
-    .scale-card:hover .scale-icon-box {
-      transform: scale(1.1) rotate(-5deg);
-      background: #fff;
-      border: 1px solid var(--pvc-gold-mid);
-    }
-
-    .scale-card:hover .scale-icon-box i {
-      color: var(--pvc-gold-dark);
-    }
-
-    .scale-card h3 {
-      font-size: 22px;
-      font-weight: 800;
-      color: #111;
-      margin-bottom: 15px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .scale-card p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #555;
-      margin-bottom: 25px;
-    }
-
-    .product-view-btn {
-      background: transparent;
-      color: var(--pvc-gold-dark);
-      border: 2px solid var(--pvc-gold-dark);
-      padding: 10px 25px;
-      border-radius: 50px;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px !important;
-      transition: all 0.4s ease;
-      z-index: 2;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: auto;
-      cursor: pointer;
-      text-decoration: none !important;
-    }
-
-    .scenario-card:hover .product-view-btn,
-    .scale-card:hover .product-view-btn {
-      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important;
-      background-size: 200% auto !important;
-      color: #000 !important;
-      border-color: transparent !important;
-      box-shadow: 0 8px 20px rgba(184, 134, 11, 0.4);
-    }
-
-    .service-boxarea {
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      border-radius: 20px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .service-boxarea .content-area {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      align-items: center;
-      text-align: center;
-    }
-
-    .service-boxarea .content-area-pera {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      width: 100%;
-    }
-
-    .service-boxarea .content-area-pera p {
-      margin-bottom: 25px;
-      flex-grow: 1;
-    }
-
-    .service-boxarea .content-area .product-view-btn {
-      margin-top: auto;
-    }
-
-    .service-boxarea:hover .product-view-btn {
-      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important;
-      background-size: 200% auto !important;
-      color: #000 !important;
-      border-color: transparent !important;
-      box-shadow: 0 8px 20px rgba(184, 134, 11, 0.4);
-    }
-
-    /* Hero Carousel Premium Vertical Pagination (Image 2 style) */
-    #home {
-      counter-reset: hero-dots;
-      position: relative;
-    }
-
-    #home .carousel-area .owl-dots {
-      position: absolute;
-      right: 40px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex !important;
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-      z-index: 100;
-    }
-
-    #home .carousel-area .owl-dot {
-      width: 6px;
-      height: 6px;
-      background: rgba(255, 255, 255, 0.4) !important;
-      border-radius: 50%;
-      border: none !important;
-      padding: 0 !important;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-      counter-increment: hero-dots;
-      display: block !important;
-    }
-
-    #home .carousel-area .owl-dot.active {
-      background: #fff !important;
-      transform: scale(1.5);
-    }
-
-    /* Circular Timer & Number for Active Dot */
-    #home .carousel-area .owl-dot.active::before {
-      content: counter(hero-dots);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-size: 8px;
-      font-weight: 700;
-      z-index: 2;
-    }
-
-    #home .carousel-area .owl-dot.active::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 28px;
-      height: 28px;
-      margin-top: -14px;
-      margin-left: -14px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: rotateDotTimer 5s linear infinite;
-      z-index: 1;
-    }
-
-    @keyframes rotateDotTimer {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Hide default Owl Nav Arrows for main carousel */
-    #home .owl-nav {
-      display: none !important;
-    }
-
-    /* Adjust main menu items to handle the transition if needed */
-    /* ===== HERO SECTION HEIGHT CONTROL (FIXED) ===== */
-    #home {
-      overflow: hidden;
-      /* prevents extra white space */
-    }
-
-    #home .hero3-section-area {
-      height: 65vh;
-      /* MAIN HEIGHT CONTROL */
-      min-height: 420px;
-      /* prevents text breaking */
-      display: flex;
-      align-items: center;
-    }
-
-    /* Mobile Optimization */
-    @media (max-width: 768px) {
-      #home .hero3-section-area {
-        height: 80vh;
-        min-height: auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/index_styles.css">
 </head>
 
 <body>
 
 
   <!--=====HEADER START =======-->
-  <header>
-    <div class="header-area homepage3 header header-sticky" id="header">
-      <div class="container-fluid" style="padding: 0 50px;">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="header-elements">
-              <div class="site-logo">
-                <a href="index.html"><img src="assets/img/logo/logo1.png" alt="PVC Logo"></a>
-              </div>
-              <div class="main-menu">
-                <ul>
-                  <li><a href="index.html" class="active">Home</a></li>
-                  
-                  <!-- Network Cameras with Dropdown -->
-                  <li class="has-dropdown">
-                    <a href="network-cameras.html">Network Cameras <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu-nav">
-                      <li><a href="network-cameras.html"><i class="fa-solid fa-video"></i> Network Cameras</a></li>
-                      <li><a href="product-category.html?cat=nvr"><i class="fa-solid fa-server"></i> Network Video Recorders (NVR)</a></li>
-                      <li><a href="product-category.html?cat=storage"><i class="fa-solid fa-database"></i> Data Storage</a></li>
-                      <li><a href="product-category.html?cat=switches"><i class="fa-solid fa-network-wired"></i> Network Switches</a></li>
-                    </ul>
-                  </li>
-                  
-                  <!-- Turbo HD with Dropdown -->
-                  
-                  
-                  <!-- Access Control with Dropdown -->
-                  <li class="has-dropdown">
-                    <a href="access-control.html">Access Control <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu-nav">
-                      <li><a href="access-control.html"><i class="fa-solid fa-id-card"></i> Access Control Systems</a></li>
-                      <li><a href="product-category.html?cat=gates"><i class="fa-solid fa-door-open"></i> Speed Gates & Turnstiles</a></li>
-                      <li><a href="product-category.html?cat=face"><i class="fa-solid fa-face-viewfinder"></i> Face Recognition</a></li>
-                    </ul>
-                  </li>
-                  
-                  <!-- Video Intercom with Dropdown -->
-                 
-                  
-                  <!-- More Products with Dropdown -->
-                  <li class="has-dropdown">
-                    <a href="products.html">More Products <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu-nav">
-                      <li><a href="alarm-systems.html"><i class="fa-solid fa-bell"></i> Alarm Systems</a></li>
-                      <li><a href="thermal-products.html"><i class="fa-solid fa-temperature-half"></i> Thermal Products</a></li>
-                      <li><a href="display-control.html"><i class="fa-solid fa-tv"></i> Display & Control</a></li>
-                      <li><a href="software.html"><i class="fa-solid fa-code"></i> Software</a></li>
-                      <li><a href="intelligent-traffic.html"><i class="fa-solid fa-car"></i> Intelligent Traffic</a></li>
-                      <li><a href="audio-products.html"><i class="fa-solid fa-bullhorn"></i> Audio Products</a></li>
-                      <li class="dropdown-divider"></li>
-                      <li><a href="products.html"><i class="fa-solid fa-grid-2"></i> View All Products</a></li>
-                    </ul>
-                  </li>
-                  
-                  <!-- Services with Dropdown -->
-                  <li class="has-dropdown">
-                    <a href="services.html">Services <i class="fa-solid fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu-nav">
-                      <li><a href="services.html"><i class="fa-solid fa-toolbox"></i> Support & Tools</a></li>
-                      <li><a href="services.html"><i class="fa-solid fa-chalkboard-user"></i> Training Center</a></li>
-                      <li><a href="services.html"><i class="fa-solid fa-rotate"></i> RMA Service</a></li>
-                      <li><a href="services.html"><i class="fa-solid fa-headset"></i> Technical Support</a></li>
-                    </ul>
-                  </li>
-                  
-                  <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="header-right-icons">
-                <!-- Search Icon -->
-                <div class="nav-search-wrapper">
-                  <button class="nav-search-btn" aria-label="Search" type="button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                  <div class="nav-search-dropdown">
-                    <form class="nav-search-form" onsubmit="return handleNavSearch(event)">
-                      <input type="text" class="nav-search-input" placeholder="Search products..." autocomplete="off">
-                      <button type="submit" class="nav-search-submit" aria-label="Submit search">
-                        <i class="fa-solid fa-arrow-right"></i>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <!-- Phone Icon -->
-                <a href="tel:+919144555566" class="nav-phone-btn" aria-label="Call us">
-                  <i class="fa-solid fa-phone"></i>
-                </a>
-              </div>
-              <!-- MOBILE HEADER ACTIONS (Search Bar + Phone + Menu) -->
-              <div class="mobile-header-actions d-lg-none">
-                <div class="mobile-header-search-bar">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                  <input type="text" placeholder="Search products..." onkeydown="if(event.key==='Enter'){handleMobileSearch(event)}" autocomplete="off">
-                </div>
-                <a href="tel:+919144555566" class="mobile-action-btn mobile-phone-btn" aria-label="Call us">
-                  <i class="fa-solid fa-phone"></i>
-                </a>
-                <div class="mobile-menu-toggle">
-                  <i class="fa-solid fa-bars"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- CLEAN MOBILE SIDEBAR -->
-    <div class="clean-mobile-overlay"></div>
-    <div class="clean-mobile-sidebar">
-      <div class="clean-sidebar-header">
-        <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" class="clean-logo">
-        <div class="clean-close-btn"><i class="fa-solid fa-xmark"></i></div>
-      </div>
-      <div class="clean-mobile-nav">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
+  <!--===== GLOBAL HEADER COMPONENT =======-->
+  <script src="assets/js/global_header.js"></script>
+  <!--===== END GLOBAL HEADER =======-->
 
-  </header>
   <!--=====HEADER END =======-->
 
   <!--===== PRELOADER STARTS =======-->
   <div class="preloader">
     <div class="loading-container">
       <div id="loading-icon">
-        <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" style="width: 150px;">
+        <img src="assets/img/logo/logo1.png" alt="PVC Logo" style="width: 150px;">
       </div>
     </div>
   </div>
@@ -1548,8 +78,8 @@
           <div class="row m-0">
             <div class="col-lg-8" style="padding-left: 50px;">
               <div class="header-main-content heading5">
-               
-               
+
+
                 <div class="btn-area">
                 </div>
               </div>
@@ -1558,7 +88,7 @@
         </div>
       </div>
 
-    
+
 
     </div>
   </section>
@@ -1885,15 +415,15 @@
   <!--===== SHOP BY CATEGORIES SECTION ENDS =======-->
 
   <!--===== ABOUT AREA STARTS =======-->
-  
+
   <!--===== ABOUT AREA ENDS =======-->
 
   <!--===== INTELLIGENCE SCENARIOS AREA STARTS =======-->
-  
+
   <!--===== INTELLIGENCE SCENARIOS AREA ENDS =======-->
 
   <!--===== NEW PRODUCTS CAROUSEL SECTION =====-->
-  
+
   <!--===== PRODUCTS AREA STARTS =======-->
   <!-- <section id="products" class="sp1" style="background: #fff; padding: 100px 0;">
     <div class="container">
@@ -2085,71 +615,13 @@
         <!-- New Impressive Heading for Ecosystem -->
         <div class="row mb-5 justify-content-center">
           <div class="col-lg-12 text-center" data-aos="fade-down">
-            <style>
-              .eco-header-section {
-                padding-bottom: 30px;
-                position: relative;
-              }
-
-              .eco-icon-top {
-                width: 70px;
-                height: 70px;
-                background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid));
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto 20px;
-                box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-                animation: eco-glow 3s infinite ease-in-out;
-              }
-
-              @keyframes eco-glow {
-
-                0%,
-                100% {
-                  transform: scale(1);
-                  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-                }
-
-                50% {
-                  transform: scale(1.08);
-                  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
-                }
-              }
-
-              .eco-header-subtitle {
-                color: #000000;
-                font-weight: 700;
-                letter-spacing: 4px;
-                text-transform: uppercase;
-                margin-bottom: 15px;
-                font-size: 14px;
-                display: block;
-              }
-
-              .eco-header-title {
-                font-size: 46px;
-                font-weight: 800;
-                margin-bottom: 20px;
-                letter-spacing: -1px;
-                color: var(--pvc-gold-dark);
-              }
-
-              .eco-header-divider {
-                width: 120px;
-                height: 3px;
-                background: linear-gradient(to right, transparent, var(--pvc-gold-mid), transparent);
-                margin: 0 auto;
-              }
-            </style>
-            <div class="eco-header-section">
-              <div class="eco-icon-top">
-                <i class="fa-solid fa-earth-americas" style="color: #fff; font-size: 32px;"></i>
+            <div class="premium-header-section">
+              <div class="premium-icon-box">
+                <i class="fa-solid fa-earth-americas"></i>
               </div>
-              <span class="eco-header-subtitle">Global Impact</span>
-              <h2 class="eco-header-title">OUR STATISTICS</h2>
-              <div class="eco-header-divider"></div>
+              <span class="premium-subtitle">Global Impact</span>
+              <h2 class="premium-title">OUR STATISTICS</h2>
+              <div class="premium-divider"></div>
             </div>
           </div>
         </div>
@@ -2312,92 +784,126 @@
         <div class="row align-items-center">
           <div class="col-lg-12 text-center mb-4" data-aos="fade-down">
             <style>
-              .brand-header-section {
+              /* Unified Premium Heading Style */
+              .premium-header-section {
+                padding-bottom: 30px;
                 position: relative;
-                padding: 20px 0;
+                text-align: center;
               }
 
-              .brand-header-section h4 {
-                font-size: 36px;
-                font-weight: 900;
-                color: var(--pvc-gold-dark);
-                margin-bottom: 10px;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-              }
-
-              @keyframes shimmer {
-
-                0%,
-                100% {
-                  background-position: 0% 50%;
-                }
-
-                50% {
-                  background-position: 100% 50%;
-                }
-              }
-
-              .brand-header-section h4 {
-                background-size: 200% auto;
-              }
-
-              .brand-subtitle {
-                color: #555;
-                font-size: 16px;
-                font-weight: 600;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                margin-bottom: 15px;
-              }
-
-              .brand-icon {
-                display: inline-block;
-                width: 70px;
-                height: 70px;
+              .premium-icon-box {
+                width: 80px;
+                height: 80px;
                 background: linear-gradient(135deg, var(--pvc-gold-dark), var(--pvc-gold-mid));
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 0 auto 15px;
-                box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);
-                animation: pulse 2s infinite;
+                margin: 0 auto 25px;
+                box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+                animation: premium-pulse 3s infinite ease-in-out;
               }
 
-              @keyframes pulse {
+              .premium-icon-box i {
+                color: #fff;
+                font-size: 36px;
+              }
+
+              @keyframes premium-pulse {
 
                 0%,
                 100% {
                   transform: scale(1);
-                  box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);
+                  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
                 }
 
                 50% {
-                  transform: scale(1.1);
-                  box-shadow: 0 12px 30px rgba(184, 134, 11, 0.5);
+                  transform: scale(1.05);
+                  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
                 }
               }
 
-              .brand-icon i {
-                color: #fff;
-                font-size: 32px;
+              .premium-subtitle {
+                display: block;
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color: #333;
+                margin-bottom: 12px;
+                font-family: 'Inter', sans-serif;
               }
 
-              .brand-divider {
-                width: 80px;
-                height: 3px;
-                background: linear-gradient(to right, transparent, var(--pvc-gold-dark), transparent);
-                margin: 20px auto;
+              .premium-title {
+                font-size: 48px;
+                font-weight: 800;
+                color: var(--pvc-gold-dark);
+                text-transform: uppercase;
+                letter-spacing: -0.5px;
+                margin-bottom: 20px;
+                line-height: 1.1;
+                font-family: 'Outfit', sans-serif;
+              }
+
+              .premium-divider {
+                width: 100px;
+                height: 4px;
+                background: linear-gradient(to right, transparent, var(--pvc-gold-mid), transparent);
+                margin: 0 auto;
+                border-radius: 2px;
+              }
+
+              /* Responsive Adjustments */
+              @media (max-width: 991px) {
+                .premium-title {
+                  font-size: 40px;
+                }
+
+                .premium-icon-box {
+                  width: 70px;
+                  height: 70px;
+                  margin-bottom: 20px;
+                }
+
+                .premium-icon-box i {
+                  font-size: 30px;
+                }
+              }
+
+              @media (max-width: 767px) {
+                .premium-title {
+                  font-size: 32px;
+                  letter-spacing: 0;
+                }
+
+                .premium-subtitle {
+                  font-size: 12px;
+                  letter-spacing: 2px;
+                }
+
+                .premium-divider {
+                  width: 80px;
+                  height: 3px;
+                }
+
+                .premium-icon-box {
+                  width: 60px;
+                  height: 60px;
+                  margin-bottom: 15px;
+                }
+
+                .premium-icon-box i {
+                  font-size: 24px;
+                }
               }
             </style>
-            <div class="brand-header-section">
-              <div class="brand-icon">
+            <div class="premium-header-section">
+              <div class="premium-icon-box">
                 <i class="fa-solid fa-handshake"></i>
               </div>
-              <p class="brand-subtitle">Trusted By Industry Leaders</p>
-              <h4>Our Strategic Partners</h4>
-              <div class="brand-divider"></div>
+              <span class="premium-subtitle">Trusted By Industry Leaders</span>
+              <h2 class="premium-title">OUR STRATEGIC PARTNERS</h2>
+              <div class="premium-divider"></div>
             </div>
           </div>
         </div>
@@ -2518,18 +1024,6 @@
               border-radius: 2px;
             }
 
-            .feedback-creative-grid {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 30px;
-              padding: 40px 0;
-            }
-
-            @media (max-width: 991px) {
-              .feedback-creative-grid {
-                grid-template-columns: 1fr;
-              }
-            }
 
             .deep-glass-card {
               background: rgba(255, 255, 255, 0.9);
@@ -2639,9 +1133,10 @@
         </div>
       </div>
 
-      <div class="feedback-creative-grid">
+      <!-- Feedback Carousel -->
+      <div class="feedback-carousel owl-carousel">
         <!-- Card 1 -->
-        <div class="deep-glass-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="deep-glass-card">
           <div class="big-quote-bg">“</div>
           <p class="feedback-text">"The transition to 4K surveillance with AcuSeek NVR has been seamless. The clarity is
             unmatched, and our security protocols have evolved overnight."</p>
@@ -2655,8 +1150,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="deep-glass-card" data-aos="fade-up" data-aos-delay="200"
-          style="background: linear-gradient(135deg, #fff, #fff9f0);">
+        <div class="deep-glass-card" style="background: linear-gradient(135deg, #fff, #fff9f0);">
           <div class="big-quote-bg">“</div>
           <p class="feedback-text">"Solar cable-free cameras are a lifesaver for our remote energy monitoring sites. No
             wiring, just pure high-end intelligence in the wild."</p>
@@ -2670,7 +1164,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="deep-glass-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="deep-glass-card">
           <div class="big-quote-bg">“</div>
           <p class="feedback-text">"Perimeter protection solutions from PVC have virtually eliminated our trespassing
             issues. The AI detection is terrifyingly accurate."</p>
@@ -2683,6 +1177,32 @@
           </div>
         </div>
       </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          $('.feedback-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplaySpeed: 1000,
+            smartSpeed: 800,
+            responsive: {
+              0: {
+                items: 1
+              },
+              768: {
+                items: 2
+              },
+              1000: {
+                items: 3
+              }
+            }
+          });
+        });
+      </script>
     </div>
   </section>
   <!--===== FEEDBACK AREA ENDS =======-->
@@ -2798,62 +1318,6 @@
   </section>
   <!--===== CONTACT AREA ENDS =======-->
 
-  <!--===== FOOTER AREA STARTS =======-->
-  <footer class="footer3-section-area">
-    <div class="container">
-      <div class="row sp1 pb-0">
-        <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
-          <div class="logo-content">
-            <img src="assets/img/logo/pvc-logo.png" alt="PVC Logo" style="height: 100px; margin-bottom: 20px;">
-            <p>Upholding integrity and innovating the future of AIoT security. Providing world-class machine perception
-              and intelligence solutions globally.</p>
-            <ul class="d-flex mt-4 list-unstyled gap-3">
-              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a></li>
-              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a></li>
-              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href="#" class="footer-social-link"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="footer-list">
-            <h4
-              style="border-bottom: 2px solid var(--pvc-gold-mid); padding-bottom: 10px; color: var(--white-primary);">
-              Quick Links</h4>
-            <ul class="list-unstyled">
-              <li><a href="index.html" style="color: rgba(255,255,255,0.8);">Home</a></li>
-              <li><a href="about-us.html" style="color: rgba(255,255,255,0.8);">About Us</a></li>
-              <li><a href="products.html" style="color: rgba(255,255,255,0.8);">Products</a></li>
-              <li><a href="services.html" style="color: rgba(255,255,255,0.8);">Services</a></li>
-              <li><a href="contact-us.html" style="color: rgba(255,255,255,0.8);">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="head">
-            <h4
-              style="border-bottom: 2px solid var(--pvc-gold-mid); padding-bottom: 10px; color: var(--white-primary);">
-              International</h4>
-          </div>
-          <div class="location-area mb-3 d-flex align-items-center gap-2">
-            <i class="fa-solid fa-phone-volume footer-contact-icon"></i>
-            <a href="tel:+917579445566" style="color: var(--white-primary);">+91 7579 44 55 66</a>
-          </div>
-          <div class="location-area d-flex align-items-center gap-2">
-            <i class="fa-solid fa-envelope-open-text footer-contact-icon"></i>
-            <a href="mailto:Sales@pvcsecurity.com" style="color: var(--white-primary);">Sales@pvcsecurity.com</a>
-          </div>
-        </div>
-      </div>
-      <div class="row pt-5 pb-5 mt-5 border-top border-secondary">
-        <div class="col-12 text-center">
-          <p style="color: rgba(255,255,255,0.6)">© Copyright 2024 - PVC Security Systems. All Rights Reserved</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!--===== FOOTER AREA ENDS =======-->
   <script src="assets/js/plugins/bootstrap.min.js"></script>
   <script src="assets/js/plugins/aos.js"></script>
   <script src="assets/js/plugins/fontawesome.js"></script>
@@ -2867,24 +1331,27 @@
   <script src="assets/js/plugins/counter.js"></script>
   <script src="assets/js/plugins/Splitetext.js"></script>
   <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
-  <script src="assets/js/plugins/aos.js"></script>
   <script src="assets/js/main.js"></script>
-  
+
+  <!--===== GLOBAL FOOTER COMPONENT =======-->
+  <script src="assets/js/global_footer.js"></script>
+  <!--===== END GLOBAL FOOTER =======-->
+
   <!-- Quick Links Auto-Scroll + Manual Swipe (Mobile Only) -->
   <script>
-    (function() {
+    (function () {
       // Only run on mobile
       if (window.innerWidth > 768) return;
-      
+
       const container = document.querySelector('.quick-links-section .container');
       if (!container) return;
-      
+
       const scrollSpeed = 0.8;
       const resumeDelay = 1000;
       let lastScrollTime = 0;
       let userScrolling = false;
       let resumeTimeout = null;
-      
+
       // Continuous auto-scroll - never stops
       function autoScroll(timestamp) {
         if (!userScrolling) {
@@ -2896,30 +1363,30 @@
         }
         requestAnimationFrame(autoScroll);
       }
-      
+
       // Track user interaction without blocking
       function onUserTouch() {
         userScrolling = true;
         if (resumeTimeout) clearTimeout(resumeTimeout);
       }
-      
+
       function onTouchEnd() {
         if (resumeTimeout) clearTimeout(resumeTimeout);
-        resumeTimeout = setTimeout(function() {
+        resumeTimeout = setTimeout(function () {
           userScrolling = false;
         }, resumeDelay);
       }
-      
+
       // Passive listeners - don't block touch
       container.addEventListener('touchstart', onUserTouch, { passive: true });
       container.addEventListener('touchend', onTouchEnd, { passive: true });
       container.addEventListener('touchcancel', onTouchEnd, { passive: true });
-      
+
       // Start auto-scroll after page loads
       requestAnimationFrame(autoScroll);
     })();
   </script>
-  
+
   <script>
     AOS.init({
       duration: 1000,
@@ -2954,171 +1421,6 @@
   <!-- Cart Functionality -->
   <link rel="stylesheet" href="assets/css/cart_styles.css">
   <script src="assets/js/cart.js"></script>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919144555566" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-    <span>Chat with us</span>
-  </a>
-
-  <style>
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 100px;
-      right: 25px;
-      z-index: 9998;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: #25D366;
-      color: #ffffff !important;
-      padding: 12px 20px;
-      border-radius: 50px;
-      text-decoration: none !important;
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-      transition: all 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-      background: #128C7E;
-      transform: scale(1.05);
-      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
-      color: #ffffff !important;
-    }
-
-    .whatsapp-float i {
-      font-size: 22px;
-    }
-
-    .whatsapp-float span {
-      white-space: nowrap;
-    }
-
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-      .whatsapp-float {
-        bottom: 90px;
-        right: 20px;
-        padding: 12px 16px;
-        font-size: 13px;
-      }
-
-      .whatsapp-float i {
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .whatsapp-float {
-        bottom: 80px;
-        right: 15px;
-        padding: 14px;
-        border-radius: 50%;
-      }
-
-      .whatsapp-float span {
-        display: none;
-      }
-
-      .whatsapp-float i {
-        font-size: 24px;
-      }
-    }
-  </style>
-
-  <!-- Search Icon Functionality -->
-  <script>
-    // Toggle search dropdown
-    document.addEventListener('DOMContentLoaded', function() {
-      const searchBtn = document.querySelector('.nav-search-btn');
-      const searchWrapper = document.querySelector('.nav-search-wrapper');
-      const searchInput = document.querySelector('.nav-search-input');
-      
-      if (searchBtn && searchWrapper) {
-        searchBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          searchWrapper.classList.toggle('active');
-          if (searchWrapper.classList.contains('active') && searchInput) {
-            setTimeout(() => searchInput.focus(), 100);
-          }
-        });
-        
-        // Close when clicking outside
-        document.addEventListener('click', function(e) {
-          if (!searchWrapper.contains(e.target)) {
-            searchWrapper.classList.remove('active');
-          }
-        });
-        
-        // Close on Escape key
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape') {
-            searchWrapper.classList.remove('active');
-          }
-        });
-      }
-    });
-    
-    // Handle search form submission
-    function handleNavSearch(e) {
-      e.preventDefault();
-      const input = document.querySelector('.nav-search-input');
-      const query = input ? input.value.trim() : '';
-      if (query) {
-        // Redirect to products page with search query
-        window.location.href = 'products.html?search=' + encodeURIComponent(query);
-      }
-      return false;
-    }
-    
-    // Mobile Search Functionality
-    (function() {
-      const mobileSearchBtn = document.querySelector('.mobile-search-btn');
-      const mobileSearchWrapper = document.querySelector('.mobile-search-wrapper');
-      const mobileSearchInput = document.querySelector('.mobile-search-input');
-      
-      if (mobileSearchBtn && mobileSearchWrapper) {
-        mobileSearchBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          mobileSearchWrapper.classList.toggle('active');
-          if (mobileSearchWrapper.classList.contains('active') && mobileSearchInput) {
-            setTimeout(() => mobileSearchInput.focus(), 100);
-          }
-        });
-        
-        // Close when clicking outside
-        document.addEventListener('click', function(e) {
-          if (mobileSearchWrapper && !mobileSearchWrapper.contains(e.target)) {
-            mobileSearchWrapper.classList.remove('active');
-          }
-        });
-        
-        // Close on Escape key
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && mobileSearchWrapper) {
-            mobileSearchWrapper.classList.remove('active');
-          }
-        });
-      }
-    })();
-    
-    // Handle mobile search form submission
-    function handleMobileSearch(e) {
-      e.preventDefault();
-      const input = document.querySelector('.mobile-search-input');
-      const query = input ? input.value.trim() : '';
-      if (query) {
-        window.location.href = 'products.html?search=' + encodeURIComponent(query);
-      }
-      return false;
-    }
-  </script>
 
 </body>
 

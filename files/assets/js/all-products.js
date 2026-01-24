@@ -1,271 +1,271 @@
-                                    const moniterNames = [
-                                        "BLUE FEATHER 15 INCH MONITOR",
-                                        "BLUE FEATHER 17 INCH MONITOR",
-                                        "BLUE FEATHER 19 INCH MONITOR",
-                                        "BLUE FEATHER 22 INCH MONITOR",
-                                        "LAPCARE 15'' MONITER (HDMI&VGA)",
-                                        "LAPCARE 20'' MONITER (HDMI&VGA)",
-                                        "ZEBRONICS 22'' INCH LED MONITOR (HDMI)",
-                                        "ZEBSTER 15.4 (V16/E16)",
-                                        "ZEBSTER 19'' INCH LED MONITOR (HDMI)"
-                                    ];
-                                const maxxionNames = [
-                                    "BNC MAXXION TYPE-2",
-                                    "EZVIZ ROBO STAND",
-                                    "FYBER 30MTR EXTENDER",
-                                    "MAXXION 10/100 POE EXTENDER WATER PROOF 30W",
-                                    "MAXXION 10/1000 POE EXTENDER 30W",
-                                    "MAXXION 1U PLASTIC RACK",
-                                    "MAXXION 3PIN POWER SOCKET",
-                                    "MAXXION 40CM POLE RING",
-                                    "MAXXION 4CH SMPS",
-                                    "MAXXION 6SOCKET POWER",
-                                    "MAXXION 8CH SMPS",
-                                    "MAXXION BNC SCREW TYPE",
-                                    "MAXXION CABEL MANAGER",
-                                    "MAXXION CABINET LOCK",
-                                    "MAXXION CRIMPING TOOL HEAVY",
-                                    "MAXXION DC SCREW TYPE",
-                                    "MAXXION DUAL SIDE POLE STAND",
-                                    "MAXXION GIGA POE EXTENDER WATER PROOF 30W",
-                                    "MAXXION GIGA POE EXTENDER WATER PROOF 90W",
-                                    "MAXXION HDMI 4K 15MTR",
-                                    "MAXXION HDMI 4K 3MTR",
-                                    "MAXXION HDMI 4K 5MTR",
-                                    "MAXXION HDMI CABEL 4K 10MTRS",
-                                    "MAXXION HDMI CABEL 4K 20MTRS",
-                                    "MAXXION HDMI CABEL 4K 30MTRS",
-                                    "MAXXION JUNCTION BOX",
-                                    "MAXXION METAL DOME STAND",
-                                    "MAXXION PUNCH DOWN TOOL",
-                                    "MAXXION ROUND BOX HEAVY",
-                                    "MAXXION ROUND BOX HEAVY 5X5",
-                                    "MAXXION SQUARE BOX HEAVY 5X5",
-                                    "MAXXION WIRE BNC ELIGHT",
-                                    "PRINTING AND SATAONARY",
-                                    "PRINTING AND STATIONARY"
-                                ];
-                            const mastelNames = [
-                                "MASTEL 2MP COLOUR+AUDIO BULLET",
-                                "MASTEL 2MP COLOUR+AUDIO DOME",
-                                "MASTEL 4 PORT POE",
-                                "MASTEL 4MP IP COLOUR BULLET PRO",
-                                "MASTEL 4MP IP COLOUR DOME",
-                                "MASTEL 6+2 PORT POE 10/100",
-                                "MASTEL 8 PORT POE",
-                                "MASTEL 8+2 PORT POE  2 UPLINK GIGA (8 PORT 10/100 + 2 10/100/1000)",
-                                "MASTEL 9+2 PORT POE 10/100",
-                                "MASTEL SMPS 4CH",
-                                "MASTEL SMPS 8CH"
-                            ];
-                        const imouNames = [
-                            "IMOU 128GB SD CARD",
-                            "IMOU 2MP  IPC-A22EP-D",
-                            "IMOU 3+3MP WIFI LINKAGE",
-                            "IMOU 3MP WIFI BULLET",
-                            "IMOU 4G OUT DOOR 2MP",
-                            "IMOU 5+5MP WIFI LINKAGE",
-                            "IMOU CRUISER 3MP OUT DOOR",
-                            "IMOU CRUISER 5MP OUT DOOR",
-                            "IMOU CRUISER SE 4MP 2K+",
-                            "IMOU CUE 2MP C22EP",
-                            "IMOU RANGER S2 4MP ROBO"
-                        ];
-                    const hikvisionNames = [
-                        "D LINK RJ 45 NEW",
-                        "DAH-4MP-IP-IR30MTR BULLET [DH-IPC-HFW1431S1P-S4]",
-                        "DS-2CE70DOT-PTLTS HIK 2MP DOME 2WAY (A)",
-                        "DS-2DE4225IW-DE E PTZ 25X",
-                        "DS-KH6320-TE1 INDOOR SCREENS",
-                        "DS-KIT321MFWX-B BIOMETRIC",
-                        "EZVIZ CS-C1C 2MP WIFI CAMERA",
-                        "EZVIZ H3C 2MP BULLET CAMERA",
-                        "EZVIZ TY1 2MP WIFI PT CAMERA",
-                        "HARD DISK 3TB [S]",
-                        "HIK 16 PORT POE 16+2 UPLINK GIGA WITH SFP",
-                        "HIK 16+1G+1S POE [DS-3E0318P-E/M]",
-                        "HIK 16CH 2MP DVR",
-                        "HIK 16CH 4MP DVR (DS-7216HQHI K1)",
-                        "HIK 16CH 4MP DVR (IDS-7216HQHI-M1/FA)",
-                        "HIK 16CH 5MP 2WAY AUDIO DVR (IDS-7216HQHI-M1/XT)",
-                        "HIK 16CH 8MP 2 SATA DVR (7216HUHI-M2/S)",
-                        "HIK 16CH M1 DVR UP TO 5 MP",
-                        "HIK 16CH NVR  NXI K1",
-                        "HIK 16CH NVR  NXI-K2 (2SATA)",
-                        "HIK 16CH NVR NI Q1",
-                        "HIK 16CH NVR NIQ1/M",
-                        "HIK 22 MONITOR",
-                        "HIK 24+1G+1S POE[DS-3E0326P-E/M]",
-                        "HIK 24G+2S POE [DS-3E0526P-E/M]",
-                        "HIK 2MP 12MM 80MT IR BULLET (DS-2CE1ADOT-IT5F)",
-                        "HIK 2MP 15X PTZ DS-2DE4215IW-DE",
-                        "HIK 2MP 20M SMART DUAL LIGHT MIC IN BULLET",
-                        "HIK 2MP 20M SMART DUAL LIGHT MIC IN DOME",
-                        "HIK 2MP 2CE18DOT-LFS",
-                        "HIK 2MP 2WAY AUDIO BULLET (DS-2CE16DOT-LPTS)",
-                        "HIK 2MP 40 MTR 6MM COLOUR(DS-2CE12DFT-F)2100",
-                        "HIK 2MP 40 MTR 6MM SMART HYBRID LIGHT (DS-2CE17DOT- LFS)",
-                        "HIK 2MP 40 MTR 8MM IR BULLET (DS-2CE1ADOT-IT3F)",
-                        "HIK 2MP 4CH 2WAY AUDIO DVR M1/T",
-                        "HIK 2MP 6MM IR BULLET (DS- 2CE1ADOT IT1F)",
-                        "HIK 2MP AUDIO BULLET 2WAY OLD(DS-2CE16DOT-LPTS)",
-                        "HIK 2MP COLOUR  MIC DOME",
-                        "HIK 2MP COLOUR HD PT",
-                        "HIK 2MP COLOUR MIC BULLET",
-                        "HIK 2MP ECO BULLET",
-                        "HIK 2MP IP COLOR+AUDIO BULLET (Black)",
-                        "HIK 2MP IP COLOUR +AUDIO BULLET (P)",
-                        "HIK 2MP IP COLOUR BULLET (M)",
-                        "HIK 2MP IP COLOUR+MIC DOME",
-                        "HIK 2MP IP DOME COLOUR+AUDIO (P)",
-                        "HIK 2MP IP HYBRID BULLET (B) 3021G2E-LIU",
-                        "HIK 2MP IP HYBRID+MIC  DOME",
-                        "HIK 2MP IP HYBRID+MIC BULLET",
-                        "HIK 2MP IP IR BULLET",
-                        "HIK 2MP IP IR DOME",
-                        "HIK 2MP IR REGULER+MIC BULLET",
-                        "HIK 2MP IR REGULER+MIC DOME",
-                        "HIK 3+1 180MTRS",
-                        "HIK 32CH 5MP/3K DVR M2/XT",
-                        "HIK 32CH NVR NXI-K2 (2SATA)",
-                        "HIK 32CH NVR NXI-K4 4SATA",
-                        "HIK 3K 20M SMART DUAL LIGHT MIC IN BULLET",
-                        "HIK 3K 2OM SMART DUAL LIGHT MIC IN DOME",
-                        "HIK 4+2 POE [DS-3E0106P-E/M]",
-                        "HIK 4CH  DVR 5MP M1",
-                        "HIK 4CH 2MP DVR",
-                        "HIK 4CH 4MP DVR (DS-7204HQHI-M1/FA)",
-                        "HIK 4CH 5MP EDVR 1TB (E04HQHI-D)",
-                        "HIK 4CH 8MP DVR (IDS-7204HUHI-M1/FA)",
-                        "HIK 4CH EDVR 1TB (EO4HGHI-E)",
-                        "HIK 4CH EDVR 320GB (E04HGHI-B)",
-                        "HIK 4CH EDVR 512GB (E04HGHI-D)",
-                        "HIK 4CH NVR NI-Q1/M",
-                        "HIK 4CH NVR NXI K1",
-                        "HIK 4CH NVR-NI-Q1",
-                        "HIK 4G+1G POE [DS-3E0505P-E/M]  FULL GIG",
-                        "HIK 4MP IP BULLET",
-                        "HIK 4MP IP COLOUR + MIC BULLET (P)",
-                        "HIK 4MP IP COLOUR BULLET + MIC (B) (2CD3041G2E-LIU)",
-                        "HIK 4MP IP COLOUR VIEW +MIC DOME",
-                        "HIK 4MP IP COLOUR VIEW BULLET (M)",
-                        "HIK 4MP IP COLOUR+MIC DOME (P)",
-                        "HIK 4MP IP DOME",
-                        "HIK 4MP IP DOME HYD(DS-2CD1343G2-LIUF/SL)",
-                        "HIK 4MP IP HYBRID DOME (1341G2-LIU)",
-                        "HIK 4MP IP HYBRID+MIC BULLET",
-                        "HIK 4MP IP HYBRID+MIC DOME",
-                        "HIK 4MP IP HYBRIDE BULLET - 2CD1041G2-LIU",
-                        "HIK 4MP IP IR BULLET -2CD1041GO-I",
-                        "HIK 4MP IP IR BULLET 6MM LENS",
-                        "HIK 4MP IP PTZ (2DE4425IW-DE E)",
-                        "HIK 4MP IP VERIFOCAL (VF) BULLET",
-                        "HIK 4MP IP VF SMART HYBRIDE (2CD3641G2-LIZS)",
-                        "HIK 4MP PTZ",
-                        "HIK 5MP 3K COLOUR+MIC VU BULLET",
-                        "HIK 5MP 3K COLOUR+MIC VU DOME",
-                        "HIK 5MP 40 MTR 8MM IR BULLET (DS-2CE1AHOT-IT3F)",
-                        "HIK 5MP NORMAL+MIC DOME",
-                        "HIK 5MP REGULAR+MIC BULLET",
-                        "HIK 64 CH NVR 4 SATA DS-7764NI-M4",
-                        "HIK 6MP IP BULLET COLOUR+AUDIO (N)",
-                        "HIK 6MP IP COLOUR A+B (2CD3061G2E-LIU)",
-                        "HIK 6MP IP COLOUR DOME(B) 2CD3161G2E-LIU",
-                        "HIK 6MP IP DOME COLOUR+AUDIO",
-                        "HIK 6MP IP HYBRID+MIC BULLET",
-                        "HIK 6MP IP HYBRID+MIC DOME",
-                        "HIK 8+2G POE[DS-3E0310P-E/M]",
-                        "HIK 8CH 2MP 2WAY AUDIO DVR M1/T",
-                        "HIK 8CH 2MP DVR",
-                        "HIK 8CH 4MP DVR (IDS-7208HQHI-M1/FA)",
-                        "HIK 8CH 5MP 2WAY AUDIO DVR (IDS-7208HQHI-M1/XT)",
-                        "HIK 8CH 5MP DVR M1/S",
-                        "HIK 8CH 5MP EDVR 1TB (E08HQHI-B))",
-                        "HIK 8CH 8MP DVR (IDS-7208HUHI-M1/FA)",
-                        "HIK 8CH EDVR 1TB (EO8HGHI-D)",
-                        "HIK 8CH NVR NI Q1",
-                        "HIK 8CH NVR NIQ1/M",
-                        "HIK 8CH NVR NXI K1",
-                        "HIK 8CH NVR NXI K2",
-                        "HIK 8G+1G+1S POE [DS-3EO510P-E/M]",
-                        "HIK 8PORT POE",
-                        "HIK BIOMETRIC",
-                        "HIK BIOMETRIC-B",
-                        "HIK C3N",
-                        "HIK C6",
-                        "HIK C8C",
-                        "HIK DS-2CE1ACOT-VF",
-                        "HIK H8C  4MP 6MM",
-                        "HIK IP VIDEO DOOR KIT (KIS603-P (C)",
-                        "HIK SMPS 10AMPS (8CH)",
-                        "HIK SMPS 20AMPS (16CH)",
-                        "HIK SMPS 5AMPS",
-                        "HIK VIDEO DOOR KIT HD (KIS402-P)",
-                        "HIK WIRELESS EXTERNAL SOUNDER (DS-PS1-E-WB)",
-                        "HIK WIRLESS INTRUSION ALARM AX PRO KIT",
-                        "HIKVISION 19'' MONITOR"
-                    ];
-                const hiFocusNames = [
-                    "3+1 HIFOCUS OUTDOOR CABLE",
-                    "HI FOCUS 4G SOLAR",
-                    "HI FOCUS 8+2GIGA POE",
-                    "HIFOCUS (HF) 4 PORT POE SWITCH 10/100",
-                    "HIFOCUS (HF) 4G ROUTER",
-                    "HIFOCUS (HF) 8 PORT POE SWITCH 10/100",
-                    "HIFOCUS 2.4MP  IR DOME",
-                    "HIFOCUS 2.4MP COLOUR BULLET",
-                    "HIFOCUS 2.4MP COLOUR BULLET +AUDIO",
-                    "HIFOCUS 2.4MP COLOUR DOME+AUDIO",
-                    "HIFOCUS 4CH DVR",
-                    "HIFOCUS 8CH DVR",
-                    "HIFOCUS CAT 6 INDOOR (HF)"
-                ];
-            const finolexNames = [
-                "CAT6 LAN GRY 100MTR NEW",
-                "FINOLEX CAT 6 305 MTR(NEW)",
-                "FINOLEX CAT6 GRY 100MTRS",
-                "FINOLEX CAT6 LAN YLW 305MTR CABLE",
-                "FINOLEX TELEPHONE WIRE"
-            ];
-        const ezvizNames = [
-            "EZVIZ 4G H8C 3MP  OUTDOOR",
-            "EZVIZ 8CH NVR (CS-X5S)",
-            "EZVIZ CP1 LITE",
-            "EZVIZ EB3 -3MP BATTERY BULLET",
-            "EZVIZ H1C MINI CAMERA",
-            "EZVIZ H4 3MP POE DOME",
-            "EZVIZ H5 POE BULLET",
-            "EZVIZ H5C 4G BULLET",
-            "EZVIZ H6C 2MP",
-            "EZVIZ H7C DUAL 2K",
-            "EZVIZ H8C 2MP OUTDOOR PT",
-            "EZVIZ H8C 2MP WIFI",
-            "EZVIZ H8C 3MP POE",
-            "EZVIZ H8C 4G 2K OUTDOOR",
-            "EZVIZ H8C WIFI 4MP",
-            "EZVIZ HB8 4G 3MP SOLAR OUTDOOR",
-            "EZVIZ SMART HOME SOLAR PANEL",
-            "EZVIZ WIFI H9C 3+3",
-            "EZVIZ WIFI H9C 5+5"
-        ];
-    const erdNames = [
-        "ERD 12V - 5AMP ADAPTOR",
-        "ERD 12V-1AMP PLUGIN",
-        "ERD 12V-2AMP PLUGIN",
-        "ERD 12V-3AMP DESKTOP SWITCH",
-        "ERD 12V-3AMP PLUGIN",
-        "ERD 16CH SMPS",
-        "ERD 48V-1.25AMP POE ADAPTER",
-        "ERD 4CH SMPS",
-        "ERD 5V 1 AMP PLUGIN",
-        "ERD 8CH SMPS",
-        "ERD SPIKE 1.5MTRS",
-        "ERD SPIKE 3MTR",
-        "ERD SPIKE 5MTR"
-    ];
+const moniterNames = [
+    "BLUE FEATHER 15 INCH MONITOR",
+    "BLUE FEATHER 17 INCH MONITOR",
+    "BLUE FEATHER 19 INCH MONITOR",
+    "BLUE FEATHER 22 INCH MONITOR",
+    "LAPCARE 15'' MONITER (HDMI&VGA)",
+    "LAPCARE 20'' MONITER (HDMI&VGA)",
+    "ZEBRONICS 22'' INCH LED MONITOR (HDMI)",
+    "ZEBSTER 15.4 (V16/E16)",
+    "ZEBSTER 19'' INCH LED MONITOR (HDMI)"
+];
+const maxxionNames = [
+    "BNC MAXXION TYPE-2",
+    "EZVIZ ROBO STAND",
+    "FYBER 30MTR EXTENDER",
+    "MAXXION 10/100 POE EXTENDER WATER PROOF 30W",
+    "MAXXION 10/1000 POE EXTENDER 30W",
+    "MAXXION 1U PLASTIC RACK",
+    "MAXXION 3PIN POWER SOCKET",
+    "MAXXION 40CM POLE RING",
+    "MAXXION 4CH SMPS",
+    "MAXXION 6SOCKET POWER",
+    "MAXXION 8CH SMPS",
+    "MAXXION BNC SCREW TYPE",
+    "MAXXION CABEL MANAGER",
+    "MAXXION CABINET LOCK",
+    "MAXXION CRIMPING TOOL HEAVY",
+    "MAXXION DC SCREW TYPE",
+    "MAXXION DUAL SIDE POLE STAND",
+    "MAXXION GIGA POE EXTENDER WATER PROOF 30W",
+    "MAXXION GIGA POE EXTENDER WATER PROOF 90W",
+    "MAXXION HDMI 4K 15MTR",
+    "MAXXION HDMI 4K 3MTR",
+    "MAXXION HDMI 4K 5MTR",
+    "MAXXION HDMI CABEL 4K 10MTRS",
+    "MAXXION HDMI CABEL 4K 20MTRS",
+    "MAXXION HDMI CABEL 4K 30MTRS",
+    "MAXXION JUNCTION BOX",
+    "MAXXION METAL DOME STAND",
+    "MAXXION PUNCH DOWN TOOL",
+    "MAXXION ROUND BOX HEAVY",
+    "MAXXION ROUND BOX HEAVY 5X5",
+    "MAXXION SQUARE BOX HEAVY 5X5",
+    "MAXXION WIRE BNC ELIGHT",
+    "PRINTING AND SATAONARY",
+    "PRINTING AND STATIONARY"
+];
+const mastelNames = [
+    "MASTEL 2MP COLOUR+AUDIO BULLET",
+    "MASTEL 2MP COLOUR+AUDIO DOME",
+    "MASTEL 4 PORT POE",
+    "MASTEL 4MP IP COLOUR BULLET PRO",
+    "MASTEL 4MP IP COLOUR DOME",
+    "MASTEL 6+2 PORT POE 10/100",
+    "MASTEL 8 PORT POE",
+    "MASTEL 8+2 PORT POE  2 UPLINK GIGA (8 PORT 10/100 + 2 10/100/1000)",
+    "MASTEL 9+2 PORT POE 10/100",
+    "MASTEL SMPS 4CH",
+    "MASTEL SMPS 8CH"
+];
+const imouNames = [
+    "IMOU 128GB SD CARD",
+    "IMOU 2MP  IPC-A22EP-D",
+    "IMOU 3+3MP WIFI LINKAGE",
+    "IMOU 3MP WIFI BULLET",
+    "IMOU 4G OUT DOOR 2MP",
+    "IMOU 5+5MP WIFI LINKAGE",
+    "IMOU CRUISER 3MP OUT DOOR",
+    "IMOU CRUISER 5MP OUT DOOR",
+    "IMOU CRUISER SE 4MP 2K+",
+    "IMOU CUE 2MP C22EP",
+    "IMOU RANGER S2 4MP ROBO"
+];
+const hikvisionNames = [
+    "D LINK RJ 45 NEW",
+    "DAH-4MP-IP-IR30MTR BULLET [DH-IPC-HFW1431S1P-S4]",
+    "DS-2CE70DOT-PTLTS HIK 2MP DOME 2WAY (A)",
+    "DS-2DE4225IW-DE E PTZ 25X",
+    "DS-KH6320-TE1 INDOOR SCREENS",
+    "DS-KIT321MFWX-B BIOMETRIC",
+    "EZVIZ CS-C1C 2MP WIFI CAMERA",
+    "EZVIZ H3C 2MP BULLET CAMERA",
+    "EZVIZ TY1 2MP WIFI PT CAMERA",
+    "HARD DISK 3TB [S]",
+    "HIK 16 PORT POE 16+2 UPLINK GIGA WITH SFP",
+    "HIK 16+1G+1S POE [DS-3E0318P-E/M]",
+    "HIK 16CH 2MP DVR",
+    "HIK 16CH 4MP DVR (DS-7216HQHI K1)",
+    "HIK 16CH 4MP DVR (IDS-7216HQHI-M1/FA)",
+    "HIK 16CH 5MP 2WAY AUDIO DVR (IDS-7216HQHI-M1/XT)",
+    "HIK 16CH 8MP 2 SATA DVR (7216HUHI-M2/S)",
+    "HIK 16CH M1 DVR UP TO 5 MP",
+    "HIK 16CH NVR  NXI K1",
+    "HIK 16CH NVR  NXI-K2 (2SATA)",
+    "HIK 16CH NVR NI Q1",
+    "HIK 16CH NVR NIQ1/M",
+    "HIK 22 MONITOR",
+    "HIK 24+1G+1S POE[DS-3E0326P-E/M]",
+    "HIK 24G+2S POE [DS-3E0526P-E/M]",
+    "HIK 2MP 12MM 80MT IR BULLET (DS-2CE1ADOT-IT5F)",
+    "HIK 2MP 15X PTZ DS-2DE4215IW-DE",
+    "HIK 2MP 20M SMART DUAL LIGHT MIC IN BULLET",
+    "HIK 2MP 20M SMART DUAL LIGHT MIC IN DOME",
+    "HIK 2MP 2CE18DOT-LFS",
+    "HIK 2MP 2WAY AUDIO BULLET (DS-2CE16DOT-LPTS)",
+    "HIK 2MP 40 MTR 6MM COLOUR(DS-2CE12DFT-F)2100",
+    "HIK 2MP 40 MTR 6MM SMART HYBRID LIGHT (DS-2CE17DOT- LFS)",
+    "HIK 2MP 40 MTR 8MM IR BULLET (DS-2CE1ADOT-IT3F)",
+    "HIK 2MP 4CH 2WAY AUDIO DVR M1/T",
+    "HIK 2MP 6MM IR BULLET (DS- 2CE1ADOT IT1F)",
+    "HIK 2MP AUDIO BULLET 2WAY OLD(DS-2CE16DOT-LPTS)",
+    "HIK 2MP COLOUR  MIC DOME",
+    "HIK 2MP COLOUR HD PT",
+    "HIK 2MP COLOUR MIC BULLET",
+    "HIK 2MP ECO BULLET",
+    "HIK 2MP IP COLOR+AUDIO BULLET (Black)",
+    "HIK 2MP IP COLOUR +AUDIO BULLET (P)",
+    "HIK 2MP IP COLOUR BULLET (M)",
+    "HIK 2MP IP COLOUR+MIC DOME",
+    "HIK 2MP IP DOME COLOUR+AUDIO (P)",
+    "HIK 2MP IP HYBRID BULLET (B) 3021G2E-LIU",
+    "HIK 2MP IP HYBRID+MIC  DOME",
+    "HIK 2MP IP HYBRID+MIC BULLET",
+    "HIK 2MP IP IR BULLET",
+    "HIK 2MP IP IR DOME",
+    "HIK 2MP IR REGULER+MIC BULLET",
+    "HIK 2MP IR REGULER+MIC DOME",
+    "HIK 3+1 180MTRS",
+    "HIK 32CH 5MP/3K DVR M2/XT",
+    "HIK 32CH NVR NXI-K2 (2SATA)",
+    "HIK 32CH NVR NXI-K4 4SATA",
+    "HIK 3K 20M SMART DUAL LIGHT MIC IN BULLET",
+    "HIK 3K 2OM SMART DUAL LIGHT MIC IN DOME",
+    "HIK 4+2 POE [DS-3E0106P-E/M]",
+    "HIK 4CH  DVR 5MP M1",
+    "HIK 4CH 2MP DVR",
+    "HIK 4CH 4MP DVR (DS-7204HQHI-M1/FA)",
+    "HIK 4CH 5MP EDVR 1TB (E04HQHI-D)",
+    "HIK 4CH 8MP DVR (IDS-7204HUHI-M1/FA)",
+    "HIK 4CH EDVR 1TB (EO4HGHI-E)",
+    "HIK 4CH EDVR 320GB (E04HGHI-B)",
+    "HIK 4CH EDVR 512GB (E04HGHI-D)",
+    "HIK 4CH NVR NI-Q1/M",
+    "HIK 4CH NVR NXI K1",
+    "HIK 4CH NVR-NI-Q1",
+    "HIK 4G+1G POE [DS-3E0505P-E/M]  FULL GIG",
+    "HIK 4MP IP BULLET",
+    "HIK 4MP IP COLOUR + MIC BULLET (P)",
+    "HIK 4MP IP COLOUR BULLET + MIC (B) (2CD3041G2E-LIU)",
+    "HIK 4MP IP COLOUR VIEW +MIC DOME",
+    "HIK 4MP IP COLOUR VIEW BULLET (M)",
+    "HIK 4MP IP COLOUR+MIC DOME (P)",
+    "HIK 4MP IP DOME",
+    "HIK 4MP IP DOME HYD(DS-2CD1343G2-LIUF/SL)",
+    "HIK 4MP IP HYBRID DOME (1341G2-LIU)",
+    "HIK 4MP IP HYBRID+MIC BULLET",
+    "HIK 4MP IP HYBRID+MIC DOME",
+    "HIK 4MP IP HYBRIDE BULLET - 2CD1041G2-LIU",
+    "HIK 4MP IP IR BULLET -2CD1041GO-I",
+    "HIK 4MP IP IR BULLET 6MM LENS",
+    "HIK 4MP IP PTZ (2DE4425IW-DE E)",
+    "HIK 4MP IP VERIFOCAL (VF) BULLET",
+    "HIK 4MP IP VF SMART HYBRIDE (2CD3641G2-LIZS)",
+    "HIK 4MP PTZ",
+    "HIK 5MP 3K COLOUR+MIC VU BULLET",
+    "HIK 5MP 3K COLOUR+MIC VU DOME",
+    "HIK 5MP 40 MTR 8MM IR BULLET (DS-2CE1AHOT-IT3F)",
+    "HIK 5MP NORMAL+MIC DOME",
+    "HIK 5MP REGULAR+MIC BULLET",
+    "HIK 64 CH NVR 4 SATA DS-7764NI-M4",
+    "HIK 6MP IP BULLET COLOUR+AUDIO (N)",
+    "HIK 6MP IP COLOUR A+B (2CD3061G2E-LIU)",
+    "HIK 6MP IP COLOUR DOME(B) 2CD3161G2E-LIU",
+    "HIK 6MP IP DOME COLOUR+AUDIO",
+    "HIK 6MP IP HYBRID+MIC BULLET",
+    "HIK 6MP IP HYBRID+MIC DOME",
+    "HIK 8+2G POE[DS-3E0310P-E/M]",
+    "HIK 8CH 2MP 2WAY AUDIO DVR M1/T",
+    "HIK 8CH 2MP DVR",
+    "HIK 8CH 4MP DVR (IDS-7208HQHI-M1/FA)",
+    "HIK 8CH 5MP 2WAY AUDIO DVR (IDS-7208HQHI-M1/XT)",
+    "HIK 8CH 5MP DVR M1/S",
+    "HIK 8CH 5MP EDVR 1TB (E08HQHI-B))",
+    "HIK 8CH 8MP DVR (IDS-7208HUHI-M1/FA)",
+    "HIK 8CH EDVR 1TB (EO8HGHI-D)",
+    "HIK 8CH NVR NI Q1",
+    "HIK 8CH NVR NIQ1/M",
+    "HIK 8CH NVR NXI K1",
+    "HIK 8CH NVR NXI K2",
+    "HIK 8G+1G+1S POE [DS-3EO510P-E/M]",
+    "HIK 8PORT POE",
+    "HIK BIOMETRIC",
+    "HIK BIOMETRIC-B",
+    "HIK C3N",
+    "HIK C6",
+    "HIK C8C",
+    "HIK DS-2CE1ACOT-VF",
+    "HIK H8C  4MP 6MM",
+    "HIK IP VIDEO DOOR KIT (KIS603-P (C)",
+    "HIK SMPS 10AMPS (8CH)",
+    "HIK SMPS 20AMPS (16CH)",
+    "HIK SMPS 5AMPS",
+    "HIK VIDEO DOOR KIT HD (KIS402-P)",
+    "HIK WIRELESS EXTERNAL SOUNDER (DS-PS1-E-WB)",
+    "HIK WIRLESS INTRUSION ALARM AX PRO KIT",
+    "HIKVISION 19'' MONITOR"
+];
+const hiFocusNames = [
+    "3+1 HIFOCUS OUTDOOR CABLE",
+    "HI FOCUS 4G SOLAR",
+    "HI FOCUS 8+2GIGA POE",
+    "HIFOCUS (HF) 4 PORT POE SWITCH 10/100",
+    "HIFOCUS (HF) 4G ROUTER",
+    "HIFOCUS (HF) 8 PORT POE SWITCH 10/100",
+    "HIFOCUS 2.4MP  IR DOME",
+    "HIFOCUS 2.4MP COLOUR BULLET",
+    "HIFOCUS 2.4MP COLOUR BULLET +AUDIO",
+    "HIFOCUS 2.4MP COLOUR DOME+AUDIO",
+    "HIFOCUS 4CH DVR",
+    "HIFOCUS 8CH DVR",
+    "HIFOCUS CAT 6 INDOOR (HF)"
+];
+const finolexNames = [
+    "CAT6 LAN GRY 100MTR NEW",
+    "FINOLEX CAT 6 305 MTR(NEW)",
+    "FINOLEX CAT6 GRY 100MTRS",
+    "FINOLEX CAT6 LAN YLW 305MTR CABLE",
+    "FINOLEX TELEPHONE WIRE"
+];
+const ezvizNames = [
+    "EZVIZ 4G H8C 3MP  OUTDOOR",
+    "EZVIZ 8CH NVR (CS-X5S)",
+    "EZVIZ CP1 LITE",
+    "EZVIZ EB3 -3MP BATTERY BULLET",
+    "EZVIZ H1C MINI CAMERA",
+    "EZVIZ H4 3MP POE DOME",
+    "EZVIZ H5 POE BULLET",
+    "EZVIZ H5C 4G BULLET",
+    "EZVIZ H6C 2MP",
+    "EZVIZ H7C DUAL 2K",
+    "EZVIZ H8C 2MP OUTDOOR PT",
+    "EZVIZ H8C 2MP WIFI",
+    "EZVIZ H8C 3MP POE",
+    "EZVIZ H8C 4G 2K OUTDOOR",
+    "EZVIZ H8C WIFI 4MP",
+    "EZVIZ HB8 4G 3MP SOLAR OUTDOOR",
+    "EZVIZ SMART HOME SOLAR PANEL",
+    "EZVIZ WIFI H9C 3+3",
+    "EZVIZ WIFI H9C 5+5"
+];
+const erdNames = [
+    "ERD 12V - 5AMP ADAPTOR",
+    "ERD 12V-1AMP PLUGIN",
+    "ERD 12V-2AMP PLUGIN",
+    "ERD 12V-3AMP DESKTOP SWITCH",
+    "ERD 12V-3AMP PLUGIN",
+    "ERD 16CH SMPS",
+    "ERD 48V-1.25AMP POE ADAPTER",
+    "ERD 4CH SMPS",
+    "ERD 5V 1 AMP PLUGIN",
+    "ERD 8CH SMPS",
+    "ERD SPIKE 1.5MTRS",
+    "ERD SPIKE 3MTR",
+    "ERD SPIKE 5MTR"
+];
 (() => {
     const accessoryNames = [
-        
+
         "10MM CLIPS",
         "128GB HP SD CARD",
         "2MP VIDEO BALUN  BLUE",
@@ -1592,11 +1592,20 @@
         sortBy: "default"
     };
 
+
     const getFilteredProducts = () => {
         let filtered = [...products];
 
         if (state.selectedCategories.size > 0) {
             filtered = filtered.filter(item => state.selectedCategories.has(item.category));
+        }
+
+        if (state.searchQuery) {
+            const query = state.searchQuery.toLowerCase().trim();
+            filtered = filtered.filter(item =>
+                item.name.toLowerCase().includes(query) ||
+                item.category.toLowerCase().includes(query)
+            );
         }
 
         if (elements.inStockFilter && elements.inStockFilter.checked) {
@@ -2091,34 +2100,42 @@
 
     bindEvents();
 
+
     // If a category was passed via query param (e.g. ?category=ACCESSORIES), apply it before initial render
-    (function applyCategoryFromUrl() {
+    (function applyFiltersFromUrl() {
         try {
             const params = new URLSearchParams(window.location.search);
+
+            // Handle Category
             const catParam = params.get('category') || params.get('cat');
-            if (!catParam) return;
-            const desired = String(catParam).trim().toUpperCase();
-            if (!elements.categoryFilters) return;
+            if (catParam) {
+                const desired = String(catParam).trim().toUpperCase();
+                if (elements.categoryFilters) {
+                    const inputs = elements.categoryFilters.querySelectorAll('input[name="category"]');
+                    inputs.forEach(i => i.checked = false);
 
-            // uncheck all category inputs, then check the desired one
-            const inputs = elements.categoryFilters.querySelectorAll('input[name="category"]');
-            inputs.forEach(i => i.checked = false);
+                    const targetInput = elements.categoryFilters.querySelector(`input[name="category"][value="${desired}"]`);
+                    if (targetInput) {
+                        targetInput.checked = true;
+                        if (desired === 'ALL CATEGORIES') state.selectedCategories = new Set();
+                        else state.selectedCategories = new Set([desired]);
 
-            const targetInput = elements.categoryFilters.querySelector(`input[name="category"][value="${desired}"]`);
-            if (targetInput) {
-                targetInput.checked = true;
-                // update state
-                if (desired === 'ALL CATEGORIES') state.selectedCategories = new Set();
-                else state.selectedCategories = new Set([desired]);
-
-                // update label visual states
-                const labels = elements.categoryFilters.querySelectorAll('.filter-checkbox-label');
-                labels.forEach(lbl => {
-                    const inp = lbl.querySelector('input[name="category"]');
-                    if (inp && inp.checked) lbl.classList.add('is-checked');
-                    else lbl.classList.remove('is-checked');
-                });
+                        const labels = elements.categoryFilters.querySelectorAll('.filter-checkbox-label');
+                        labels.forEach(lbl => {
+                            const inp = lbl.querySelector('input[name="category"]');
+                            if (inp && inp.checked) lbl.classList.add('is-checked');
+                            else lbl.classList.remove('is-checked');
+                        });
+                    }
+                }
             }
+
+            // Handle Search
+            const searchParam = params.get('search') || params.get('q');
+            if (searchParam) {
+                state.searchQuery = String(searchParam).trim();
+            }
+
         } catch (e) {
             // ignore URL parsing errors
         }
