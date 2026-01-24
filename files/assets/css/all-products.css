@@ -131,13 +131,18 @@
     align-items: center;
     cursor: pointer;
     padding: 8px 0;
-    font-size: 13px;
+    font-size: 14px;
     color: #444;
     transition: color 0.2s;
     user-select: none;
 }
 
 .filter-checkbox-label:hover {
+    color: #b8860b;
+}
+
+/* Highlight only labels that are actively checked (controlled via JS) */
+.filter-checkbox-label.is-checked {
     color: #b8860b;
 }
 
@@ -567,6 +572,60 @@
     
     .product-sidebar.active {
         display: block;
+    }
+
+    /* Mobile filter modal styles */
+    .product-sidebar.mobile-active {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.98);
+        width: 92%;
+        max-width: 520px;
+        max-height: 80vh;
+        overflow: auto;
+        z-index: 1100;
+        border-radius: 10px;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        background: #fff;
+        display: block;
+        padding: 12px;
+        opacity: 0;
+        transition: transform 200ms ease, opacity 160ms ease;
+    }
+
+    .product-sidebar.mobile-active.mobile-show {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    .mobile-filter-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.45);
+        z-index: 1050;
+        opacity: 1;
+    }
+
+    .mobile-filter-actions {
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 -6px 16px rgba(0,0,0,0.06);
+    }
+
+    .mobile-apply-btn {
+        background: #b8860b;
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        width: 100%;
+        max-width: 420px;
+        cursor: pointer;
     }
     
     .products-content-area {
