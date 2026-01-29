@@ -15,25 +15,26 @@ body,
    ========================================================================== */
 .shop-categories-section {
     background: #fff;
-    padding: 60px 0 80px;
+    padding: 80px 0 100px;
 }
 
 .shop-cat-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .shop-cat-title {
     color: #b8860b;
-    font-size: 42px;
-    font-weight: 700;
-    margin: 0 0 10px;
-    letter-spacing: -0.5px;
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0 0 15px;
+    letter-spacing: -1px;
+    text-transform: capitalize;
 }
 
 .shop-cat-tagline {
-    color: #777;
-    font-size: 16px;
+    color: #666;
+    font-size: 18px;
     font-weight: 400;
     margin: 0;
 }
@@ -43,52 +44,59 @@ body,
     display: block;
     text-align: center;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #fff;
+    border-radius: 12px;
 }
 
 .shop-cat-card:hover {
     text-decoration: none;
+    transform: translateY(-5px);
 }
 
 /* Image Box - Full width banner style */
 .shop-cat-img {
     width: 100%;
-    height: 160px;
-    background: #f5f5f5;
-    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    background: #ffffff;
+    border-radius: 12px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12px;
-    transition: all 0.3s ease;
-    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .shop-cat-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .shop-cat-card:hover .shop-cat-img {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 35px rgba(184, 134, 11, 0.15);
     border-color: #b8860b;
 }
 
 .shop-cat-card:hover .shop-cat-img img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* Category Name - Below the image box */
 .shop-cat-name {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
     color: #333;
     margin: 0;
-    padding: 8px 0;
+    padding: 10px 0;
     transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .shop-cat-card:hover .shop-cat-name {
@@ -98,15 +106,11 @@ body,
 /* Responsive - Tablet */
 @media (max-width: 991px) {
     .shop-categories-section {
-        padding: 50px 0 60px;
+        padding: 60px 0 70px;
     }
 
     .shop-cat-title {
-        font-size: 36px;
-    }
-
-    .shop-cat-img {
-        height: 140px;
+        font-size: 38px;
     }
 
     .shop-cat-name {
@@ -117,51 +121,50 @@ body,
 /* Responsive - Mobile */
 @media (max-width: 768px) {
     .shop-categories-section {
-        padding: 40px 0 50px;
+        padding: 50px 0 60px;
     }
 
     .shop-cat-header {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .shop-cat-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .shop-cat-tagline {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .shop-cat-img {
-        height: 100px;
-        border-radius: 6px;
-        margin-bottom: 8px;
+        border-radius: 10px;
+        margin-bottom: 10px;
     }
 
     .shop-cat-name {
-        font-size: 11px;
-        padding: 5px 0;
+        font-size: 12px;
+        padding: 6px 0;
     }
 }
 
 /* Responsive - Small Mobile */
 @media (max-width: 480px) {
     .shop-categories-section {
-        padding: 30px 0 40px;
+        padding: 40px 0 50px;
     }
 
     .shop-cat-title {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .shop-cat-img {
-        height: 80px;
-        margin-bottom: 6px;
+        border-radius: 8px;
+        margin-bottom: 8px;
     }
 
     .shop-cat-name {
-        font-size: 10px;
-        padding: 4px 0;
+        font-size: 11px;
+        padding: 5px 0;
     }
 }
 
