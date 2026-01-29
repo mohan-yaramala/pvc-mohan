@@ -118,8 +118,8 @@ function initPvcFooter() {
             <i class="fa-brands fa-whatsapp"></i>
         </a>
 
-        <!-- Global Mobile Sticky CTA -->
-        <div class="pvc-mobile-sticky-cta">
+        <div class="pvc-mobile-sticky-cta" id="pvcMobileStickyCta">
+            <div class="pvc-sticky-close" id="pvcStickyClose"><i class="fa-solid fa-xmark"></i></div>
             <span class="pvc-sticky-text">Need security guidance?</span>
             <a href="tel:${PVC_FOOTER_DATA.phone1Clean}" class="pvc-sticky-btn">Call Now</a>
         </div>
@@ -146,6 +146,16 @@ function initPvcFooter() {
         }
     });
 }
+
+// Global Close Handler for Mobile CTA
+document.addEventListener('click', function (e) {
+    if (e.target.closest('#pvcStickyClose')) {
+        const cta = document.getElementById('pvcMobileStickyCta');
+        if (cta) {
+            cta.style.display = 'none';
+        }
+    }
+});
 
 // Auto-load dependencies
 if (!document.querySelector('link[href*="global_footer.css"]')) {

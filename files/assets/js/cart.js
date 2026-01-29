@@ -37,10 +37,10 @@ function saveCart(cart) {
  */
 function addToCart(product) {
     const cart = getCart();
-    
+
     // Check if product already exists in cart
     const existingItemIndex = cart.findIndex(item => item.model === product.model);
-    
+
     if (existingItemIndex !== -1) {
         // Product exists, increment quantity
         cart[existingItemIndex].quantity += 1;
@@ -54,7 +54,7 @@ function addToCart(product) {
             quantity: 1
         });
     }
-    
+
     saveCart(cart);
     showAddToCartNotification(product.name);
 }
@@ -67,7 +67,7 @@ function removeFromCart(model) {
     let cart = getCart();
     cart = cart.filter(item => item.model !== model);
     saveCart(cart);
-    
+
     // Reload cart display if on cart page
     if (window.location.pathname.includes('cart.html')) {
         loadCartPage();
@@ -82,14 +82,14 @@ function removeFromCart(model) {
 function updateCartItemQuantity(model, quantity) {
     const cart = getCart();
     const itemIndex = cart.findIndex(item => item.model === model);
-    
+
     if (itemIndex !== -1) {
         if (quantity <= 0) {
             removeFromCart(model);
         } else {
             cart[itemIndex].quantity = quantity;
             saveCart(cart);
-            
+
             // Update display if on cart page
             if (window.location.pathname.includes('cart.html')) {
                 loadCartPage();
@@ -106,12 +106,12 @@ function calculateCartTotals() {
     const cart = getCart();
     let subtotal = 0;
     let itemCount = 0;
-    
+
     cart.forEach(item => {
         subtotal += (item.price * item.quantity);
         itemCount += item.quantity;
     });
-    
+
     return {
         subtotal: subtotal,
         itemCount: itemCount,
@@ -136,13 +136,13 @@ function formatCurrency(amount) {
 function updateFloatingCartButton() {
     const cart = getCart();
     const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
-    
+
     // Remove existing button
     const existingBtn = document.getElementById('floatingCartBtn');
     if (existingBtn) {
         existingBtn.remove();
     }
-    
+
     // Only show button if cart has items and not on cart page
     if (itemCount > 0 && !window.location.pathname.includes('cart.html')) {
         const floatingBtn = document.createElement('a');
@@ -167,7 +167,7 @@ function showAddToCartNotification(productName) {
     if (existingNotif) {
         existingNotif.remove();
     }
-    
+
     // Create notification
     const notification = document.createElement('div');
     notification.id = 'cartNotification';
@@ -188,9 +188,9 @@ function showAddToCartNotification(productName) {
         <strong><i class="fa-solid fa-check-circle"></i> Added to Cart!</strong>
         <p style="margin: 5px 0 0 0; font-size: 14px;">${productName}</p>
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Auto remove after 3 seconds
     setTimeout(() => {
         notification.style.animation = 'slideOutRight 0.4s ease';
@@ -208,18 +208,18 @@ function loadCartPage() {
     const cartItemsContainer = document.getElementById('cartItemsContainer');
     const emptyCartMessage = document.getElementById('emptyCartMessage');
     const cartSummarySection = document.querySelector('.cart-summary-section');
-    
+
     if (cart.length === 0) {
         // Show empty cart message
         if (cartSummarySection) cartSummarySection.style.display = 'none';
         if (emptyCartMessage) emptyCartMessage.style.display = 'block';
         return;
     }
-    
+
     // Hide empty message, show cart
     if (cartSummarySection) cartSummarySection.style.display = 'block';
     if (emptyCartMessage) emptyCartMessage.style.display = 'none';
-    
+
     // Display cart items
     cartItemsContainer.innerHTML = cart.map(item => `
         <div class="cart-item" data-model="${item.model}">
@@ -247,7 +247,7 @@ function loadCartPage() {
             </button>
         </div>
     `).join('');
-    
+
     // Update totals
     updateCartTotals();
 }
@@ -257,11 +257,11 @@ function loadCartPage() {
  */
 function updateCartTotals() {
     const totals = calculateCartTotals();
-    
+
     const subtotalEl = document.getElementById('cartSubtotal');
     const itemCountEl = document.getElementById('cartItemCount');
     const totalEl = document.getElementById('cartTotal');
-    
+
     if (subtotalEl) subtotalEl.textContent = formatCurrency(totals.subtotal);
     if (itemCountEl) itemCountEl.textContent = totals.itemCount;
     if (totalEl) totalEl.textContent = formatCurrency(totals.total);
@@ -274,12 +274,12 @@ function updateCartTotals() {
  */
 function initializeShippingSelection() {
     const shippingCards = document.querySelectorAll('.shipping-card');
-    
+
     shippingCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function () {
             // Remove selected class from all cards
             shippingCards.forEach(c => c.classList.remove('selected'));
-            
+
             // Add selected class to clicked card
             this.classList.add('selected');
         });
@@ -303,95 +303,95 @@ function getSelectedShippingMethod() {
 function placeRFQOnWhatsApp() {
     // Get form values
     const mobileNumber = document.getElementById('mobileNumber').value.trim();
-        const customerName = document.getElementById('customerName').value.trim();
-        const cityName = document.getElementById('cityName').value.trim();
+    const customerName = document.getElementById('customerName').value.trim();
+    const cityName = document.getElementById('cityName').value.trim();
     const shippingMethod = getSelectedShippingMethod();
-    
+
     // Validate required fields
     if (!mobileNumber) {
         alert('Please enter your mobile number');
         document.getElementById('mobileNumber').focus();
         return;
     }
-    
-        if (!customerName) {
-            alert('Please enter your name');
-            document.getElementById('customerName').focus();
-            return;
-        }
 
-        if (!cityName) {
-            alert('Please enter your city or village name');
-            document.getElementById('cityName').focus();
-            return;
-        }
-    
+    if (!customerName) {
+        alert('Please enter your name');
+        document.getElementById('customerName').focus();
+        return;
+    }
+
+    if (!cityName) {
+        alert('Please enter your city or village name');
+        document.getElementById('cityName').focus();
+        return;
+    }
+
     // Delivery pincode is optional now; do not block submission if empty
-    
+
     // Shipping method is optional now; do not block submission if not selected
-    
+
     // Get cart items
     const cart = getCart();
     if (cart.length === 0) {
         alert('Your cart is empty');
         return;
     }
-    
+
     // Generate RFQ Number (timestamp-based unique identifier)
     const rfqNumber = 'RFQ' + Date.now().toString().slice(-8);
-    
+
     // Get current date in DD/MM/YYYY format
     const currentDate = new Date();
     const formattedDate = `${String(currentDate.getDate()).padStart(2, '0')}/${String(currentDate.getMonth() + 1).padStart(2, '0')}/${currentDate.getFullYear()}`;
-    
+
     // Build product list with quantity and name format: • QTY × PRODUCT_NAME
     let productList = '';
     cart.forEach((item) => {
         productList += `• ${item.quantity} × ${item.name}\n`;
     });
-    
+
     // Generate professional WhatsApp RFQ message using the specified template
     let message = `🧾 *REQUEST FOR QUOTATION (RFQ)*\n`;
     message += `${'─'.repeat(30)}\n\n`;
-    
+
     message += `📌 *RFQ Details*\n`;
     message += `• RFQ Number: ${rfqNumber}\n`;
     message += `• 📅 Date: ${formattedDate}\n`;
-        message += `• 👤 Name: ${customerName}\n`;
-        message += `• 📍 City/Village: ${cityName}\n`;
-    if (deliveryPincode) message += `• 📍 Delivery Pin Code: ${deliveryPincode}\n`;
+    message += `• 👤 Name: ${customerName}\n`;
+    message += `• 📍 City/Village: ${cityName}\n`;
+    // deliveryPincode removed as it is not in the current form
     message += `• 📱 Registered Mobile Number: ${mobileNumber}\n\n`;
-    
+
     message += `${'─'.repeat(30)}\n\n`;
-    
+
     message += `📦 *Products Requested*\n`;
     message += `${productList}\n`;
-    
+
     message += `${'─'.repeat(30)}\n\n`;
-    
+
     if (shippingMethod && shippingMethod !== 'Not Selected') {
         message += `🚚 *Shipping Method*\n`;
         message += `${shippingMethod}\n\n`;
     }
-    
+
     message += `${'─'.repeat(30)}\n\n`;
-    
+
     message += `📝 _Note: Final pricing, availability, and delivery timeline\n`;
     message += `will be confirmed after review._\n\n`;
-    
+
     message += `🙏 Kindly share the quotation at your earliest convenience.\n`;
     message += `Thank you.`;
-    
+
     // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
-    
+
     // Fixed WhatsApp business number - DO NOT CHANGE
     const WHATSAPP_NUMBER = "919144555566";
-    
+
     // Create WhatsApp URL and open
     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
     window.open(whatsappURL, '_blank');
-    
+
     // Optional: Clear cart after placing RFQ (uncomment if needed)
     // localStorage.removeItem('pvcCart');
     // setTimeout(() => { window.location.href = 'products.html'; }, 1000);
@@ -402,24 +402,18 @@ function placeRFQOnWhatsApp() {
 /**
  * Initialize cart functionality on page load
  */
-document.addEventListener('DOMContentLoaded', function() {
-    // CHANGE 1: Clear cart on new session start (prevents old localStorage cart from persisting)
-    // Keeps cart usable across pages during the same browsing session.
-    const CART_STORAGE_KEY = 'pvcCart';
-    const CART_SESSION_FLAG_KEY = 'pvcCartSessionActive';
-    if (!sessionStorage.getItem(CART_SESSION_FLAG_KEY)) {
-        localStorage.removeItem(CART_STORAGE_KEY);
-        sessionStorage.setItem(CART_SESSION_FLAG_KEY, '1');
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    // Removed: Clear cart on new session start. This was causing items to vanish 
+    // when moving between product pages and the cart page.
 
     // Update floating cart button on all pages
     updateFloatingCartButton();
-    
+
     // If on cart page, load cart
     if (window.location.pathname.includes('cart.html')) {
         loadCartPage();
         initializeShippingSelection();
-        
+
         // Bind Place RFQ button
         const placeRFQBtn = document.getElementById('placeRFQBtn');
         if (placeRFQBtn) {

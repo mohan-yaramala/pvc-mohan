@@ -217,13 +217,18 @@
     letter-spacing: 1px;
 }
 
+.pvc-nav-item.has-mega-brand .pvc-mega-list {
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 500px;
+}
+
 .pvc-mega-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 2-column internal grid */
+    /* 2-column internal grid for other menus */
     gap: 15px;
 }
 

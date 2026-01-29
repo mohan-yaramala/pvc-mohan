@@ -11,111 +11,99 @@ body,
 }
 
 /* ==========================================================================
-   SHOP BY CATEGORIES - E-commerce Grid Layout
+   Product Categories Styles (Homepage)
+   Matches the Premium Design with Gold Glow & Smooth Transitions
    ========================================================================== */
-.shop-categories-section {
-    background: #fff;
-    padding: 80px 0 100px;
+
+.shop-cat-section {
+    padding: 80px 0;
+    background: #ffffff;
 }
 
-.shop-cat-header {
-    text-align: center;
-    margin-bottom: 60px;
+.shop-cat-title-area {
+    margin-bottom: 50px;
 }
 
 .shop-cat-title {
-    color: #b8860b;
-    font-size: 48px;
-    font-weight: 800;
-    margin: 0 0 15px;
-    letter-spacing: -1px;
-    text-transform: capitalize;
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #b38e1a;
+    /* Matching the gold title in screenshot */
+    margin-bottom: 15px;
 }
 
-.shop-cat-tagline {
+.shop-cat-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
     color: #666;
-    font-size: 18px;
-    font-weight: 400;
-    margin: 0;
 }
 
-/* Category Card - Reference Style */
+/* Category Cards */
 .shop-cat-card {
     display: block;
     text-align: center;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background: #fff;
-    border-radius: 12px;
+    background: transparent;
+    padding-bottom: 10px;
 }
 
-.shop-cat-card:hover {
-    text-decoration: none;
-    transform: translateY(-5px);
-}
-
-/* Image Box - Full width banner style */
 .shop-cat-img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    background: #ffffff;
+    position: relative;
     border-radius: 12px;
+    /* Smooth rounded corners from screenshot */
     overflow: hidden;
+    margin-bottom: 12px;
+    aspect-ratio: 16 / 9;
+    background: #f8f9fa;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Initial soft shadow */
+    transition: all 0.4s ease;
 }
 
-.shop-cat-img img {
+.shop-cat-img img,
+.svg-object {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* This makes the image fill the entire box */
+    transition: transform 0.6s ease;
+    pointer-events: none;
 }
 
+/* Hover State - Gold Glow Effect */
 .shop-cat-card:hover .shop-cat-img {
-    box-shadow: 0 15px 35px rgba(184, 134, 11, 0.15);
-    border-color: #b8860b;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(179, 142, 26, 0.35);
+    /* Pure Gold Glow */
+    outline: 2px solid #d4af37;
+    /* Subtle gold outline like the screen */
 }
 
 .shop-cat-card:hover .shop-cat-img img {
-    transform: scale(1.08);
+    transform: scale(1.05);
+    /* Slight zoom on hover */
 }
 
-/* Category Name - Below the image box */
+/* Category Name Styling */
 .shop-cat-name {
-    font-size: 16px;
-    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    /* Extra bold text */
     color: #333;
-    margin: 0;
-    padding: 10px 0;
-    transition: color 0.3s ease;
+    margin: 8px 0 0;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
+    transition: all 0.3s ease;
 }
 
 .shop-cat-card:hover .shop-cat-name {
-    color: #b8860b;
-}
-
-/* Responsive - Tablet */
-@media (max-width: 991px) {
-    .shop-categories-section {
-        padding: 60px 0 70px;
-    }
-
-    .shop-cat-title {
-        font-size: 38px;
-    }
-
-    .shop-cat-name {
-        font-size: 14px;
-    }
+    font-size: 14px;
 }
 
 /* Responsive - Mobile */
@@ -147,24 +135,31 @@ body,
     }
 }
 
-/* Responsive - Small Mobile */
-@media (max-width: 480px) {
-    .shop-categories-section {
-        padding: 40px 0 50px;
-    }
-
+/* Responsive Tweaks */
+@media (max-width: 768px) {
     .shop-cat-title {
         font-size: 26px;
     }
 
-    .shop-cat-img {
-        border-radius: 8px;
-        margin-bottom: 8px;
-    }
+    /* Responsive - Small Mobile */
+    @media (max-width: 480px) {
+        .shop-categories-section {
+            padding: 40px 0 50px;
+        }
 
-    .shop-cat-name {
-        font-size: 11px;
-        padding: 5px 0;
+        .shop-cat-title {
+            font-size: 26px;
+        }
+
+        .shop-cat-img {
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .shop-cat-name {
+            font-size: 11px;
+            padding: 5px 0;
+        }
     }
 }
 
@@ -710,5 +705,73 @@ body,
     .row.g-4 {
         --bs-gutter-x: 0.75rem;
         --bs-gutter-y: 0.75rem;
+    }
+}
+
+/* Filter Sidebar Refinements */
+.filter-widget {
+    margin-bottom: 30px !important;
+}
+
+.filter-widget h4 {
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding-bottom: 12px !important;
+    position: relative !important;
+}
+
+.filter-options {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+.filter-checkbox-label {
+    font-size: 14px !important;
+    color: #444 !important;
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.filter-checkbox-label:hover {
+    background: rgba(212, 175, 55, 0.05) !important;
+    color: var(--pvc-gold-dark) !important;
+}
+
+.filter-checkbox-label.is-checked {
+    background: rgba(212, 175, 55, 0.1) !important;
+    color: var(--pvc-gold-dark) !important;
+    font-weight: 600 !important;
+}
+
+.filter-checkbox-label input {
+    margin: 0 12px 0 0 !important;
+}
+
+/* Scrollable brands if many */
+#categoryFilters .filter-widget:nth-child(2) .filter-options {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#categoryFilters .filter-widget:nth-child(2) .filter-options::-webkit-scrollbar {
+    width: 4px;
+}
+
+#categoryFilters .filter-widget:nth-child(2) .filter-options::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #categoryFilters .filter-widget:nth-child(2) .filter-options {
+        max-height: none;
+        /* Full height in mobile modal */
     }
 }

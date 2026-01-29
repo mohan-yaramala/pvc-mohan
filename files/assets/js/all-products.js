@@ -1,4 +1,4 @@
-const moniterNames = [
+const monitorNames = [
     "BLUE FEATHER 15 INCH MONITOR",
     "BLUE FEATHER 17 INCH MONITOR",
     "BLUE FEATHER 19 INCH MONITOR",
@@ -9,13 +9,75 @@ const moniterNames = [
     "ZEBSTER 15.4 (V16/E16)",
     "ZEBSTER 19'' INCH LED MONITOR (HDMI)"
 ];
+const hddNames = [
+    "1TB INTERNAL",
+    "1TB SEAGATE SKYHAWK",
+    "1TB SEGATE HDD - 2",
+    "1TB SEGATE HDD WD",
+    "1TB SEGATE HDD",
+    "1TB TOSHIBA",
+    "1TB WD PURPLE",
+    "2TB BLUE FEATHER",
+    "2TB SEAGATE SKYHAWK",
+    "2TB SEGATE HDD WD",
+    "2TB SEGATE HDD",
+    "2TB TOSHIBA",
+    "2TB WD PURPLE",
+    "3TB SEGATE HDD",
+    "4TB BLUE FEATHER",
+    "4TB SEAGATE SKYHAWK",
+    "4TB SEGATE HDD",
+    "4TB TOSHIBA",
+    "4TB WD PURPLE",
+    "500GB BLUE FEATHER",
+    "500GB SEGATE HDD WD",
+    "500GB SEGATE HDD",
+    "6TB HDD SEGATE",
+    "6TB SEAGATE SKYHAWK",
+    "6TB TOSHIBA",
+    "6TB WD PURPLE",
+    "8TB WD PURPLE",
+    "HARD DISK 500 GB [S]",
+    "HDD 500GB IMP",
+    "SEAGATE 2TB SKYHAWK",
+    "SEAGATE 8TB SKYHAWK"
+];
+const sdCardNames = [
+    "64GB CP-PLUS SD CARD",
+    "64GB HIFOCUS",
+    "64GB HP SD CARD",
+    "BRYT 64GB SD CARD",
+    "HIKSEMI 128GB SD CARD",
+    "HIKVISION 256GB SD CARD",
+    "HIKVISION 32GB SD CARD",
+    "HP 256GB SD CARD",
+    "KIOXIA 128GB SD",
+    "KIOXIA 128GB",
+    "KIOXIA 256GB SD",
+    "KIOXIA 64GB SD",
+    "KIOXIA 64GB"
+];
+const cableNames = [
+    "A2 3+1 GOLD CABLE",
+    "A2 3+1 OUTDOOR CABLE",
+    "CP 3+1 90 MTRS OUTDOOR",
+    "FINOLEX 2C 1SQURE POWER WIRE",
+    "FINOLEX 3+1 180MTR CABLE",
+    "FINOLEX 3+1 305 MTRS CABLE",
+    "FINOLEX 3+1 CABLE 90MTR",
+    "FINOLEX 305 MTR CAT6",
+    "FINOLEX CAT6 GRY 305MTRS CABLE",
+    "FINOLEX CAT6 LAN YLW 305MTR LOOSE CABLE",
+    "HDMI 1.5 MTR CABLE",
+    "HIFOCUS (HF) 3+1 90MTR OUTDOOR",
+    "HIK 3+1 90MTRS CABLE"
+];
 const maxxionNames = [
     "BNC MAXXION TYPE-2",
     "EZVIZ ROBO STAND",
     "FYBER 30MTR EXTENDER",
     "MAXXION 10/100 POE EXTENDER WATER PROOF 30W",
     "MAXXION 10/1000 POE EXTENDER 30W",
-    "MAXXION 1U PLASTIC RACK",
     "MAXXION 3PIN POWER SOCKET",
     "MAXXION 40CM POLE RING",
     "MAXXION 4CH SMPS",
@@ -221,9 +283,8 @@ const hiFocusNames = [
     "HIFOCUS CAT 6 INDOOR (HF)"
 ];
 const finolexNames = [
-    "CAT6 LAN GRY 100MTR NEW",
-    "FINOLEX CAT 6 305 MTR(NEW)",
     "FINOLEX CAT6 GRY 100MTRS",
+    "FINOLEX CAT 6 305 MTR(NEW)",
     "FINOLEX CAT6 LAN YLW 305MTR CABLE",
     "FINOLEX TELEPHONE WIRE"
 ];
@@ -263,6 +324,31 @@ const erdNames = [
     "ERD SPIKE 3MTR",
     "ERD SPIKE 5MTR"
 ];
+const rackNames = [
+    "1U VOLTAIC RACK",
+    "2U ECO RACK (N)",
+    "2U MINI RACK OLD",
+    "2U RACK HOOPOE FOLDING",
+    "2U VOLTAIC RACK",
+    "4U MINI RACK - 550",
+    "4U RACK BIG - 950",
+    "4U VOLTAIC RACK",
+    "AFT RACKS 2U -350D",
+    "AFT RACKS 2U MINI",
+    "AFT RACKS 4U -350D",
+    "AFT RACKS 4U MINI",
+    "AFT RACKS 6U -500D",
+    "D LINK 12U RACK",
+    "SGS DVR PLASTIC RACK BOX",
+    "2U MINI RACK - 450 (N)",
+    "MAXXION OUTDOOR PVC POE RACK (MX-800D)",
+    "MAXXION OUTDOOR PVC POE RACK (MX-800E)",
+    "MAXXION OUTDOOR PVC POE RACK (MX-800F)",
+    "OUTDOOR RACK (H TYPE)",
+    "2U MINI ANWIZ",
+    "4U MINI ANWIZ",
+    "MAXXION 1U PLASTIC RACK"
+];
 const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
 (() => {
@@ -272,7 +358,6 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "128GB HP SD CARD",
         "2MP VIDEO BALUN  BLUE",
         "2PIN CONNECTOR  BNC",
-        "2U MINI RACK - 450 (N)",
         "2X1 LAN COPULER",
         "3 PIN POWER CABLE",
         "3PIN POWER CABLE",
@@ -404,9 +489,6 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "MAXXION METAL CAMERA STAND HEAYY",
         "MAXXION METAL CAMERA STAND HEAYY 1",
         "MAXXION OUTDOOR METAL BOX (MX-D400MB)",
-        "MAXXION OUTDOOR PVC POE RACK (MX-800D)",
-        "MAXXION OUTDOOR PVC POE RACK (MX-800E)",
-        "MAXXION OUTDOOR PVC POE RACK (MX-800F)",
         "MAXXION POE SPLITER CONNECTOR TYPE",
         "MAXXION POLE BRACKET STAND 1FT WITH RING",
         "MAXXION POLE BRACKET STAND WITH RING",
@@ -425,7 +507,6 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "MULTITEC STRIPPING TOOL",
         "MX CRIMPING TOOL",
         "OTG TYPE C",
-        "OUTDOOR RACK (H TYPE)",
         "POE  INJECTOR",
         "POE BOX WHITE",
         "POE MULTI PLUXER",
@@ -1575,6 +1656,8 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
 
+
+
     const catMap = {
         "ACCESSORIES": { list: accessoryImageFiles, path: "assets/img/accessoryimages/" },
         "ANVIZ": { list: anvizImageFiles, path: "assets/img/ANVIZ/" },
@@ -2174,180 +2257,160 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "YADON 8PORT POE SWITCH WITH BACKUP"
     ];
 
-    // RACK category product names
-    const rackNames = [
-        "MAXXION 1U PLASTIC RACK",
-        "2U MINI RACK - 450 (N)",
-        "MAXXION OUTDOOR PVC POE RACK (MX-800D)",
-        "MAXXION OUTDOOR PVC POE RACK (MX-800E)",
-        "MAXXION OUTDOOR PVC POE RACK (MX-800F)",
-        "OUTDOOR RACK (H TYPE)",
-        "CP 2U RACK",
-        "CP 4U RACK",
-        "D LINK 2U MINI RACK",
-        "D LINK 2U RACK",
-        "D LINK 4U BIG RACK",
-        "D LINK 4U MINI RACK (UN)",
-        "D LINK 6U RACK",
-        "D LINK 9U RACK",
-        "D LINK TRAY RACK",
-        "TP LINK 18PORT GIGABITE RACKMOUNT WITH 16POE"
-    ];
 
     let products = [
         ...accessoryNames.map((name, index) => ({
             image: findProductImage(name, "ACCESSORIES"),
             id: index + 1,
             name,
-            image: findProductImage(name, "ACCESSORIES"),
             category: "ACCESSORIES",
             isNew: true,
             inStock: true,
             originalIndex: index
         })),
-        ...anwizNames.map((name, index) => ({
-            image: findProductImage(name, "ANWIZ"),
-            id: accessoryNames.length + index + 1,
-            name,
-            category: "ANWIZ",
-            isNew: true,
-            inStock: true,
-            originalIndex: accessoryNames.length + index
-        })),
         ...cableNames.map((name, index) => ({
             image: findProductImage(name, "CABLES"),
-            id: accessoryNames.length + anwizNames.length + index + 1,
+            id: accessoryNames.length + index + 1,
             name,
             category: "CABLES",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + index
+            originalIndex: accessoryNames.length + index
         })),
         ...cpPlusNames.map((name, index) => ({
             image: findProductImage(name, "CP PLUS"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + index + 1,
             name,
             category: "CP PLUS",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + index
         })),
         ...dlinkNames.map((name, index) => ({
             image: findProductImage(name, "D-LINK"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + index + 1,
             name,
             category: "D-LINK",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + index
         })),
         ...dahuaNames.map((name, index) => ({
             image: findProductImage(name, "DAHUA"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + index + 1,
             name,
             category: "DAHUA",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + index
         })),
         ...erdNames.map((name, index) => ({
             image: findProductImage(name, "ERD"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + index + 1,
             name,
             category: "ERD",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + index
         })),
         ...ezvizNames.map((name, index) => ({
             image: findProductImage(name, "EZVIZ"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + index + 1,
             name,
             category: "EZVIZ",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + index
         })),
         ...finolexNames.map((name, index) => ({
             image: findProductImage(name, "FINOLEX"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + index + 1,
             name,
             category: "FINOLEX",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + index
         })),
         ...hiFocusNames.map((name, index) => ({
             image: findProductImage(name, "HI FOCUS"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + index + 1,
             name,
             category: "HI FOCUS",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + index
         })),
         ...hikvisionNames.map((name, index) => ({
             image: findProductImage(name, "HIKVISION"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + index + 1,
             name,
             category: "HIKVISION",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + index
         })),
         ...imouNames.map((name, index) => ({
             image: findProductImage(name, "IMOU"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + index + 1,
             name,
             category: "IMOU",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + index
         })),
         ...mastelNames.map((name, index) => ({
             image: findProductImage(name, "MASTEL"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + index + 1,
             name,
             category: "MASTEL",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + index
         })),
         ...maxxionNames.map((name, index) => ({
             image: findProductImage(name, "MAXXION"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + index + 1,
             name,
             category: "MAXXION",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + index
         })),
         ...hddNames.map((name, index) => ({
             image: findProductImage(name, "HDD"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + index + 1,
             name,
             category: "HDD",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + index
         })),
         ...sdCardNames.map((name, index) => ({
             image: findProductImage(name, "SD CARDS"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + index + 1,
             name,
             category: "SD CARDS",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + index
         })),
-        ...moniterNames.map((name, index) => ({
+        ...monitorNames.map((name, index) => ({
             image: findProductImage(name, "MONITOR"),
-            id: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + sdCardNames.length + index + 1,
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + sdCardNames.length + index + 1,
             name,
             category: "MONITOR",
             isNew: true,
             inStock: true,
-            originalIndex: accessoryNames.length + anwizNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + sdCardNames.length + index
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + sdCardNames.length + index
+        })),
+        ...rackNames.map((name, index) => ({
+            image: findProductImage(name, "RACK"),
+            id: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + sdCardNames.length + monitorNames.length + index + 1,
+            name,
+            category: "RACK",
+            isNew: true,
+            inStock: true,
+            originalIndex: accessoryNames.length + cableNames.length + cpPlusNames.length + dlinkNames.length + dahuaNames.length + erdNames.length + ezvizNames.length + finolexNames.length + hiFocusNames.length + hikvisionNames.length + imouNames.length + mastelNames.length + maxxionNames.length + hddNames.length + sdCardNames.length + monitorNames.length + index
         }))
     ];
 
@@ -2441,28 +2504,16 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         });
     }
 
-    // Append RACK products to products list
-    if (Array.isArray(rackNames) && rackNames.length) {
-        rackNames.forEach((name) => {
-            products.push({
-                image: findProductImage(name, "RACK"),
-                id: products.length + 1,
-                name,
-                category: "RACK",
-                isNew: true,
-                inStock: true,
-                originalIndex: products.length
-            });
-        });
-    }
 
-    // Remove duplicate products by name (case-insensitive), keep first occurrence
+
+    // Remove duplicate products by name+category combination (case-insensitive), keep first occurrence
+    // This allows the same product name to exist in multiple categories (e.g., "CP 2U RACK" in both CP PLUS and RACK)
     {
-        const seenNames = new Set();
+        const seenKeys = new Set();
         products = products.filter(p => {
-            const key = (p.name || "").trim().toLowerCase();
-            if (seenNames.has(key)) return false;
-            seenNames.add(key);
+            const key = `${(p.name || "").trim().toLowerCase()}|${(p.category || "").trim().toLowerCase()}`;
+            if (seenKeys.has(key)) return false;
+            seenKeys.add(key);
             return true;
         });
     }
@@ -2476,7 +2527,8 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         inStockFilter: document.getElementById("inStockFilter"),
         categoryFilters: document.getElementById("categoryFilters"),
         mobileFilterToggle: document.querySelector(".mobile-filter-toggle"),
-        productSidebar: document.querySelector(".product-sidebar")
+        productSidebar: document.querySelector(".product-sidebar"),
+        breadcrumb: document.getElementById("pvcBreadcrumb")
     };
 
     const state = {
@@ -2763,6 +2815,66 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         });
     };
 
+    const updateBreadcrumb = () => {
+        if (!elements.breadcrumb) return;
+
+        let html = '';
+
+        if (state.selectedCategories.size === 0) {
+            html += `<li class="breadcrumb-item active" aria-current="page">New Products</li>`;
+        } else {
+            html += `<li class="breadcrumb-item"><a href="#" id="breadcrumbReset">New Products</a></li>`;
+
+            const selected = Array.from(state.selectedCategories);
+            const brandsSelected = [];
+            const compsSelected = [];
+
+            selected.forEach(id => {
+                const brandMatch = PVC_HEADER_CONFIG.brands.find(b => b.url.toUpperCase().includes(`CATEGORY=${id.toUpperCase()}`));
+                if (brandMatch) {
+                    brandsSelected.push(brandMatch.name);
+                } else {
+                    const compMatch = PVC_HEADER_CONFIG.categories.find(c => c.url.toUpperCase().includes(`CATEGORY=${id.toUpperCase()}`));
+                    if (compMatch) {
+                        compsSelected.push(compMatch.name);
+                    } else {
+                        // Formatter: ACCESSORIES -> Accessories
+                        compsSelected.push(id.charAt(0) + id.slice(1).toLowerCase());
+                    }
+                }
+            });
+
+            if (brandsSelected.length > 0) {
+                html += `<li class="breadcrumb-item">Shop by Brand</li>`;
+                const brandText = brandsSelected.join(', ');
+                if (compsSelected.length === 0) {
+                    html += `<li class="breadcrumb-item active" aria-current="page">${brandText}</li>`;
+                } else {
+                    html += `<li class="breadcrumb-item">${brandText}</li>`;
+                }
+            } else if (compsSelected.length > 0) {
+                // If only categories but no brands, show "Shop by Categories"
+                html += `<li class="breadcrumb-item">Shop by Categories</li>`;
+            }
+
+            if (compsSelected.length > 0) {
+                const compText = compsSelected.join(', ');
+                html += `<li class="breadcrumb-item active" aria-current="page">${compText}</li>`;
+            }
+        }
+
+        elements.breadcrumb.innerHTML = html;
+
+        // Re-bind reset click
+        const resetLink = document.getElementById('breadcrumbReset');
+        if (resetLink) {
+            resetLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (elements.clearFilters) elements.clearFilters.click();
+            });
+        }
+    };
+
     const render = () => {
         const filtered = getFilteredProducts();
         if (elements.productCount) {
@@ -2770,6 +2882,20 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         }
         renderProducts(filtered);
         renderPagination(filtered.length);
+        updateBreadcrumb();
+        syncFilterLabels();
+    };
+
+    const syncFilterLabels = () => {
+        if (!elements.categoryFilters) return;
+        try {
+            const labels = elements.categoryFilters.querySelectorAll('.filter-checkbox-label');
+            labels.forEach(lbl => {
+                const inp = lbl.querySelector('input[type="checkbox"][name="category"]');
+                if (inp && inp.checked) lbl.classList.add('is-checked');
+                else lbl.classList.remove('is-checked');
+            });
+        } catch (e) { }
     };
 
     const bindEvents = () => {
@@ -2849,17 +2975,7 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                     }
                 }
 
-                // Update label visual state: add/remove 'is-checked' class
-                try {
-                    const labels = elements.categoryFilters.querySelectorAll('.filter-checkbox-label');
-                    labels.forEach(lbl => {
-                        const inp = lbl.querySelector('input[type="checkbox"][name="category"]');
-                        if (inp && inp.checked) lbl.classList.add('is-checked');
-                        else lbl.classList.remove('is-checked');
-                    });
-                } catch (e) {
-                    // ignore
-                }
+                // Visual state is now handled by render() -> syncFilterLabels()
 
                 state.currentPage = 1;
                 render();
@@ -2894,7 +3010,10 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                 if (elements.categoryFilters) {
                     elements.categoryFilters
                         .querySelectorAll("input[name='category']")
-                        .forEach((input) => (input.checked = false));
+                        .forEach((input) => {
+                            if (input.value === 'ALL CATEGORIES') input.checked = true;
+                            else input.checked = false;
+                        });
                 }
                 if (elements.inStockFilter) {
                     elements.inStockFilter.checked = false;

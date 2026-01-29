@@ -8,19 +8,32 @@ const PVC_HEADER_CONFIG = {
     phone: '+919144555566',
     searchUrl: 'all-products.html', // Point to all-products which has the list
     brands: [
-        { name: 'Hikvision', url: 'all-products.html?cat=HIKVISION' },
-        { name: 'Dahua', url: 'all-products.html?cat=DAHUA' },
-        { name: 'CP Plus', url: 'all-products.html?cat=CP PLUS' },
-        { name: 'Imou', url: 'all-products.html?cat=IMOU' },
-        { name: 'EZVIZ', url: 'all-products.html?cat=EZVIZ' }
+        { name: 'Anwiz', url: 'all-products.html?category=ANWIZ' },
+        { name: 'D-Link', url: 'all-products.html?category=D-LINK' },
+        { name: 'Dahua', url: 'all-products.html?category=DAHUA' },
+        { name: 'EDR', url: 'all-products.html?category=ERD' },
+        { name: 'Ezviz', url: 'all-products.html?category=EZVIZ' },
+        { name: 'Finolex', url: 'all-products.html?category=FINOLEX' },
+        { name: 'Hi Focus', url: 'all-products.html?category=HI FOCUS' },
+        { name: 'Hikvision', url: 'all-products.html?category=HIKVISION' },
+        { name: 'Imou', url: 'all-products.html?category=IMOU' },
+        { name: 'Master', url: 'all-products.html?category=MASTEL' },
+        { name: 'Maxxion', url: 'all-products.html?category=MAXXION' },
+        { name: 'Securi', url: 'all-products.html?category=SECUREYE' },
+        { name: 'Securus', url: 'all-products.html?category=SECURUS' },
+        { name: 'TP Link', url: 'all-products.html?category=TP LINK' },
+        { name: 'True View', url: 'all-products.html?category=TRUE VIEW' },
+        { name: 'Zebronics', url: 'all-products.html?category=ZEBRONICS' },
+        { name: 'Yadon', url: 'all-products.html?category=YADON' },
+        { name: 'CP Plus', url: 'all-products.html?category=CP PLUS' }
     ],
     categories: [
-        { name: 'Network Cameras', url: 'network-cameras.html' },
-        { name: 'Turbo HD Cameras', url: 'turbo-hd.html' },
-        { name: 'Access Control', url: 'access-control.html' },
-        { name: 'Video Intercom', url: 'video-intercom.html' },
-        { name: 'Alarm Systems', url: 'alarm-systems.html' },
-        { name: 'Display & Control', url: 'display-control.html' }
+        { name: 'Accessories', url: 'all-products.html?category=ACCESSORIES' },
+        { name: 'Cables', url: 'all-products.html?category=CABLES' },
+        { name: 'Hard Disks (HDD)', url: 'all-products.html?category=HDD' },
+        { name: 'Monitors', url: 'all-products.html?category=MONITOR' },
+        { name: 'Racks', url: 'all-products.html?category=RACK' },
+        { name: 'SD Cards', url: 'all-products.html?category=SD CARDS' }
     ]
 };
 
@@ -40,40 +53,24 @@ function initPvcHeader() {
                     <li class="pvc-nav-item"><a href="about-us.html" class="pvc-nav-link" id="nav-about">About Us</a></li>
                     
                     <li class="pvc-nav-item has-mega-brand">
-                        <a href="#" class="pvc-nav-link">Shop by Brand</a>
+                        <a href="#" class="pvc-nav-link">Shop by Brand <i class="fa-solid fa-chevron-down"></i></a>
                         <div class="pvc-mega-menu">
                             <div class="pvc-mega-column">
-                                <h4 class="pvc-mega-title">Top Brands</h4>
+                                <h4 class="pvc-mega-title">Our Partner Brands</h4>
                                 <ul class="pvc-mega-list">
                                     ${PVC_HEADER_CONFIG.brands.map(b => `<li><a href="${b.url}">${b.name}</a></li>`).join('')}
                                 </ul>
                             </div>
-                            </div>
+                        </div>
                     </li>
 
                     <li class="pvc-nav-item has-mega-category">
-                        <a href="#" class="pvc-nav-link">Shop by Categories</a>
+                        <a href="#" class="pvc-nav-link">Shop by Categories <i class="fa-solid fa-chevron-down"></i></a>
                         <div class="pvc-mega-menu">
                             <div class="pvc-mega-column">
-                                <h4 class="pvc-mega-title">Video Surveillance</h4>
+                                <h4 class="pvc-mega-title">Product Components</h4>
                                 <ul class="pvc-mega-list">
-                                    <li><a href="category-hd-camera.html">HD Cameras</a></li>
-                                    <li><a href="category-ip-camera.html">IP Cameras</a></li>
-                                    <li><a href="category-wifi-camera.html">Wi-Fi Cameras</a></li>
-                                </ul>
-                            </div>
-                            <div class="pvc-mega-column">
-                                <h4 class="pvc-mega-title">Storage & Network</h4>
-                                <ul class="pvc-mega-list">
-                                    <li><a href="category-recorders.html">Recorders (NVR/DVR)</a></li>
-                                    <li><a href="category-networking.html">Networking Switches</a></li>
-                                </ul>
-                            </div>
-                            <div class="pvc-mega-column">
-                                <h4 class="pvc-mega-title">Parts & More</h4>
-                                <ul class="pvc-mega-list">
-                                    <li><a href="category-accessories.html">Accessories</a></li>
-                                    <li><a href="all-products.html">All Products</a></li>
+                                    ${PVC_HEADER_CONFIG.categories.map(c => `<li><a href="${c.url}">${c.name}</a></li>`).join('')}
                                 </ul>
                             </div>
                         </div>
@@ -266,12 +263,25 @@ function initPvcHeader() {
         ],
         // Brands
         brands: [
-            { keys: ["hikvision", "hik"], url: "all-products.html?cat=HIKVISION" },
-            { keys: ["dahua"], url: "all-products.html?cat=DAHUA" },
-            { keys: ["cp", "plus", "cpplus"], url: "all-products.html?cat=CP PLUS" },
-            { keys: ["imou"], url: "all-products.html?cat=IMOU" },
-            { keys: ["ezviz"], url: "all-products.html?cat=EZVIZ" },
-            { keys: ["honeywell"], url: "all-products.html?cat=HONEYWELL" }
+            { keys: ["hikvision", "hik"], url: "all-products.html?category=HIKVISION" },
+            { keys: ["dahua"], url: "all-products.html?category=DAHUA" },
+            { keys: ["cp", "plus", "cpplus"], url: "all-products.html?category=CP PLUS" },
+            { keys: ["imou"], url: "all-products.html?category=IMOU" },
+            { keys: ["ezviz"], url: "all-products.html?category=EZVIZ" },
+            { keys: ["anwiz"], url: "all-products.html?category=ANWIZ" },
+            { keys: ["anviz"], url: "all-products.html?category=ANVIZ" },
+            { keys: ["d-link", "dlink"], url: "all-products.html?category=D-LINK" },
+            { keys: ["erd", "edr"], url: "all-products.html?category=ERD" },
+            { keys: ["finolex"], url: "all-products.html?category=FINOLEX" },
+            { keys: ["hi focus", "hifocus", "hificous"], url: "all-products.html?category=HI FOCUS" },
+            { keys: ["master", "mastel"], url: "all-products.html?category=MASTEL" },
+            { keys: ["maxxion"], url: "all-products.html?category=MAXXION" },
+            { keys: ["securi", "secureye"], url: "all-products.html?category=SECUREYE" },
+            { keys: ["securus"], url: "all-products.html?category=SECURUS" },
+            { keys: ["tp link", "tplink"], url: "all-products.html?category=TP LINK" },
+            { keys: ["true view", "trueview"], url: "all-products.html?category=TRUE VIEW" },
+            { keys: ["zebronics"], url: "all-products.html?category=ZEBRONICS" },
+            { keys: ["yadon"], url: "all-products.html?category=YADON" }
         ]
     };
 
@@ -358,29 +368,57 @@ function initPvcHeader() {
 
     // Handle Active State (Desktop & Mobile)
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const params = new URLSearchParams(window.location.search);
+    const hasCategory = params.has('category') || params.has('cat');
 
-    // Desktop Active
-    document.querySelectorAll('.pvc-nav-link').forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
+    // Desktop Active Logic
+    document.querySelectorAll('.pvc-nav-list .pvc-nav-link').forEach(link => {
+        const href = link.getAttribute('href');
+
+        if (hasCategory) {
+            // Check if this query belongs to Brands or Categories
+            const catValue = (params.get('category') || params.get('cat')).toUpperCase();
+            const isBrand = PVC_HEADER_CONFIG.brands.some(b => b.url.toUpperCase().includes(catValue));
+            const isCategory = PVC_HEADER_CONFIG.categories.some(c => c.url.toUpperCase().includes(catValue));
+
+            const parentItem = link.closest('.pvc-nav-item');
+            if (isBrand && parentItem.classList.contains('has-mega-brand')) {
+                link.classList.add('active');
+            } else if (isCategory && parentItem.classList.contains('has-mega-category')) {
+                link.classList.add('active');
+            }
+        } else {
+            // Standard exact match (no filters)
+            if (href === currentPath) {
+                link.classList.add('active');
+            }
         }
     });
 
-    // Mobile Active
+    // Mobile Active Logic
     document.querySelectorAll('.pvc-mobile-nav-link').forEach(link => {
         const linkPath = link.getAttribute('href');
-        if (linkPath === currentPath) {
-            // Highlight the link itself
-            link.classList.add('active'); // You can style this class in CSS if needed, or inline style here
+        const parentItem = link.closest('.pvc-mobile-nav-item');
 
-            // Also highlight parent item wrapper
-            const parentItem = link.closest('.pvc-mobile-nav-item');
-            if (parentItem) {
+        if (hasCategory) {
+            const catValue = (params.get('category') || params.get('cat')).toUpperCase();
+            const isBrandMenu = parentItem.classList.contains('has-submenu') && link.textContent.includes('Brand');
+            const isCatMenu = parentItem.classList.contains('has-submenu') && link.textContent.includes('Categories');
+
+            const isBrandMatch = PVC_HEADER_CONFIG.brands.some(b => b.url.toUpperCase().includes(catValue));
+            const isCatMatch = PVC_HEADER_CONFIG.categories.some(c => c.url.toUpperCase().includes(catValue));
+
+            if (isBrandMatch && isBrandMenu) {
+                link.classList.add('active');
                 parentItem.classList.add('active');
-
-                // If it's a submenu link (though current selector targets top level mainly, let's cover all cases)
-                // Since .pvc-mobile-nav-link is used for top level items in existing HTML structure.
-                // We'll style .pvc-mobile-nav-item.active in CSS.
+            } else if (isCatMatch && isCatMenu) {
+                link.classList.add('active');
+                parentItem.classList.add('active');
+            }
+        } else {
+            if (linkPath === currentPath) {
+                link.classList.add('active');
+                if (parentItem) parentItem.classList.add('active');
             }
         }
     });

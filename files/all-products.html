@@ -43,9 +43,8 @@
         <div class="container">
             <div class="breadcrumb-content">
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">All Products</li>
+                    <ol class="breadcrumb" id="pvcBreadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">New Products</li>
                     </ol>
                 </nav>
             </div>
@@ -74,140 +73,151 @@
                                 </label>
                             </div>
 
-                            <!-- Category Filter -->
-                            <div class="filter-widget">
-                                <h4>Product Category</h4>
-                                <div class="filter-options" id="categoryFilters">
-                                    <label class="filter-checkbox-label is-checked">
-                                        <input type="checkbox" name="category" value="ALL CATEGORIES" checked>
-                                        <span class="checkmark"></span>
-                                        ALL CATEGORIES
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="ACCESSORIES">
-                                        <span class="checkmark"></span>
-                                        ACCESSORIES
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="ANVIZ">
-                                        <span class="checkmark"></span>
-                                        ANVIZ
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="ANWIZ">
-                                        <span class="checkmark"></span>
-                                        ANWIZ
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="CABLES">
-                                        <span class="checkmark"></span>
-                                        CABLES
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="CP PLUS">
-                                        <span class="checkmark"></span>
-                                        CP PLUS
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="D-LINK">
-                                        <span class="checkmark"></span>
-                                        D-LINK
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="DAHUA">
-                                        <span class="checkmark"></span>
-                                        DAHUA
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="ERD">
-                                        <span class="checkmark"></span>
-                                        ERD
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="EZVIZ">
-                                        <span class="checkmark"></span>
-                                        EZVIZ
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="FINOLEX">
-                                        <span class="checkmark"></span>
-                                        FINOLEX
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="HDD">
-                                        <span class="checkmark"></span>
-                                        HDD
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="HI FOCUS">
-                                        <span class="checkmark"></span>
-                                        HI FOCUS
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="HIKVISION">
-                                        <span class="checkmark"></span>
-                                        HIKVISION
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="IMOU">
-                                        <span class="checkmark"></span>
-                                        IMOU
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="MASTEL">
-                                        <span class="checkmark"></span>
-                                        MASTEL
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="MAXXION">
-                                        <span class="checkmark"></span>
-                                        MAXXION
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="MONITOR">
-                                        <span class="checkmark"></span>
-                                        MONITOR
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="RACK">
-                                        <span class="checkmark"></span>
-                                        RACK
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="SD CARDS">
-                                        <span class="checkmark"></span>
-                                        SD CARDS
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="SECUREYE">
-                                        <span class="checkmark"></span>
-                                        SECUREYE
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="SECURUS">
-                                        <span class="checkmark"></span>
-                                        SECURUS
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="TP LINK">
-                                        <span class="checkmark"></span>
-                                        TP LINK
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="TRUE VIEW">
-                                        <span class="checkmark"></span>
-                                        TRUE VIEW
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="YADON">
-                                        <span class="checkmark"></span>
-                                        YADON
-                                    </label>
-                                    <label class="filter-checkbox-label">
-                                        <input type="checkbox" name="category" value="ZEBRONICS">
-                                        <span class="checkmark"></span>
-                                        ZEBRONICS
-                                    </label>
+                            <!-- This container ID stays for JS compatibility -->
+                            <div id="categoryFilters">
+                                <!-- Shop By Brands -->
+                                <div class="filter-widget mb-4">
+                                    <h4>Brands</h4>
+                                    <div class="filter-options">
+                                        <!-- Keep ALL CATEGORIES at the top of the first widget for easy reset -->
+                                        <label class="filter-checkbox-label is-checked">
+                                            <input type="checkbox" name="category" value="ALL CATEGORIES" checked>
+                                            <span class="checkmark"></span>
+                                            ALL PRODUCTS
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="ANVIZ">
+                                            <span class="checkmark"></span>
+                                            ANVIZ
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="ANWIZ">
+                                            <span class="checkmark"></span>
+                                            ANWIZ
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="CP PLUS">
+                                            <span class="checkmark"></span>
+                                            CP PLUS
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="D-LINK">
+                                            <span class="checkmark"></span>
+                                            D-LINK
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="DAHUA">
+                                            <span class="checkmark"></span>
+                                            DAHUA
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="ERD">
+                                            <span class="checkmark"></span>
+                                            ERD / EDR
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="EZVIZ">
+                                            <span class="checkmark"></span>
+                                            EZVIZ
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="FINOLEX">
+                                            <span class="checkmark"></span>
+                                            FINOLEX
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="HI FOCUS">
+                                            <span class="checkmark"></span>
+                                            HI FOCUS
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="HIKVISION">
+                                            <span class="checkmark"></span>
+                                            HIKVISION
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="IMOU">
+                                            <span class="checkmark"></span>
+                                            IMOU
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="MASTEL">
+                                            <span class="checkmark"></span>
+                                            MASTER / MASTEL
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="MAXXION">
+                                            <span class="checkmark"></span>
+                                            MAXXION
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="SECUREYE">
+                                            <span class="checkmark"></span>
+                                            SECUREYE / SECURI
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="SECURUS">
+                                            <span class="checkmark"></span>
+                                            SECURUS
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="TP LINK">
+                                            <span class="checkmark"></span>
+                                            TP LINK
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="TRUE VIEW">
+                                            <span class="checkmark"></span>
+                                            TRUE VIEW
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="YADON">
+                                            <span class="checkmark"></span>
+                                            YADON
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="ZEBRONICS">
+                                            <span class="checkmark"></span>
+                                            ZEBRONICS
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Shop By Categories -->
+                                <div class="filter-widget mb-4">
+                                    <h4>Categories</h4>
+                                    <div class="filter-options">
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="ACCESSORIES">
+                                            <span class="checkmark"></span>
+                                            ACCESSORIES
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="CABLES">
+                                            <span class="checkmark"></span>
+                                            CABLES
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="HDD">
+                                            <span class="checkmark"></span>
+                                            HARD DISK (HDD)
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="MONITOR">
+                                            <span class="checkmark"></span>
+                                            MONITORS
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="RACK">
+                                            <span class="checkmark"></span>
+                                            RACKS
+                                        </label>
+                                        <label class="filter-checkbox-label">
+                                            <input type="checkbox" name="category" value="SD CARDS">
+                                            <span class="checkmark"></span>
+                                            SD CARDS
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
