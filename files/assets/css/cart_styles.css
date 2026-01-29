@@ -181,12 +181,11 @@ button.hik-btn-outline {
 
 /* Cart Summary Section */
 .cart-summary-section {
-    background: #f9fafb;
-    /* Light grey background like image */
+    background: #fff;
     padding: 30px;
     border-radius: 12px;
     border: 1px solid var(--cart-border-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 100px;
 }
@@ -201,16 +200,12 @@ button.hik-btn-outline {
 .cart-item {
     display: flex;
     gap: 15px;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid var(--cart-border-color);
-    border-radius: 10px;
-    margin-bottom: 15px;
-    background: #ffffff;
-    /* White card inside grey summary */
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: var(--cart-bg-light);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-    position: relative;
-    align-items: center;
 }
 
 .cart-item:hover {
@@ -306,8 +301,6 @@ button.hik-btn-outline {
     font-size: 18px;
     padding: 5px;
     transition: all 0.2s ease;
-    margin-left: auto;
-    /* Push trash to the right */
 }
 
 .cart-item-remove:hover {
@@ -511,7 +504,6 @@ button.hik-btn-outline {
         opacity: 0;
         transform: translateX(-50%) translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateX(-50%) translateY(0);

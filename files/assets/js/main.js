@@ -3,13 +3,11 @@
   $(document).ready(function () {
 
     //========== CLEAN MOBILE MENU (FRESH LOGIC) ============= //
-    // Toggle Menu Open/Close
+    // Toggle Menu Open/Close - Support both old and new toggle classes
     $(".clean-mobile-toggle, .mobile-menu-toggle").on("click", function () {
       $(".clean-mobile-toggle, .mobile-menu-toggle").toggleClass("active");
       $(".clean-mobile-overlay").toggleClass("active");
       $(".clean-mobile-sidebar").toggleClass("active");
-      // Prevent body scroll
-      $("body").toggleClass("mobile-menu-open");
     });
 
     // Toggle Menu Close
@@ -17,20 +15,6 @@
       $(".clean-mobile-toggle, .mobile-menu-toggle").removeClass("active");
       $(".clean-mobile-overlay").removeClass("active");
       $(".clean-mobile-sidebar").removeClass("active");
-      $("body").removeClass("mobile-menu-open");
-    });
-
-    // Mobile Accordion Logic (Shop By Brand / Categories)
-    $(".mobile-accordion-toggle").on("click", function (e) {
-      e.preventDefault();
-      var $parent = $(this).parent();
-
-      // Toggle the specific submenu
-      $parent.find(".mobile-submenu").slideToggle(300);
-      $parent.toggleClass("dropdown-active");
-
-      // Optional: Close other open menus if desired (Accordion effect)
-      // $(".has-mobile-dropdown").not($parent).removeClass("dropdown-active").find(".mobile-submenu").slideUp(300);
     });
     //========== END CLEAN MOBILE MENU ============= //
 
