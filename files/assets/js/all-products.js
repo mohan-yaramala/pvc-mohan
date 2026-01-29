@@ -744,7 +744,7 @@ const erdNames = [
             const fn = _normalize(base);
             if (!fn) continue;
             if (fn.includes(pn) || pn.includes(fn)) {
-                return `assets/img/accessoryimages /ACCESORIES 3/${encodeURIComponent(f)}`;
+                return `assets/img/accessoryimages/ACCESORIES 3/${encodeURIComponent(f)}`;
             }
         }
         // Fallback: try common filename variants based on product name
@@ -756,19 +756,19 @@ const erdNames = [
             for (const ext of exts) {
                 const candidate = `${cleaned}.${ext}`;
                 // prefer exact file if present in the known list
-                if (accessoryImageFiles.includes(candidate)) return `assets/img/accessoryimages /ACCESORIES 3/${encodeURIComponent(candidate)}`;
+                if (accessoryImageFiles.includes(candidate)) return `assets/img/accessoryimages/ACCESORIES 3/${encodeURIComponent(candidate)}`;
             }
 
             // try variations: remove problematic characters and encode
             const safe = cleaned.replace(/[\\/:*?"<>|]/g, '');
             for (const ext of exts) {
                 const candidate = `${safe}.${ext}`;
-                if (accessoryImageFiles.includes(candidate)) return `assets/img/accessoryimages /ACCESORIES 3/${encodeURIComponent(candidate)}`;
+                if (accessoryImageFiles.includes(candidate)) return `assets/img/accessoryimages/ACCESORIES 3/${encodeURIComponent(candidate)}`;
             }
 
             // As a last resort, return a guessed path (images that exist will load)
             // encode the original filename and try .jpg first
-            return `assets/img/accessoryimages /ACCESORIES 3/${encodeURIComponent(cleaned + '.jpg')}`;
+            return `assets/img/accessoryimages/ACCESORIES 3/${encodeURIComponent(cleaned + '.jpg')}`;
         } catch (e) {
             return null;
         }
