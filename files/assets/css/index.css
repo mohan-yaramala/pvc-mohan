@@ -1,0 +1,209 @@
+/* ==========================================================================
+   PVC SECURITY - CORE DESIGN SYSTEM & INDEX PAGE
+   ========================================================================== */
+
+:root {
+    /* Primary Brand Colors */
+    --pvc-gold-dark: #B8860B;
+    --pvc-gold-mid: #D4AF37;
+    --pvc-gold-light: #F9E29D;
+    --pvc-accent-red: #E51F4D;
+
+    /* Neutrals */
+    --pvc-dark: #121212;
+    --pvc-dark-secondary: #1a1a1a;
+    --pvc-white: #FFFFFF;
+    --pvc-gray-100: #F8F9FA;
+    --pvc-gray-200: #E9ECEF;
+    --pvc-gray-600: #6C757D;
+    --pvc-gray-800: #343A40;
+
+    /* Gradients */
+    --pvc-grad-gold: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
+    --pvc-grad-premium: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    --pvc-grad-red: linear-gradient(135deg, #E51F4D 0%, #B8860B 100%);
+
+    /* Shadows & Effects */
+    --pvc-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --pvc-shadow-md: 0 10px 30px rgba(0, 0, 0, 0.12);
+    --pvc-shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.2);
+    --pvc-glass: rgba(255, 255, 255, 0.05);
+    --pvc-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Global Transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ===== HERO CAROUSEL REFINEMENT ===== */
+#home {
+    margin-top: 80px !important;
+    /* Push below fixed header */
+    padding-top: 0 !important;
+    background: #000 !important;
+    overflow: hidden;
+}
+
+.carousel-area {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero3-section-area {
+    width: 100%;
+    aspect-ratio: 1024 / 315;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    /* Force remove theme padding */
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000 !important;
+    border-radius: 0 !important;
+    box-shadow: none;
+    margin: 0;
+}
+
+/* Desktop Slide Backgrounds */
+.pvc-slide-1 {
+    background-image: url('../img/carousel/1.svg');
+}
+
+.pvc-slide-2 {
+    background-image: url('../img/carousel/2 copy.svg');
+}
+
+.pvc-slide-3 {
+    background-image: url('../img/carousel/3 copy.svg');
+}
+
+/* Remove any stage curving */
+.owl-stage-outer,
+.owl-stage,
+.carousel-area {
+    border-radius: 0 !important;
+    clip-path: none !important;
+}
+
+/* Response adjustments for mobile carousel */
+@media (max-width: 991px) {
+    #home {
+        margin-top: 70px !important;
+        /* Push below mobile header */
+        padding-top: 0 !important;
+    }
+
+    .hero3-section-area {
+        border-radius: 0;
+        margin: 0;
+        background-size: contain !important;
+        /* Prevent cutting on mobile */
+        aspect-ratio: 1024 / 315;
+        background-color: #000 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+        margin-top: 70px !important;
+        padding-top: 0 !important;
+    }
+
+    #home .hero3-section-area {
+        border-radius: 0;
+        margin: 0;
+        padding: 0 !important;
+        /* Match banner aspect ratio exactly to remove all black bars */
+        height: auto !important;
+        aspect-ratio: 1024 / 315 !important;
+        min-height: 0 !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+    }
+
+    /* Mobile Slide Backgrounds Override */
+    .pvc-slide-1 {
+        background-image: url('../img/carousel/1.svg');
+        background-position: center center;
+    }
+
+    .pvc-slide-2 {
+        background-image: url('../img/carousel/2 copy.svg');
+        background-position: center center;
+    }
+
+    .pvc-slide-3 {
+        background-image: url('../img/carousel/3 copy.svg');
+        background-position: center center;
+    }
+}
+
+/* ===== RICH AESTHETICS - MICRO ANIMATIONS ===== */
+.pvc-btn-premium {
+    background: var(--pvc-grad-premium);
+    color: var(--pvc-dark) !important;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pvc-btn-premium::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--pvc-dark);
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.pvc-btn-premium:hover {
+    color: var(--pvc-white) !important;
+    transform: translateY(-3px);
+    box-shadow: var(--pvc-shadow-md);
+}
+
+.pvc-btn-premium:hover::after {
+    width: 100%;
+}
+
+/* Glassmorphism Cards */
+.pvc-glass-card {
+    background: var(--pvc-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--pvc-glass-border);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+/* Section Header Aesthetic */
+.section-title-premium {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-weight: 800;
+    color: var(--pvc-gold-dark);
+}
+
+.section-title-premium::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--pvc-gold-dark), transparent);
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.4);
+}

@@ -339,15 +339,7 @@ const rackNames = [
     "AFT RACKS 4U MINI",
     "AFT RACKS 6U -500D",
     "D LINK 12U RACK",
-    "SGS DVR PLASTIC RACK BOX",
-    "2U MINI RACK - 450 (N)",
-    "MAXXION OUTDOOR PVC POE RACK (MX-800D)",
-    "MAXXION OUTDOOR PVC POE RACK (MX-800E)",
-    "MAXXION OUTDOOR PVC POE RACK (MX-800F)",
-    "OUTDOOR RACK (H TYPE)",
-    "2U MINI ANWIZ",
-    "4U MINI ANWIZ",
-    "MAXXION 1U PLASTIC RACK"
+    "SGS DVR PLASTIC RACK BOX"
 ];
 const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
@@ -819,9 +811,7 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "ACCESORIES 3/YADON BATERY.jpg"
     ];
 
-    const anvizImageFiles = [
-        "anviz-product7.jpg"
-    ];
+
 
     const anwiz2ImageFiles = [
         "ANWIZ 2/2U MINI ANWIZ.jpg",
@@ -1660,7 +1650,7 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
     const catMap = {
         "ACCESSORIES": { list: accessoryImageFiles, path: "assets/img/accessoryimages/" },
-        "ANVIZ": { list: anvizImageFiles, path: "assets/img/ANVIZ/" },
+
         "ANWIZ": { list: anwiz2ImageFiles, path: "assets/img/ANWIZ 2/" },
         "CABLES": { list: cableImageFiles, path: "assets/img/cables/" },
         "CP PLUS": { list: cpPlusImageFiles, path: "assets/img/CP PLUS/" },
@@ -2489,6 +2479,21 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         });
     }
 
+    // Append ANWIZ products to products list
+    if (Array.isArray(anwizNames) && anwizNames.length) {
+        anwizNames.forEach((name) => {
+            products.push({
+                image: findProductImage(name, "ANWIZ"),
+                id: products.length + 1,
+                name,
+                category: "ANWIZ",
+                isNew: true,
+                inStock: true,
+                originalIndex: products.length
+            });
+        });
+    }
+
     // Append YADON products to products list
     if (Array.isArray(yadonNames) && yadonNames.length) {
         yadonNames.forEach((name) => {
@@ -2614,7 +2619,16 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
             button.addEventListener("click", () => {
                 state.currentPage = page;
                 render();
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                // Scroll to products grid with offset for header (works on all devices)
+                const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                if (productsSection) {
+                    const headerHeight = 100; // Offset for fixed header
+                    const elementPosition = productsSection.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerHeight;
+                    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                } else {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }
             });
             return button;
         };
@@ -3031,6 +3045,16 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
             const openMobileFilters = () => {
                 // show sidebar as modal
                 elements.productSidebar.classList.add('mobile-active');
+
+                // Add a close icon to the sidebar if it doesn't exist
+                if (!elements.productSidebar.querySelector('.mobile-filter-close')) {
+                    const closeBtn = document.createElement('div');
+                    closeBtn.className = 'mobile-filter-close';
+                    closeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                    elements.productSidebar.prepend(closeBtn);
+                    closeBtn.addEventListener('click', closeMobileFilters);
+                }
+
                 // create backdrop
                 _mobileBackdrop = document.createElement('div');
                 _mobileBackdrop.className = 'mobile-filter-backdrop';
@@ -3051,6 +3075,11 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                     // remove actions area if present
                     const actions = elements.productSidebar.querySelector('.mobile-filter-actions');
                     if (actions && actions.parentNode) actions.parentNode.removeChild(actions);
+
+                    // remove close button
+                    const closeBtn = elements.productSidebar.querySelector('.mobile-filter-close');
+                    if (closeBtn && closeBtn.parentNode) closeBtn.parentNode.removeChild(closeBtn);
+
                     elements.productSidebar.classList.remove('mobile-active');
                     // also ensure any legacy 'active' flag is cleared so wrapper hides on mobile
                     elements.productSidebar.classList.remove('active');

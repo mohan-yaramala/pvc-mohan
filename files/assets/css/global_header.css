@@ -431,7 +431,7 @@
     }
 
     .pvc-util-btn.pvc-phone-btn {
-        display: none;
+        display: flex;
     }
 }
 
@@ -483,6 +483,8 @@
     padding: 15px 0 15px 10px;
     /* Adjusted padding */
     display: block;
+    margin-bottom: 8px;
+    /* Added gap between items */
     transition: var(--transition-smooth);
 }
 

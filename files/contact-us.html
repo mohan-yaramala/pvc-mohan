@@ -374,6 +374,115 @@
       color: #B38728;
       display: inline-block;
     }
+
+    /* === SUCCESS POPUP STYLES === */
+    .success-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .success-overlay.active {
+      display: flex !important;
+      opacity: 1;
+    }
+
+    .success-card {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 30px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .success-overlay.active .success-card {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .checkmark-circle {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #D4AF37, #AA771C);
+      border-radius: 50%;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+      animation: pulseGold 2s infinite;
+    }
+
+    @keyframes pulseGold {
+      0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+      }
+    }
+
+    .checkmark-icon {
+      font-size: 40px;
+      color: white;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .success-overlay.active .checkmark-icon {
+      animation: popCheck 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s forwards;
+    }
+
+    @keyframes popCheck {
+      from {
+        opacity: 0;
+        transform: scale(0) rotate(-45deg);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+      }
+    }
+
+    .btn-success-close {
+      background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+      color: #000;
+      border: none;
+      padding: 15px 50px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 16px;
+      margin-top: 30px;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s;
+      box-shadow: 0 10px 20px rgba(184, 134, 11, 0.3);
+    }
+
+    .btn-success-close:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(184, 134, 11, 0.4);
+    }
   </style>
 </head>
 
@@ -385,23 +494,17 @@
 
   <!--=====HEADER END =======-->
 
-  <section class="contact-hero">
+  <section class="shop-categories-section pt-5" style="background:#fff; margin-top:80px;">
     <div class="container">
-      <h1 data-aos="fade-up">Get In Touch</h1>
-      <p data-aos="fade-up" data-aos-delay="200">We are here to secure your future with world-class AIoT solutions.</p>
+      <div class="shop-cat-header" data-aos="fade-up">
+        <h2 class="shop-cat-title">Get In Touch</h2>
+        <div class="eco-header-divider"></div>
+        <p class="shop-cat-tagline">We are here to secure your future with world-class AIoT solutions.</p>
+      </div>
     </div>
   </section>
 
-  <div class="breadcrumb-area">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0" style="background: transparent; padding: 0;">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-        </ol>
-      </nav>
-    </div>
-  </div>
+
 
   <section class="sp1" style="background: #fafafa;">
     <div class="container">
@@ -427,7 +530,8 @@
             </div>
             <h3>Chat on WhatsApp</h3>
             <p>Instant help & quotation</p>
-            <span class="micro-text">Quick response from our team</span>
+            <span class="micro-text" style="color: #25D366; font-weight: 700;">Click to Chat Now <i
+                class="fa-solid fa-arrow-right"></i></span>
           </a>
         </div>
 
@@ -439,20 +543,22 @@
             </div>
             <h3>Call PVC Security</h3>
             <p style="font-weight: 700; font-size: 18px; color: #555;">+91 7579 44 55 66</p>
-            <span class="micro-text">10 AM – 8 PM | Mon–Sat</span>
+            <span class="micro-text" style="color: #D4AF37; font-weight: 700;">Tap to Call Now <i
+                class="fa-solid fa-phone"></i></span>
           </a>
         </div>
 
         <!-- Card 3: Service Area (Red) -->
         <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="contact-action-card card-red">
+          <a href="#contact-form-area" class="contact-action-card card-red">
             <div class="card-icon-box">
-              <i class="fa-solid fa-map-location-dot"></i>
+              <i class="fa-solid fa-calendar-check"></i>
             </div>
-            <h3>Service Coverage</h3>
-            <p>Andhra Pradesh & Telangana</p>
-            <span class="micro-text">Supply • Installation • Support</span>
-          </div>
+            <h3>Book Support Vist</h3>
+            <p>Schedule Technicians</p>
+            <span class="micro-text" style="color: #E91E63; font-weight: 700;">Click to Book Appointment <i
+                class="fa-solid fa-chevron-down"></i></span>
+          </a>
         </div>
 
         <!-- Card 4: Email (Black) -->
@@ -463,14 +569,15 @@
             </div>
             <h3>Email Us</h3>
             <p>pvcsecurity@gmail.com</p>
-            <span class="micro-text">Formal communication option</span>
+            <span class="micro-text" style="color: #333; font-weight: 700;">Click to Send Email <i
+                class="fa-solid fa-envelope"></i></span>
           </a>
         </div>
       </div>
 
     </div>
   </section>
-  <section class="contact-form-section" style="background: #fff;">
+  <section id="contact-form-area" class="contact-form-section" style="background: #fff;">
     <div class="container">
       <div class="row align-items-center">
         <!-- Left Side: Text & Features -->
@@ -637,12 +744,34 @@
       formContainer.style.opacity = '0';
 
       setTimeout(() => {
-        alert('Message sent successfully!');
+        // Show Success Popup
+        const overlay = document.getElementById('successOverlay');
+        overlay.classList.add('active');
+
+        // Reset Form visibility (behind the popup)
         formContainer.style.transform = 'translateY(0)';
         formContainer.style.opacity = '1';
-      }, 800);
+      }, 500);
     });
+
+    function closeSuccessPopup() {
+      const overlay = document.getElementById('successOverlay');
+      overlay.classList.remove('active');
+    }
   </script>
+
+  <!-- Success Modal HTML -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+      <div class="checkmark-circle">
+        <i class="fa-solid fa-check checkmark-icon"></i>
+      </div>
+      <h3 style="font-weight: 800; color: #000; margin-bottom: 10px;">Request Sent!</h3>
+      <p style="color: #666; font-size: 15px; margin-bottom: 0;">We have received your details.<br>Our experts will
+        contact you shortly.</p>
+      <button class="btn-success-close" onclick="closeSuccessPopup()">DONE</button>
+    </div>
+  </div>
 
 </body>
 

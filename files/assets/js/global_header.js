@@ -11,15 +11,15 @@ const PVC_HEADER_CONFIG = {
         { name: 'Anwiz', url: 'all-products.html?category=ANWIZ' },
         { name: 'D-Link', url: 'all-products.html?category=D-LINK' },
         { name: 'Dahua', url: 'all-products.html?category=DAHUA' },
-        { name: 'EDR', url: 'all-products.html?category=ERD' },
+        { name: 'ERD', url: 'all-products.html?category=ERD' },
         { name: 'Ezviz', url: 'all-products.html?category=EZVIZ' },
         { name: 'Finolex', url: 'all-products.html?category=FINOLEX' },
         { name: 'Hi Focus', url: 'all-products.html?category=HI FOCUS' },
         { name: 'Hikvision', url: 'all-products.html?category=HIKVISION' },
         { name: 'Imou', url: 'all-products.html?category=IMOU' },
-        { name: 'Master', url: 'all-products.html?category=MASTEL' },
+        { name: 'Mastel', url: 'all-products.html?category=MASTEL' },
         { name: 'Maxxion', url: 'all-products.html?category=MAXXION' },
-        { name: 'Securi', url: 'all-products.html?category=SECUREYE' },
+        { name: 'Secureye', url: 'all-products.html?category=SECUREYE' },
         { name: 'Securus', url: 'all-products.html?category=SECURUS' },
         { name: 'TP Link', url: 'all-products.html?category=TP LINK' },
         { name: 'True View', url: 'all-products.html?category=TRUE VIEW' },
@@ -53,7 +53,7 @@ function initPvcHeader() {
                     <li class="pvc-nav-item"><a href="about-us.html" class="pvc-nav-link" id="nav-about">About Us</a></li>
                     
                     <li class="pvc-nav-item has-mega-brand">
-                        <a href="#" class="pvc-nav-link">Shop by Brand <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#" class="pvc-nav-link">Shop by Brand</a>
                         <div class="pvc-mega-menu">
                             <div class="pvc-mega-column">
                                 <h4 class="pvc-mega-title">Our Partner Brands</h4>
@@ -65,7 +65,7 @@ function initPvcHeader() {
                     </li>
 
                     <li class="pvc-nav-item has-mega-category">
-                        <a href="#" class="pvc-nav-link">Shop by Categories <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#" class="pvc-nav-link">Shop by Categories</a>
                         <div class="pvc-mega-menu">
                             <div class="pvc-mega-column">
                                 <h4 class="pvc-mega-title">Product Components</h4>
@@ -123,7 +123,6 @@ function initPvcHeader() {
             <li class="pvc-mobile-nav-item has-submenu">
                 <div class="pvc-mobile-link-wrapper">
                     <a href="#" class="pvc-mobile-nav-link">Shop by Brand</a>
-                    <i class="fa-solid fa-chevron-right pvc-mobile-toggle-btn"></i>
                 </div>
                 <div class="pvc-mobile-submenu">
                     ${PVC_HEADER_CONFIG.brands.map(b => `<a href="${b.url}" class="pvc-mobile-sub-link">${b.name}</a>`).join('')}
@@ -133,7 +132,6 @@ function initPvcHeader() {
             <li class="pvc-mobile-nav-item has-submenu">
                <div class="pvc-mobile-link-wrapper">
                     <a href="#" class="pvc-mobile-nav-link">Shop by Categories</a>
-                    <i class="fa-solid fa-chevron-right pvc-mobile-toggle-btn"></i>
                 </div>
                 <div class="pvc-mobile-submenu">
                     ${PVC_HEADER_CONFIG.categories.map(c => `<a href="${c.url}" class="pvc-mobile-sub-link">${c.name}</a>`).join('')}
@@ -211,13 +209,13 @@ function initPvcHeader() {
 
             if (parent.classList.contains('active')) {
                 subMenu.style.maxHeight = subMenu.scrollHeight + "px";
-                icon.style.transform = 'rotate(90deg)';
+                if (icon) icon.style.transform = 'rotate(90deg)';
                 linkText.style.background = 'linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)';
                 linkText.style.webkitBackgroundClip = 'text';
                 linkText.style.webkitTextFillColor = 'transparent';
             } else {
                 subMenu.style.maxHeight = null;
-                icon.style.transform = 'rotate(0deg)';
+                if (icon) icon.style.transform = 'rotate(0deg)';
                 linkText.style.background = 'none';
                 linkText.style.webkitTextFillColor = 'var(--pvc-white)';
                 linkText.style.color = 'var(--pvc-white)';
@@ -269,7 +267,6 @@ function initPvcHeader() {
             { keys: ["imou"], url: "all-products.html?category=IMOU" },
             { keys: ["ezviz"], url: "all-products.html?category=EZVIZ" },
             { keys: ["anwiz"], url: "all-products.html?category=ANWIZ" },
-            { keys: ["anviz"], url: "all-products.html?category=ANVIZ" },
             { keys: ["d-link", "dlink"], url: "all-products.html?category=D-LINK" },
             { keys: ["erd", "edr"], url: "all-products.html?category=ERD" },
             { keys: ["finolex"], url: "all-products.html?category=FINOLEX" },

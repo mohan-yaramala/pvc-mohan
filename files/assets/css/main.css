@@ -9872,18 +9872,21 @@ html {
 
 .loading-container,
 .loading {
-  height: 170px;
+  height: 250px;
   position: relative;
-  width: 170px;
+  width: 250px;
   border-radius: 100%;
 }
 
 .loading-container {
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loading {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-color: transparent var(--ztc-text-text-2) transparent var(--ztc-text-text-2);
   animation: rotate-loading 1.5s linear 0s infinite normal;
   transform-origin: 50% 50%;
@@ -9891,7 +9894,7 @@ html {
 
 .preloader2 .loading {
   border-color: transparent var(--ztc-bg-bg-7) transparent var(--ztc-bg-bg-7) !important;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   animation: rotate-loading 1.5s linear 0s infinite normal;
   transform-origin: 50% 50%;
 }
@@ -9901,8 +9904,8 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   animation: inherit !important;
 }
 
@@ -9916,45 +9919,52 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 150px;
-  width: 150px;
-  animation: move 2s linear 0s infinite normal;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading-icon img {
+  width: 180px !important;
+  height: auto !important;
+  object-fit: contain;
 }
 
 @media (max-width: 991px) {
+
   .loading-container,
   .loading {
-    height: 120px;
-    width: 120px;
+    height: 180px;
+    width: 180px;
   }
-  
+
   #loading-icon {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100px;
-    width: 100px;
+    height: 140px;
+    width: 140px;
   }
-  
+
   #loading-icon img {
-    width: 100px !important;
-    height: auto !important;
+    width: 120px !important;
   }
 }
 
 @media (max-width: 480px) {
+
   .loading-container,
   .loading {
-    height: 100px;
-    width: 100px;
+    height: 140px;
+    width: 140px;
   }
-  
+
   #loading-icon {
-    height: 80px;
-    width: 80px;
+    height: 110px;
+    width: 110px;
   }
-  
+
   #loading-icon img {
-    width: 80px !important;
+    width: 90px !important;
   }
 }
 
@@ -15946,18 +15956,20 @@ html {
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens, or use nowrap for strict bar */
+  flex-wrap: wrap;
+  /* Allows wrapping on smaller screens, or use nowrap for strict bar */
   align-items: center;
   gap: 10px;
   position: relative;
   /* Added for index.html integration */
-  margin-top: 20px; 
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 /* Top Level Items */
 .mega-category {
-  position: relative; /* Anchor for absolute dropdowns */
+  position: relative;
+  /* Anchor for absolute dropdowns */
   padding: 0;
   margin: 0;
 }
@@ -15982,7 +15994,7 @@ html {
 .mega-category h4:hover,
 .mega-category.active h4 {
   color: var(--pvc-gold-mid, #d4af37);
-  background: rgba(0,0,0,0.02);
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .mega-category h4 i.fa-solid:first-child {
@@ -15992,7 +16004,8 @@ html {
 
 /* Arrow Icon */
 .mega-category h4::after {
-  content: '\f078'; /* Chevron down */
+  content: '\f078';
+  /* Chevron down */
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 10px;
@@ -16007,29 +16020,40 @@ html {
 
 /* Featured Box Special Styling */
 .featured-solution {
-    border-left: 1px solid #eee;
-    padding-left: 20px;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
+  border-left: 1px solid #eee;
+  padding-left: 20px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
+
 .featured-solution .featured-content {
   font-size: 12px;
   line-height: 1.3;
 }
+
 .featured-solution h4 {
   padding: 0 0 5px 0;
   font-size: 13px;
   color: var(--pvc-gold-mid, #d4af37);
   pointer-events: none;
 }
-.featured-solution h4::after { display: none; }
-.featured-solution a { font-size: 12px; text-decoration: none; color: #333; font-weight: 700; }
+
+.featured-solution h4::after {
+  display: none;
+}
+
+.featured-solution a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+}
 
 /* The Dropdown Content (UL) */
 .mega-category ul {
-  display: none; 
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -16037,7 +16061,7 @@ html {
   background: #fff;
   padding: 10px 0;
   margin: 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 4px 4px;
   border-top: 2px solid var(--pvc-gold-mid, #d4af37);
   z-index: 100;
@@ -16081,28 +16105,87 @@ html {
     flex-direction: column;
     align-items: stretch;
   }
+
   .mega-category ul {
     position: static;
     box-shadow: none;
     border: none;
     background: #f9f9f9;
-    display: none !important; /* Force hide unless clicked */
-    opacity: 1; 
+    display: none !important;
+    /* Force hide unless clicked */
+    opacity: 1;
     visibility: visible;
     transform: none;
   }
+
   .mega-category.active ul {
     display: block !important;
   }
+
   .mega-category h4 {
     padding: 15px;
     border-bottom: 1px solid #eee;
     justify-content: space-between;
   }
+
   .featured-solution {
     border: none;
     margin: 0;
     padding: 15px;
     background: #fdfdfd;
+  }
+}
+
+/* ===== GLOBAL PAGE HEADER STYLES ===== */
+.shop-cat-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.shop-cat-title {
+  font-size: 42px !important;
+  font-weight: 700 !important;
+  color: #B8860B !important;
+  /* PVC Brand Gold */
+  margin: 0 0 15px 0 !important;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.eco-header-divider {
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #B8860B, transparent);
+  margin: 0 auto 20px !important;
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(184, 134, 11, 0.4);
+}
+
+.shop-cat-tagline {
+  font-size: 16px !important;
+  color: #555 !important;
+  margin: 0 !important;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .shop-cat-title {
+    font-size: 36px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .shop-cat-title {
+    font-size: 28px !important;
+  }
+
+  .shop-cat-tagline {
+    font-size: 14px !important;
+  }
+
+  .shop-cat-header {
+    margin-bottom: 35px;
   }
 }

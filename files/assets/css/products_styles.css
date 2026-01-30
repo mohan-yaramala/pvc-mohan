@@ -28,7 +28,7 @@ body,
     font-family: 'Outfit', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #b38e1a;
+    color: #B8860B;
     /* Matching the gold title in screenshot */
     margin-bottom: 15px;
 }
@@ -56,12 +56,11 @@ body,
     overflow: hidden;
     margin-bottom: 12px;
     aspect-ratio: 16 / 9;
-    background: #f8f9fa;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    /* Initial soft shadow */
+    box-shadow: none;
     transition: all 0.4s ease;
 }
 
@@ -77,11 +76,8 @@ body,
 
 /* Hover State - Gold Glow Effect */
 .shop-cat-card:hover .shop-cat-img {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(179, 142, 26, 0.35);
-    /* Pure Gold Glow */
-    outline: 2px solid #d4af37;
-    /* Subtle gold outline like the screen */
+    transform: translateY(-5px);
+    /* Removed box-shadow and outline for a cleaner look */
 }
 
 .shop-cat-card:hover .shop-cat-img img {

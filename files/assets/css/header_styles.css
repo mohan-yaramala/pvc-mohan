@@ -176,102 +176,12 @@ body {
 
 /* EXCEPTIONS: Index Hero (Keep Large) */
 #home {
-    margin-top: 70px !important;
-    /* Start after fixed header */
+    margin-top: 80px !important;
     padding-top: 0 !important;
     background: #000 !important;
 }
 
-/* ==========================================================================
-   HOME PAGE HERO CAROUSEL - DESKTOP VIEW (≥ 992px)
-   ========================================================================== */
-@media (min-width: 992px) {
-
-    #home .carousel-area,
-    #home .hero3-section-area,
-    #home .carousel-area .owl-stage-outer,
-    #home .carousel-area .owl-stage,
-    #home .carousel-area .owl-item,
-    #home .carousel-area .carousel-item {
-        height: 60vh !important;
-        min-height: 200px !important;
-        max-height: 70vh !important;
-    }
-
-    #home .carousel-area img,
-    #home .hero3-section-area img {
-        height: 100% !important;
-        width: 100% !important;
-        object-fit: cover !important;
-        object-position: center !important;
-    }
-}
-
-/* Hero background should fully cover the hero area */
-#home .carousel-area,
-#home .hero3-section-area {
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-
-/* ==========================================================================
-   HOME PAGE HERO CAROUSEL - MOBILE VIEW (≤ 768px)
-   ========================================================================== */
-@media (max-width: 768px) {
-
-    #home .carousel-area,
-    #home .hero3-section-area,
-    #home .carousel-area .owl-stage-outer,
-    #home .carousel-area .owl-stage,
-    #home .carousel-area .owl-item,
-    #home .carousel-area .carousel-item {
-        height: auto !important;
-        min-height: 200px !important;
-        max-height: none !important;
-    }
-
-    #home .carousel-area img,
-    #home .hero3-section-area img {
-        height: auto !important;
-        width: 100% !important;
-        object-fit: contain !important;
-        object-position: center !important;
-        max-width: 100% !important;
-    }
-}
-
-
-/* ==========================================================================
-   REMOVE CURVED/WAVE SHAPE AT BOTTOM OF HERO SECTION
-   ========================================================================== */
-.carousel-area.owl-carousel .owl-stage-outer,
-.carousel-area .owl-stage-outer,
-#home .owl-stage-outer {
-    border-radius: 0 !important;
-}
-
-.carousel-area,
-#home,
-#home .carousel-area {
-    border-radius: 0 !important;
-}
-
-/* Ensure no pseudo-elements create curves */
-#home::before,
-#home::after,
-.carousel-area::before,
-.carousel-area::after,
-.hero3-section-area::before,
-.hero3-section-area::after {
-    border-radius: 0 !important;
-    clip-path: none !important;
-}
-
-/* Straight edge transition to next section */
-#home {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
+/* Hero section logic moved to index.css and index_styles.css to avoid conflicts */
 
 /* ==========================================================================
    DROPDOWN MENU STYLES (For All Navigation Items)

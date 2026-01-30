@@ -42,9 +42,8 @@ function initPvcFooter() {
                     <ul class="pvc-footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="all-products.html?cat=HIKVISION">Shop by Brand</a></li>
-                        <li><a href="product-category.html">Shop by Categories</a></li>
                         <li><a href="all-products.html">New Products</a></li>
+                        <li><a href="all-products.html?category=ACCESSORIES">Shop by Categories</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
@@ -92,9 +91,6 @@ function initPvcFooter() {
                         <a href="https://wa.me/${PVC_FOOTER_DATA.whatsapp}" target="_blank" class="pvc-footer-btn pvc-btn-whatsapp" aria-label="Chat on WhatsApp">
                             <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
                         </a>
-                        <a href="tel:${PVC_FOOTER_DATA.phone1Clean}" class="pvc-footer-btn pvc-btn-call" aria-label="Call Support">
-                            <i class="fa-solid fa-phone-volume"></i> Call Now
-                        </a>
                     </div>
                     <div class="pvc-trust-icons" style="margin-bottom: 20px;">
                         <span style="font-size: 13px; color: rgba(255,255,255,0.5);"><i class="fa-regular fa-clock"></i> ${PVC_FOOTER_DATA.workingHours}</span>
@@ -118,11 +114,9 @@ function initPvcFooter() {
             <i class="fa-brands fa-whatsapp"></i>
         </a>
 
-        <div class="pvc-mobile-sticky-cta" id="pvcMobileStickyCta">
-            <div class="pvc-sticky-close" id="pvcStickyClose"><i class="fa-solid fa-xmark"></i></div>
-            <span class="pvc-sticky-text">Need security guidance?</span>
-            <a href="tel:${PVC_FOOTER_DATA.phone1Clean}" class="pvc-sticky-btn">Call Now</a>
-        </div>
+        </a>
+        
+        </a>
     </footer>
     `;
 

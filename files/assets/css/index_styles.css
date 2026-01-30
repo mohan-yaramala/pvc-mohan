@@ -1132,6 +1132,20 @@ body.homepage3-body {
     box-shadow: 0 20px 40px rgba(184, 134, 11, 0.1);
 }
 
+.shop-cat-img {
+    width: 100%;
+    aspect-ratio: 304 / 158;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
 
 .scale-icon-box {
     width: 65px;
@@ -1331,27 +1345,204 @@ body.homepage3-body {
 /* Adjust main menu items to handle the transition if needed */
 /* ===== HERO SECTION HEIGHT CONTROL (FIXED) ===== */
 #home {
+    margin-top: 80px !important;
+    padding-top: 0 !important;
+    background: #000 !important;
     overflow: hidden;
-    /* prevents extra white space */
 }
 
-#home {
-    margin-top: 70px !important;
+#home .carousel-area,
+#home .owl-stage-outer,
+#home .owl-stage {
+    border-radius: 0 !important;
+    clip-path: none !important;
 }
 
 #home .hero3-section-area {
-    height: 65vh;
-    /* MAIN HEIGHT CONTROL */
-    min-height: 420px;
-    /* prevents text breaking */
-    display: flex;
-    align-items: center;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    display: block;
 }
 
-/* Mobile Optimization */
-@media (max-width: 768px) {
-    #home .hero3-section-area {
-        height: 80vh;
-        min-height: auto;
+
+/* Mobile Optimization removed - using aspect ratio from index.css */
+
+/* ===== SHOP BY CATEGORIES SECTION ===== */
+.shop-categories-section {
+    padding: 70px 0;
+    background: var(--white-primary);
+}
+
+.shop-cat-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.shop-cat-title {
+    font-size: 42px !important;
+    font-weight: 700 !important;
+    color: var(--pvc-gold-dark) !important;
+    margin: 0 0 15px 0 !important;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.eco-header-divider {
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--pvc-gold-dark), transparent);
+    margin: 0 auto 20px;
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.4);
+    border-radius: 2px;
+}
+
+.shop-cat-tagline {
+    font-size: 16px !important;
+    color: var(--text-light) !important;
+    margin: 0 !important;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.shop-cat-card {
+    display: block;
+    background: transparent;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.shop-cat-card:hover {
+    transform: translateY(-5px);
+}
+
+.shop-cat-img {
+    width: 100%;
+    aspect-ratio: 304 / 158;
+    background: transparent !important;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Lift effect handled by .shop-cat-card:hover */
+.shop-cat-card:hover .shop-cat-img {
+    filter: none !important;
+    transform: none !important;
+}
+
+.shop-cat-card:hover {
+    transform: translateY(-3px);
+}
+
+.shop-cat-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+    transition: transform 0.5s ease;
+}
+
+.shop-cat-card:hover .shop-cat-img img {
+    transform: scale(1.02);
+}
+
+.shop-cat-name {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: var(--pvc-gold-dark) !important;
+    /* Force dark color on mobile */
+    text-align: center;
+    margin: 0 !important;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.shop-cat-card:hover .shop-cat-name {
+    color: var(--pvc-gold-mid) !important;
+}
+
+@media (max-width: 991px) {
+    .shop-cat-title {
+        font-size: 36px !important;
+    }
+
+    .shop-categories-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .shop-cat-title {
+        font-size: 28px !important;
+    }
+
+    .shop-cat-tagline {
+        font-size: 14px !important;
+    }
+
+    .shop-categories-section {
+        padding: 20px 0 40px !important;
+    }
+
+    .shop-categories-section .row.g-3 {
+        --bs-gutter-x: 0.5rem !important;
+        --bs-gutter-y: 0.5rem !important;
+    }
+
+    .shop-cat-header {
+        margin-bottom: 20px !important;
+    }
+
+    .shop-cat-img {
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .shop-cat-name {
+        font-size: 12px !important;
+        margin: 0 !important;
+        line-height: 1 !important;
+    }
+
+    .shop-cat-card {
+        margin-bottom: 5px !important;
+        padding: 0 !important;
+    }
+}
+
+/* Preloader Animation Fix */
+#loading-icon img {
+    animation: pulseGoldlogo 2s infinite ease-in-out;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+}
+
+@keyframes pulseGoldlogo {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.8));
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
     }
 }
