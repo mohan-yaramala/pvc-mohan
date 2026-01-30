@@ -367,7 +367,7 @@ body {
     visibility: hidden !important;
     opacity: 0 !important;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    transform: translateY(-10px) !important;
+    transform: translateY(15px) !important;
     border-bottom: 2px solid rgba(212, 175, 55, 0.3) !important;
     overflow: visible !important;
     max-height: none !important;
@@ -375,15 +375,16 @@ body {
     display: block !important;
     clip: unset !important;
     pointer-events: none;
+    filter: blur(10px);
 }
 
-/* Show mega menu on hover */
-.main-menu ul li.has-megamenu:hover .mega-menu-wrapper,
-li.has-megamenu:hover .mega-menu-wrapper {
+/* Show mega menu on hover - Seamless Transition */
+.main-menu ul li.has-megamenu:hover .mega-menu-wrapper {
     visibility: visible !important;
     opacity: 1 !important;
     transform: translateY(0) !important;
     pointer-events: auto;
+    filter: blur(0);
 }
 
 /* Invisible bridge to prevent menu closing */
@@ -718,23 +719,24 @@ li.has-megamenu:hover .mega-menu-wrapper {
 }
 
 .mobile-menu-toggle {
-    font-size: 24px;
-    color: #fff;
-    /* Gold Icon */
+    font-size: 28px;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: var(--pvc-gold-mid) !important;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    text-shadow: 0 2px 10px rgba(184, 134, 11, 0.4);
 }
 
-.mobile-menu-toggle:active {
-    background: var(--pvc-gold-mid);
-    color: #000;
+.mobile-menu-toggle:hover {
+    transform: scale(1.1);
 }
 
 /* 2. Dark Overlay Background */

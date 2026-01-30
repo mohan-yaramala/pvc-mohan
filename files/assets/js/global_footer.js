@@ -54,28 +54,28 @@ function initPvcFooter() {
                     <h4 class="pvc-footer-title">Contact Support</h4>
                     <ul class="pvc-contact-list">
                         <li class="pvc-contact-item">
-                            <div class="pvc-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <a href="tel:${PVC_FOOTER_DATA.phone1Clean}" class="pvc-contact-icon" aria-label="Call Primary"><i class="fa-solid fa-phone"></i></a>
                             <div class="pvc-contact-text">
                                 <span>Call Primary</span>
                                 <a href="tel:${PVC_FOOTER_DATA.phone1Clean}">${PVC_FOOTER_DATA.phone1}</a>
                             </div>
                         </li>
                         <li class="pvc-contact-item">
-                            <div class="pvc-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <a href="tel:${PVC_FOOTER_DATA.phone2Clean}" class="pvc-contact-icon" aria-label="Call Secondary"><i class="fa-solid fa-phone"></i></a>
                             <div class="pvc-contact-text">
                                 <span>Call Secondary</span>
                                 <a href="tel:${PVC_FOOTER_DATA.phone2Clean}">${PVC_FOOTER_DATA.phone2}</a>
                             </div>
                         </li>
                         <li class="pvc-contact-item">
-                            <div class="pvc-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <a href="mailto:${PVC_FOOTER_DATA.email}" class="pvc-contact-icon" aria-label="Email Us"><i class="fa-solid fa-envelope"></i></a>
                             <div class="pvc-contact-text">
                                 <span>Email Address</span>
                                 <a href="mailto:${PVC_FOOTER_DATA.email}">${PVC_FOOTER_DATA.email}</a>
                             </div>
                         </li>
                         <li class="pvc-contact-item">
-                            <div class="pvc-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <a href="contact-us.html" class="pvc-contact-icon" aria-label="Our Location"><i class="fa-solid fa-location-dot"></i></a>
                             <div class="pvc-contact-text">
                                 <span>Service Area</span>
                                 <p>${PVC_FOOTER_DATA.serviceArea}</p>
@@ -94,12 +94,6 @@ function initPvcFooter() {
                     </div>
                     <div class="pvc-trust-icons" style="margin-bottom: 20px;">
                         <span style="font-size: 13px; color: rgba(255,255,255,0.5);"><i class="fa-regular fa-clock"></i> ${PVC_FOOTER_DATA.workingHours}</span>
-                    </div>
-                    <div class="pvc-footer-social">
-                        <a href="#" class="pvc-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="pvc-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="pvc-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="pvc-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -123,19 +117,35 @@ function initPvcFooter() {
     document.body.insertAdjacentHTML('beforeend', footerHtml);
 
     // --- ACTIVE PAGE HIGHLIGHTING ---
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const currentFull = currentPage + window.location.search;
+    const currentPagePath = window.location.pathname.split('/').pop() || 'index.html';
+    const queryParams = new URLSearchParams(window.location.search);
+    const hasCategoryFilter = queryParams.has('category') || queryParams.has('cat');
 
     document.querySelectorAll('.pvc-footer-links a').forEach(link => {
         const href = link.getAttribute('href');
 
-        // Match full URL (for categories) or exact filename
-        if (href === currentFull || href === currentPage) {
-            link.classList.add('active');
+        if (hasCategoryFilter) {
+            const catVal = (queryParams.get('category') || queryParams.get('cat')).toUpperCase();
+
+            // If it's the "Shop by Categories" link, check if it's a component
+            if (href.includes('category=ACCESSORIES') && catVal !== 'ALL CATEGORIES') {
+                // If the current category is one of the component categories (from header config)
+                // We don't have direct access here but we can check if it matches common ones
+                const components = ["ACCESSORIES", "CABLES", "HDD", "MONITOR", "RACK", "SD CARDS"];
+                if (components.includes(catVal)) {
+                    link.classList.add('active');
+                    return;
+                }
+            }
+
+            // If it's "New Products", we might want it active for brands if we want to follow header logic
+            // But usually brands aren't "New Products". Header highlights "New Products" only for the exact page.
         }
 
-        // Special case for query params where exact match might miss
-        if (window.location.search && href.includes(window.location.search) && href.includes(currentPage)) {
+        // Standard matching
+        if (href === currentPagePath || (queryParams.toString() && href.includes(currentPagePath) && href.includes(queryParams.toString()))) {
+            link.classList.add('active');
+        } else if (href === currentPagePath && !hasCategoryFilter) {
             link.classList.add('active');
         }
     });

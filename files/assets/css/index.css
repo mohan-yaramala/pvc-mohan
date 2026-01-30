@@ -115,29 +115,27 @@
         border-radius: 0;
         margin: 0;
         padding: 0 !important;
-        /* Match banner aspect ratio exactly to remove all black bars */
+        /* Restore original aspect-ratio with slight increase for better presence */
         height: auto !important;
-        aspect-ratio: 1024 / 315 !important;
+        aspect-ratio: 1024 / 380 !important;
         min-height: 0 !important;
-        background-size: cover !important;
+        background-size: contain !important;
         background-repeat: no-repeat !important;
         background-position: center center !important;
+        background-color: #000 !important;
     }
 
     /* Mobile Slide Backgrounds Override */
     .pvc-slide-1 {
         background-image: url('../img/carousel/1.svg');
-        background-position: center center;
     }
 
     .pvc-slide-2 {
-        background-image: url('../img/carousel/2 copy.svg');
-        background-position: center center;
+        background-image: url('../img/carousel/2.svg');
     }
 
     .pvc-slide-3 {
-        background-image: url('../img/carousel/3 copy.svg');
-        background-position: center center;
+        background-image: url('../img/carousel/3 copy 2.svg');
     }
 }
 

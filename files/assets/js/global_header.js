@@ -249,7 +249,7 @@ function initPvcHeader() {
         categories: [
             { keys: ["ip", "network", "wifi", "wireless", "ethernet"], url: "network-cameras.html" },
             { keys: ["turbo", "hd", "analog", "coaxial", "cctv"], url: "turbo-hd.html" },
-            { keys: ["access", "biometric", "fingerprint", "attendance", "card"], url: "access-control.html" },
+            { keys: ["access", "biometric", "fingerprint", "attendance"], url: "access-control.html" },
             { keys: ["intercom", "door", "bell", "videophone"], url: "video-intercom.html" },
             { keys: ["alarm", "instrusion", "sensor", "theft"], url: "alarm-systems.html" },
             { keys: ["display", "monitor", "screen", "wall"], url: "display-control.html" },
@@ -287,9 +287,15 @@ function initPvcHeader() {
 
         const cleanQuery = query.toLowerCase().trim();
 
+        // 0. For single-character searches, go straight to products list to show everything
+        if (cleanQuery.length === 1) {
+            window.location.href = `all-products.html?search=${encodeURIComponent(cleanQuery)}`;
+            return;
+        }
+
         // 1. Check Static Pages
         for (const [key, url] of Object.entries(PVC_SEARCH_MAPPING.pages)) {
-            if (cleanQuery.includes(key)) {
+            if (cleanQuery === key || (cleanQuery.length > 3 && cleanQuery.includes(key))) {
                 window.location.href = url;
                 return;
             }
@@ -297,7 +303,7 @@ function initPvcHeader() {
 
         // 2. Check Brands
         for (const brand of PVC_SEARCH_MAPPING.brands) {
-            if (brand.keys.some(k => cleanQuery.includes(k))) {
+            if (brand.keys.some(k => cleanQuery === k || (cleanQuery.length > 3 && cleanQuery.includes(k)) || (k.length > 3 && k.includes(cleanQuery)))) {
                 window.location.href = brand.url;
                 return;
             }
@@ -305,7 +311,7 @@ function initPvcHeader() {
 
         // 3. Check Categories
         for (const cat of PVC_SEARCH_MAPPING.categories) {
-            if (cat.keys.some(k => cleanQuery.includes(k))) {
+            if (cat.keys.some(k => cleanQuery === k || (cleanQuery.length > 3 && cleanQuery.includes(k)) || (k.length > 3 && k.includes(cleanQuery)))) {
                 window.location.href = cat.url;
                 return;
             }
