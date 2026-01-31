@@ -66,20 +66,88 @@
 
   <!--===== HERO AREA STARTS =======-->
   <section id="home" data-aos="zoom-out" data-aos-duration="1500">
-    <div class="carousel-area owl-carousel">
+    <!-- ================= DESKTOP CAROUSEL ================= -->
+    <div class="carousel-area owl-carousel hero-slider-desktop d-none d-md-block">
 
-      <!-- Slide 1 -->
-      <div class="hero3-section-area pvc-slide-1"></div>
+      <!-- Desktop Slide 1 -->
+      <div class="hero3-section-area"
+        style="background-image: url('assets/img/carousel/1.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="container-fluid p-0">
+          <div class="row m-0">
+            <div class="col-lg-8" style="padding-left: 50px;">
+              <h1 class="banner-title"><strong></strong></h1>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- Slide 2 -->
-      <div class="hero3-section-area pvc-slide-2"></div>
+      <!-- Desktop Slide 2 -->
+      <div class="hero3-section-area"
+        style="background-image: url('assets/img/carousel/2 copy.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="container-fluid p-0">
+          <div class="row m-0">
+            <div class="col-lg-8" style="padding-left: 50px;">
+              <h1 class="banner-title"><strong></strong></h1>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- Slide 3 -->
-      <div class="hero3-section-area pvc-slide-3"></div>
-
-
+      <!-- Desktop Slide 3 -->
+      <div class="hero3-section-area"
+        style="background-image: url('assets/img/carousel/3 copy.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="container-fluid p-0">
+          <div class="row m-0">
+            <div class="col-lg-8" style="padding-left: 50px;">
+              <h1 class="banner-title"><strong></strong></h1>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
+
+    <!-- ================= MOBILE CAROUSEL ================= -->
+    <div class="carousel-area owl-carousel hero-slider-mobile d-block d-md-none">
+
+      <!-- Mobile Slide 1 -->
+      <div class="hero3-section-area"
+        style="background-image: url('assets/img/carousel/1.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="container-fluid p-0">
+          <div class="row m-0">
+            <div class="col-12 text-center">
+              <h1 class="banner-title"><strong></strong></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Slide 2 -->
+      <div class="hero3-section-area"
+        style="background-image: url('assets/img/carousel/2.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="container-fluid p-0">
+          <div class="row m-0">
+            <div class="col-12 text-center">
+              <h1 class="banner-title"><strong></strong></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Slide 3 -->
+      <div class="hero3-section-area"
+        style="background-image: url('assets/img/carousel/3 copy 2.svg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="container-fluid p-0">
+          <div class="row m-0">
+            <div class="col-12 text-center">
+              <h1 class="banner-title"><strong></strong></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </section>
   <!--===== HERO AREA ENDS =======-->
 
@@ -1426,6 +1494,28 @@
   <link rel="stylesheet" href="assets/css/cart_styles.css">
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/form_validation.js"></script>
+
+  <script>
+    $('.hero-slider-desktop').owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 1500,
+      autoplayHoverPause: false,
+      nav: false,
+      dots: true
+    });
+
+    $('.hero-slider-mobile').owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 1500,
+      autoplayHoverPause: false,
+      nav: false,
+      dots: true
+    });
+  </script>
 
 </body>
 

@@ -1,0 +1,101 @@
+  border-top: 1px solid #DDDBD9;
+}
+
+.footer4-section-area {
+  position: relative;
+  background: var(--ztc-text-text-1);
+  overflow: hidden;
+  padding: 100px 0 0 0;
+}
+
+.footer4-section-area .bg1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .footer4-section-area .logo-content {
+    text-align: center;
+  }
+}
+
+.footer4-section-area .logo-content p {
+  color: var(--ztc-text-text-12);
+  font-family: var(--ztc-family-font1);
+  font-size: var(--ztc-font-size-font-s18);
+  font-style: normal;
+  font-weight: var(--ztc-weight-regular);
+  line-height: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.footer4-section-area .logo-content ul li {
+  display: inline-block;
+}
+
+.footer4-section-area .logo-content ul li a {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  line-height: 36px;
+  transition: all 0.4s;
+  border-radius: 165px;
+  background: rgba(216, 7, 88, 0.1);
+  color: var(--ztc-text-text-11);
+  margin: 0 12px 0 0;
+}
+
+.footer4-section-area .logo-content ul li a:hover {
+  background: var(--ztc-text-text-13);
+  transition: all 0.4s;
+  transform: translateY(-3px);
+  color: var(--ztc-text-text-1);
+}
+
+@media (max-width: 767px) {
+  .footer4-section-area .footer-list {
+    text-align: center;
+  }
+}
+
+.footer4-section-area .footer-list h4 {
+  font-family: var(--ztc-family-font1);
+  font-size: var(--ztc-font-size-font-s20);
+  line-height: var(--ztc-font-size-font-s20);
+  font-weight: var(--ztc-weight-semibold);
+  color: var(--ztc-text-text-11);
+  transition: all 0.4s;
+  margin-bottom: 4px;
+}
+
+.footer4-section-area .footer-list ul li a {
+  font-family: var(--ztc-family-font1);
+  font-size: var(--ztc-font-size-font-s18);
+  line-height: var(--ztc-font-size-font-s18);
+  font-weight: var(--ztc-weight-regular);
+  color: var(--ztc-text-text-12);
+  display: inline-block;
+  transition: all 0.4s;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer4-section-area .footer-list ul li a:hover {
+  padding-left: 4px;
+  transition: all 0.4s;
+  color: var(--ztc-text-text-13);
+}
+
+.footer4-section-area .head h4 {
+  font-family: var(--ztc-family-font1);
+  font-size: var(--ztc-font-size-font-s20);
+  line-height: var(--ztc-font-size-font-s20);
+  font-weight: var(--ztc-weight-semibold);
+  color: var(--ztc-text-text-11);
+  transition: all 0.4s;
+  margin-bottom: 4px;
+}
